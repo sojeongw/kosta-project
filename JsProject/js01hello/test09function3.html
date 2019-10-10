@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset=utf-8>
+  <title> java script </title>
+
+  <script type="text/javascript">
+  console.log("function");
+
+  function start(){
+    return function(arr){
+      return {
+        time:arr[0](),
+        meter:arr[1].getsu()}; // 함수 안의 함수 출력하기
+    };
+  }
+
+  var fn = start();
+  console.log(fn);  // 일단 나오는지 본 다음에
+  var obj = fn(
+    [
+      function(){
+        return 777;
+      },
+      {
+        getsu:function(){
+          return 888;
+        }
+      }
+    ]
+  );
+
+  console.log(obj);
+  console.log(obj.time);
+  console.log(obj.meter);
+
+
+
+
+
+  </script>
+</head>
+
+<body>
+  <h1>function</h1>
+
+</body>
+  </html>

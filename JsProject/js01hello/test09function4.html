@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset=utf-8>
+  <title> java script </title>
+
+  <script type="text/javascript">
+  console.log("function");
+
+  function apply(x,y){
+    console.log("apply()...");
+
+    // 100, 200 출력
+    console.log(arguments[2]);
+    console.log(arguments[3]);
+
+    // x가 null이면 x에 홍길동을 할당
+    // y가 undefined면 y에 010을 할당
+    // 단, xy가 null 또는 undefined가 아닐 경우는 해당 값 할당
+    /*
+    x = arguments[0];
+    y = arguments[1];
+    console.log(x);
+    console.log(y);
+    if(x===null){
+      x = "홍길동";
+    }
+    if(y===undefined){
+      y = "010";
+    } else {this.x = x; this.y=y;}
+
+    return console.log(x, y);
+    */
+
+    let a = x || "홍길동";
+    let b = y || "010";
+    console.log(a);
+    console.log(b);
+  }
+
+  var su;
+  apply(null, su, 100, 200);
+//  apply("최길동", "02", 100, 200);
+
+
+
+  </script>
+</head>
+
+<body>
+  <h1>function</h1>
+
+</body>
+  </html>

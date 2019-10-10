@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset=utf-8>
+  <title> java script </title>
+
+  <script src = "test11.js"></script>
+  <script type="text/javascript">
+  console.log("object");
+
+  // 외부 js 파일에 게시판 오브젝트를 만들고
+  // 여기서 객체 생성 및 출력하시오
+
+  var b = new Board();
+  b._setTitle("제목");
+  b._setContent("내용");
+  b._setWriter("작성자");
+
+  console.log(b._getTitle());
+  console.log(b._getContent());
+  console.log(b._getWriter());
+
+  function User(name){
+    this._name = name;
+  }
+
+  var obj = {kor:99, eng:88};
+
+  User.prototype = obj;
+  var u = new User("tiger");
+  console.log(u._name);
+  u.score = obj;
+  console.log(u.score.kor);
+  // u에다가 바로 넣고 싶은데 u=obj; 하면 u가 바뀌어버린다.
+  // u를 new 하기 전에 프로토타입 선언(29번)
+  console.log(u.kor);
+
+  ////////////////////////////////////
+
+  function Person(name){
+    this._name = name;
+  }
+  var pInfo = {nationality:"korea", tel:"010-4655-7478"};
+  // 이 속성을 이용해서 출력을 하고 싶은 상황
+
+  Person.prototype = pInfo;
+  var p = new Person("kim");
+  console.log(p._name);   // 위에서 받은 값이 있어야 여기서 kim이 찍힌다.
+  // 하나하나 속성을 만들지 않아도 사용할 수 있도록
+  console.log(p.nationality);
+  console.log(p.tel);
+
+
+
+
+
+  </script>
+</head>
+
+<body>
+  <h1>object</h1>
+
+</body>
+</html>

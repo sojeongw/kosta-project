@@ -1,0 +1,48 @@
+package semi.com.user;
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+
+	create user semi03book identified by hi123456 account unlock;
+grant connect, resource to semi03book;
+
+create table book_info(
+book_num number not null primary key,
+book_name varchar2(50) not null,
+book_writer varchar2(20) not null,
+book_company varchar2(20) not null,
+book_checkout varchar2(5)
+);
+
+drop table book_info;
+
+create table user_info(
+user_id varchar2(20) primary key not null,
+user_pw varchar2(20) not null,
+user_name varchar2(20) not null,
+user_tel varchar2(20) not null,
+user_email varchar2(30) not null,
+user_address varchar2(30) not null
+);
+
+drop table user_info;
+
+create table checkout(
+checkout_num number primary key not null,
+book_num number not null references book_info(book_num),
+user_id varchar2(20) not null references user_info(user_id),
+checkout_start varchar2(20),
+checkout_end varchar2(20)
+);
+
+drop table checkout;
+
+create sequence seq_checkout_num;
+drop sequence seq_checkout_num;
+	
+	
+	
+}

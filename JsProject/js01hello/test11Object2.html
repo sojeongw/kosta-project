@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset=utf-8>
+  <title> java script </title>
+
+  <script type="text/javascript">
+  console.log("object");
+
+  function User(name){
+    this._name = name;
+  }
+  User.prototype = {nationality:"spain", tel:"010", say:function(){
+    return "Good Morning";
+  }};    // 생성자를 user로 할 때
+
+  function Person(name){
+    this._name = name;
+  }
+
+  // 또 다른 방법
+  /*
+  Person.prototype = Object.create({nationality:"korea", tel:"010-4655-7478"});
+  var p = new Person("kim");
+  console.log(p._name);
+  console.log(p.nationality);
+  console.log(p.tel);
+  */
+
+  // 이 방법으로 추가할 수 있는 부분
+  Person.prototype = Object.create({nationality:"korea", tel:"010-4655-7478"},{
+    // 생성자를 만들어주고
+    constructor:{value:Person},  // value : 오브젝트 이름. 이 오브젝트를 상속받은 것처럼 사용할 수 있게 된다.
+    // 그 다음부터는 넣고싶은 함수를 넣어준다.
+    say:{value:function(){
+      return "Hello " + this._name;   // 생성자가 person일때와 user일때 각각의 이름으로 출력된다
+    }}    // value : 함수
+  });
+
+  var p = new Person("kim");
+  console.log(p._name);
+  console.log(p.nationality);
+  console.log(p.tel);
+  console.log(p.say());
+  // console.log(p.say());   // Hello
+
+  // 생성자로 같은 결과 내기
+  var p = new Person.prototype.constructor("lee");
+  console.log(p._name);
+  console.log(p.nationality);
+  console.log(p.tel);
+  console.log(p.say());
+
+  //////////////////////////////////////////////
+
+  // 생성자에 user를 준다면
+  Person.prototype = Object.create({nationality:"korea", tel:"010-4655-7478"},{
+    // 생성자를 만들어주고
+    constructor:{value:User},  // value : 오브젝트 이름
+    // 그 다음부터는 넣고싶은 함수를 넣어준다.
+    say:{value:function(){
+      return "Hello";
+    }}    // value : 함수
+  });
+  var p = new Person.prototype.constructor("kim");
+  console.log(p._name);
+  console.log(p.nationality);
+  console.log(p.tel);
+  console.log(p.say());
+
+  ////////////////////////////////////////////////
+
+  /*
+  function Product(name){
+    this._pName = name;
+  }
+
+  Product.prototype = Object.create({price:5000, code:"#31567"},
+  {
+    constructor:{value:Product},
+    say:{value:function(){
+      return "Product!!";
+    }
+  }
+});
+
+// 생성자로 하기 >> 생성자는 value를 다른걸로 바꿀 수 있다.
+var pr = new Product.prototype.constructor("wang");
+console.log(pr._pName);
+console.log(pr.price);
+console.log(pr.code);
+console.log(pr.say());
+
+var pr2 = new Product("wang wang");
+console.log(pr2._pName);
+console.log(pr2.price);
+console.log(pr2.code);
+console.log(pr2.say());
+*/
+
+// es6 class
+class Product{
+  constructor(name){    // name을 받는 생성자 생성 >> 위처럼 복잡하게 쓰지 않아도 된다.
+    this._pName = name;
+  }
+  on(){
+    console.log("on()..." + this._pName);
+    return "sojeong";
+  }
+}
+
+var pro = new Product("k001");
+console.log(pro._pName);
+pro.on();   // 바로 콜 하면 됨.
+console.log(pro.on());  // 리턴값 없으면 undefined 나옴
+
+// Product의 내용을 그대로 받고 싶을 때
+class NoteBook extends Product{
+  off(){
+    console.log("off()..." + this._pName);  // super._pName으로 하면 Product 클래스에 있는 pName을 뜻한다.
+  }
+}
+
+var note = new NoteBook("lg-001");
+console.log(note._pName);
+note.on();
+note.off();
+
+
+</script>
+</script>
+</head>
+
+<body>
+  <h1>object</h1>
+
+</body>
+</html>

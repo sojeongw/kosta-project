@@ -1,0 +1,244 @@
+/******************************************************************************/
+/* style.css */
+/******************************************************************************/
+
+html {
+	height:100%;
+	overflow-y:scroll;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+form {
+  margin: 0;
+}
+ul, ol {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+
+/* Headline */
+h1 {
+  font-size: 140%;
+}
+h2 {
+  font-size: 120%;
+}
+h3 {
+  font-size: 110%;
+}
+h4, h5 {
+  font-size: 100%;
+}
+h6 {
+  font-size: 100%;
+}
+em {
+  font-weight: bold;
+  font-style: normal;
+  color: #FF0000;
+}
+p {
+  margin: 10px 0;
+  clear:both;
+}
+
+/* Layout */
+body {
+  font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック','Helvetica Neue',sans-serif;
+  font-size: 14px;
+  color: #333;
+  text-align: center;
+	background:#e3d7a3 ;
+}
+
+#Container {
+	position:relative;
+  width: 96%;
+	height:auto;
+  margin: 0 auto;
+  padding-bottom:40px;
+  text-align: left;
+}
+
+/* Header */
+#Header {
+  width: 100%;
+  min-height: 42px;
+	margin: 0;
+	border-top:2px solid #3cb371;
+	background:#fafafa ;
+}
+
+#Sitename {
+	height:150px;
+	font-size: 36px;
+	font-family: 'Droid Serif';
+	color:#000;
+	padding:100px;
+	background: transparent url(../images/logo.jpg) no-repeat center center;
+}
+
+#Sitename:first-letter {
+	font-size: 120%;
+}
+
+#Sitename div#Slogan {
+	font-size: 14px;
+	width:90%;
+	margin:0 auto;
+	background: transparent;
+}
+
+/* GRID CONTENT */
+#grid-content {
+	width:100%;
+	margin-top:20px;
+	margin-bottom:30px;
+}
+#grid-content div {
+	float:left;
+	width: 195px;
+	line-height:1.5;
+	color: #000;
+	margin: 5px;
+	padding: 3px 15px 10px;
+	background-color: #fafafa;
+}
+#grid-content div.large {
+	float:left;
+	width: 430px;
+	margin: 5px;
+	padding: 3px 15px 10px;
+	font-size:14px;
+}
+#grid-content div p {
+	margin: 13px 0 0;
+}
+
+* html #grid-content div.large {
+	overflow:hidden;
+}
+
+#grid-content div.large div {
+	width: 96%;
+}
+
+#grid-content div.imagebox {
+	padding:0;
+	margin:0 0 0 5px;
+}
+/* コンテンツ内画像横幅を自動縮小（IE以外） */
+.imagebox img {
+	max-width: 95% !important;
+	height: auto;
+	width: auto\9; /* ie8 */
+	margin:0;
+}
+
+/* END GRID CONTENT */
+
+
+/* タイトルの設定 */
+#grid-content h2 {
+	margin:10px 0;
+	padding:3px;
+  padding-left:15px;
+	color:#fff;
+}
+
+.BlockTitle_a {
+	background:#ea5532;
+}
+.BlockTitle_b {
+	background:#f39800;
+}
+.BlockTitle_c {
+	background:#2cb4ad;
+}
+.BlockTitle_d {
+	background:#5a4498;
+}
+.BlockTitle_e {
+	background:#0073a8;
+}
+
+
+/* Footer */
+#Footer {
+  width: 100%;
+  min-height:50px;
+	background:#fafafa;
+	clear:both;
+}
+
+/* footer menu */
+#user_menu_block {
+	position:relative;
+  margin: 0 auto;
+	text-align:center;
+}
+#user_menu_block ul{
+	text-align: center;
+	width:97%;
+	margin-left:2%;
+}
+#user_menu_block ul li{
+	height:20px;
+  display: -moz-inline-box;   
+  display: inline-block;
+	line-height:18px;
+}
+* html #user_menu_block ul li{
+  display: inline;   
+  zoom: 1;   
+}
+*+html #user_menu_block ul li{
+  display: inline;   
+  zoom: 1;   
+}
+
+#user_menu_block ul li a {
+  display: block;   
+	padding: 5px;
+}
+
+#user_menu_block a:hover{
+	color:green;
+	background:orange;
+}
+
+/******************************************************************************/
+
+/* clearfix */
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.clearfix {
+  display: inline-table;
+}
+
+/* Hides from IE-mac \*/
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+/* End hide from IE-mac */
+
+/******************************************************************************/
+#Header h1 ,
+#menu_button ,
+#iPhoneMenu {
+	display:none;
+}
+
+

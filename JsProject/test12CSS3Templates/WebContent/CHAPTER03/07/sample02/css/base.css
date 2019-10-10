@@ -1,0 +1,125 @@
+@charset "utf-8";
+
+body{
+margin:0; padding:0;
+/* for mozilla */
+background:url(../img/bg-back.png) repeat left top,
+-moz-linear-gradient(top,rgba(0,0,0,0.15),rgba(0,0,0,0)) no-repeat,
+#000;
+/* for webkit */
+background:url(../img/bg-back.png) repeat left top,
+-webkit-gradient(linear,left top,left bottom,from(rgba(0,0,0,0.15)),to(rgba(0,0,0,0))) no-repeat,
+#000;
+}
+
+.header{
+padding-top:50px;padding-bottom:50px;
+background:url(../img/headmask.png) no-repeat -11px -13px,
+url(../img/topimg01.png) no-repeat left top;
+}
+
+.header h1{
+margin:0 0 0 270px; padding:10px 0 10px;
+text-align:center;
+color:#FFF;
+background:#000;
+font:32px normal;
+line-height:1.5em
+}
+
+.header h1 strong{
+color:#FFD70E;
+font:50px bold;
+}
+
+div.contentWrap{
+position:relative;
+padding-top:42px;
+}
+
+ul.menu{
+position:absolute; top:0; right:90px;
+margin:0;
+list-style-type:none}
+
+ul.menu li{
+float:left;
+width:140px; height:30px;
+margin:0 10px 0 0; padding:16px 8px 0;
+background:url(../img/bg-tab01.png);
+color:#FFD70D;
+text-align:center;
+font-weight:bold;
+}
+ul.menu li a{
+color:#FFD70D;
+text-decoration:none
+}
+
+ul.menu li.active{
+background:url(../img/bg-tab02.png);
+color:#000;
+}
+ul.menu li.active a{
+color:#000;
+text-decoration:none
+}
+
+div.content{
+clear:both;
+margin:0 70px;
+-moz-border-image:url(../img/bg-border.png) 30 / 30px;
+-webkit-border-image:url(../img/bg-border.png) 30 / 30px;
+-o-border-image:url(../img/bg-border.png) 30 / 30px;
+border-image:url(../img/bg-border.png) 30 / 30px;
+}
+
+div.content div{
+background:url(../img/bg-contents-br.png) no-repeat right bottom,#FFD70F;
+}
+div.content p{
+margin:0 250px 0 0;
+line-height:1.3em;
+font-size:20px;
+font-weight:bold;
+}
+
+div.content p.read{
+margin-right:0; margin-bottom:1em;
+font-size:32px;
+line-height:1.1em;
+background:-moz-linear-gradient(#E1BF00,#FFD708);
+background:-webkit-gradient(linear,left top,left bottom,from(#E1BF00),to(#FFD708));
+background:-moz-linear-gradient(#E1BF00,#FFD708);
+}
+
+div.content p a{
+display:inline-block;
+height:30px;
+margin-right:16px; padding-left:36px;
+background:url(../img/bg-ico01.png) no-repeat left center;
+color:#000;
+}
+div.content p a:link{
+color:#000;
+text-decoration:underline;
+}
+div.content p a:visited{
+color:#000;
+text-decoration:underline;
+}
+div.content p a:hover{
+color:#000;
+text-decoration:none;
+}
+div.content p a:active{
+color:#000;
+text-decoration:underline;
+}
+
+p.copyright{
+margin-top:20px;
+text-align:center;
+font-size:small;
+color:#fff;
+}

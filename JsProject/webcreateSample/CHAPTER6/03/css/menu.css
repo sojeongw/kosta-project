@@ -1,0 +1,234 @@
+/******************************************************************************/
+/* css for header-menu */
+/******************************************************************************/
+
+
+/* Header Menu */
+#menu_m {
+	display:block;
+  width:98%;
+	margin:0 auto;
+	padding-top:2px;
+	text-align:center;
+}
+
+}
+* html #menu_m {
+  width:96%;
+	margin-left:1%;
+}
+#menu_m a:link,
+#menu_m a:visited {	
+  color: #000;
+	text-decoration: none;
+}
+#menu_m a:hover {
+    color: blue;
+}
+
+ul.mm {
+	position:relative;
+	text-align:center;
+	list-style: none;
+}
+ul.mm li {
+  display: -moz-inline-box;
+  display: inline-block;
+ 	margin: 0;
+	padding: 0;
+	height: 20px;
+	line-height:20px;
+	liststyle:none;
+}
+* html ul.mm li {
+    display: inline;
+    zoom: 1;
+}
+*+html ul.mm li {
+    display: inline;
+    zoom: 1;   
+}
+
+ul.mm li a {
+    color: #000;  
+    display: inline-block;  
+    padding: 3px;
+    text-decoration: none;  
+}
+
+* html ul.mm li a {
+	border:1px solid #ccc;
+}
+
+ul.mm li a:hover  { 
+    background: rgba(0,0,0,0.5);  
+}
+* html ul.mm li a:hover  { 
+    background: #ccc;  
+}
+
+ul.mm li a:active { 
+    background: rgba(0,0,0,0.1);  
+}
+
+
+/* Header Menu colors */
+#menu_m a:link,
+#menu_m a:visited {	
+    color: #000;
+}
+#menu_m a:hover {	
+    color: blue;
+}
+
+ul.mm li {
+  background: transparent;
+}
+ul.mm li a {
+	color: #000;
+	border-top: 10px solid #ffbf7f  ; 
+}
+ul.mm li a:hover {
+	background: #fff;
+}
+ul.mm li.active,
+ul.mm li.active a:hover  { 
+	background: #fff;
+	border-bottom: 1px solid #fff; 
+}
+
+ul.mm li a.mm_home {
+	border-top: 10px solid #ff7f7f ; 
+}
+ul.mm li a.mm_a {
+	border-top: 10px solid #ff7fbf ; 
+}
+ul.mm li a.mm_b {
+	border-top: 10px solid #ff7fff ; 
+}
+ul.mm li a.mm_c {
+	border-top: 10px solid #bf7fff ; 
+}
+ul.mm li a.mm_d {
+	border-top: 10px solid #7f7fff ; 
+}
+ul.mm li a.mm_e {
+	border-top: 10px solid #7fbfff ; 
+}
+ul.mm li a.mm_f {
+	border-top: 10px solid #7fffd4 ; 
+}
+ul.mm li a.mm_g {
+	border-top: 10px solid #00ff7f ; 
+}
+ul.mm li a.mm_h {
+	border-top: 10px solid #7fff00 ; 
+}
+ul.mm li a.mm_i {
+	border-top: 10px solid #adff2f ; 
+}
+ul.mm li a.mm_j {
+	border-top: 10px solid #ffd700 ; 
+}
+
+ul.mm li a.mm_home:hover {
+	border-bottom: 10px solid #ff7f7f ; 
+}
+ul.mm li a.mm_a:hover {
+	border-bottom: 10px solid #ff7fbf ; 
+}
+ul.mm li a.mm_b:hover {
+	border-bottom: 10px solid #ff7fff ; 
+}
+ul.mm li a.mm_c:hover {
+	border-bottom: 10px solid #bf7fff; 
+}
+ul.mm li a.mm_d:hover {
+	border-bottom: 10px solid #7f7fff; 
+}
+ul.mm li a.mm_e:hover {
+	border-bottom: 10px solid #7fbfff; 
+}
+ul.mm li a.mm_f:hover  {
+	border-bottom: 10px solid #7fffd4; 
+}
+ul.mm li a.mm_g:hover {
+	border-bottom: 10px solid #00ff7f; 
+}
+ul.mm li a.mm_h:hover {
+	border-bottom: 10px solid #7fff00; 
+}
+ul.mm li a.mm_i:hover {
+	border-bottom: 10px solid #adff2f; 
+}
+ul.mm li a.mm_j:hover {
+	border-bottom: 10px solid #ffd700; 
+}
+
+* html ul.mm li a.mm_home:hover,
+* html ul.mm li a.mm_a:hover,
+* html ul.mm li a.mm_b:hover,
+* html ul.mm li a.mm_c:hover,
+* html ul.mm li a.mm_d:hover,
+* html ul.mm li a.mm_e:hover,
+* html ul.mm li a.mm_f:hover,
+* html ul.mm li a.mm_g:hover,
+* html ul.mm li a.mm_h:hover,
+* html ul.mm li a.mm_i:hover,
+* html ul.mm li a.mm_j:hover {
+	border-bottom: none ; 
+}
+
+ul.mm li a.mm_homes {
+	border:1px dotted #ffbf7f;
+	border-top:10px solid #ffbf7f;
+}
+ul.mm li a.mm_as {
+	border:1px dotted #ff7fbf;
+	border-top:10px solid #ff7fbf;
+}
+ul.mm li a.mm_bs {
+	border:1px dotted #ff7fff;
+	border-top:10px solid #ff7fff;
+}
+ul.mm li a.mm_cs {
+	border:1px dotted #bf7fff;
+	border-top:10px solid #bf7fff;
+}
+ul.mm li a.mm_ds {
+	border:1px dotted #7f7fff;
+	border-top:10px solid #7f7fff;
+}
+ul.mm li a.mm_es {
+	border:1px dotted #7fbfff;
+	border-top:10px solid #7fbfff;
+}
+ul.mm li a.mm_fs {
+	border:1px dotted #7fffd4;
+	border-top:10px solid #7fffd4;
+}
+ul.mm li a.mm_gs {
+	border:1px dotted #00ff7f;
+	border-top:10px solid #00ff7f;
+}
+ul.mm li a.mm_hs {
+	border:1px dotted #7fff00;
+	border-top:10px solid #7fff00;
+}
+ul.mm li a.mm_is {
+	border:1px dotted #adff2f;
+	border-top:10px solid #adff2f;
+}
+ul.mm li a.mm_js {
+	border:1px dotted #ffd700;
+	border-top:10px solid #ffd700;
+}
+
+.selected {
+    background: #fafafa;
+}
+
+ul.mm li a.selected {
+    background: #fafafa;
+}
+

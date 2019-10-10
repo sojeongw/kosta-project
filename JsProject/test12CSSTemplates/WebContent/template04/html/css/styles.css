@@ -1,0 +1,105 @@
+/* CSS Document */
+body{padding:0px; margin:0px; background:#fffbff; color:#a4a4a4; font:10px/14px Tahoma, sans-serif;}
+div, p, ul, h2, h3, h4, img{padding:0px; margin:0px;}
+ul{list-style-type:none;}
+
+.clear {clear: both; margin: 0px}
+
+ul.bullet li{font:10px/14px Tahoma, sans-serif; background:url(../images/bullet.gif) 0 4px no-repeat; padding-left:15px;}
+ul.bullet li a{color:#22454d; text-decoration:none;}
+ul.bullet li a:hover{color:#22454d; text-decoration:underline;}
+
+p span.headline{font:12px/12px Trebuchet MS, sans-serif; color:#605caf; text-transform:uppercase;}
+
+/* TOP */
+
+#topPanel{width: 744px; height: 99px; margin:0 auto; position:relative; background:url(../images/b_top.gif) 0 0 no-repeat}
+#logo{position:absolute; top:24px; left:254px}
+
+/* HEADER */
+
+#header{width: 744px; height: 242px; margin:0 auto; position:relative; background:url(../images/b_header.jpg) 0 0 no-repeat}
+
+#header ul.menu{position:absolute; top:0; left:5px; width:734px}
+#header ul.menu li{float:left;}
+#header ul.menu li a{height:55px; display:block; text-indent:-20000px; }
+#header ul.menu li a:hover{height:55px;}
+
+#header ul.menu li.home a{width:141px; background:url(../images/btn_1.jpg) 0 5px no-repeat; }
+#header ul.menu li.home a:hover{width:141px; background:url(../images/btn_1_over.jpg) 0 5px no-repeat;}
+
+#header ul.menu li.about a{width:112px; background:url(../images/btn_2.jpg) 0 5px no-repeat; }
+#header ul.menu li.about a:hover{width:112px; background:url(../images/btn_2_over.jpg) 0 5px no-repeat;}
+
+#header ul.menu li.services a{width:109px; background:url(../images/btn_3.jpg) 0 5px no-repeat; }
+#header ul.menu li.services a:hover{width:109px; background:url(../images/btn_3_over.jpg) 0 5px no-repeat;}
+
+#header ul.menu li.therapies a{width:119px; background:url(../images/btn_4.jpg) 0 5px no-repeat; }
+#header ul.menu li.therapies a:hover{width:119px; background:url(../images/btn_4_over.jpg) 0 5px no-repeat;}
+
+#header ul.menu li.staff a{width:116px; background:url(../images/btn_5.jpg) 0 5px no-repeat; }
+#header ul.menu li.staff a:hover{width:116px; background:url(../images/btn_5_over.jpg) 0 5px no-repeat;}
+
+#header ul.menu li.contact a{width:127px; background:url(../images/btn_6.jpg) 0 5px no-repeat; }
+#header ul.menu li.contact a:hover{width:127px; background:url(../images/btn_6_over.jpg) 0 5px no-repeat;}
+
+#header ul.menu li.line{width:2px; height:55px; background:url(../images/spacer_m.gif) 0 0 no-repeat;}
+
+#adheader{position:absolute; top:55px; left:0}
+#slogan{position:absolute; top:94px; left:260px}
+
+/* CONTENT */
+
+#content{width: 744px; margin:0 auto; position:relative; background:url(../images/b_content.gif) 0 0 repeat-x; margin-top:7px; margin-bottom:20px}
+
+#leftPan{width:232px; float:left; margin-right:22px}
+#news{width:208px; margin:23px 0 22px 19px}
+#news h2{ height:23px; background:url(../images/h_news.gif) 0 0 no-repeat; position:relative; margin-bottom:18px}
+.newsstory{width:201px; margin-left:7px; border-bottom: #d1cfd1 1px dotted; margin-bottom:10px}
+.newsstory p span.date{display:block; width:74px; height:16px; padding:2px 0 0 11px; font:12px/14px Trebuchet MS, sans-serif; font-weight:bold; background:#d3d7db; color:#22454d; margin-bottom:7px;}
+.newsstory p {margin-bottom:10px;}
+.newsstory p a{color:#22454d; font:10px/14px Tahoma, sans-serif; text-decoration:none}
+.newsstory p a:hover{color:#a65b99; }
+#news ul.bullet{margin:0 0 0 108px}
+
+#rightPan{width:470px; float:left; }
+#rightPan p a{color:#22454d; font:10px/14px Tahoma, sans-serif; text-decoration:underline}
+#rightPan p a:hover{color:#22454d;  text-decoration:none}
+
+#welcome{ margin-bottom:35px; margin-top:23px}
+#welcome h2{width:470px; height:35px; background:url(../images/h_welcome.gif) 0 0 no-repeat; position:relative; margin-bottom:16px; border-bottom:#d1cfd1 1px solid}
+#welcome img{float:left; margin-left:2px; margin-right:16px; width:110px}
+#welcome p{width: 337px; float:left; margin-bottom:10px}
+#welcome p span.headline{display:block; margin-bottom:10px}
+#welcome ul.bullet{margin:0 0 0 10px; float:left; width:100px}
+
+#services{width:180px; float:left; margin-right:26px}
+#services h2{height:23px; background:url(../images/h_services.gif) 0 0 no-repeat; position:relative; margin-bottom:20px;}
+
+#services ul{margin-left:8px}
+#services ul li{font:11px/16px Tahoma, sans-serif; background:url(../images/arrow.gif) 0 4px no-repeat; padding-left:16px; margin-bottom:4px}
+#services ul li a{color:#22454d; text-decoration:none;}
+#services ul li a:hover{color:#22454d; text-decoration:underline;}
+
+#solutions{width:263px; float:left;}
+#solutions h2{height:23px; background:url(../images/h_services.gif) 0 0 no-repeat; position:relative; margin-bottom:19px;}
+.solutionitem{width:249px; margin-left:6px; margin-bottom:22px}
+.solutionitem img{width:69px; float:left; margin-right:11px;}
+.solutionitem p span.headline{display:block; margin-bottom:7px; margin-top:2px}
+
+#solutions ul.bullet{margin:0 0 0 190px; }
+
+
+/* FOOTER */
+
+#footer{background:url(../images/b_footer.gif) 0 0 repeat-x; height:72px; position:relative; margin:0 auto; width:744px;}
+
+#footer p{padding: 25px 0 0 0; font:11px/18px Trebuchet MS, sans-serif; font-weight:normal; text-align:center; color:#605caf;}
+#footer p a{font:11px/18px Trebuchet MS, sans-serif; font-weight:normal; color:#605caf; text-decoration:none; padding: 0 5px }
+#footer p a:hover{text-decoration:none; background:#605caf; color:#fff}
+#sponsor{
+	width:756px;
+	margin:0 auto;
+	text-align: center;
+	padding: 10px 0px 15px 0px;
+}

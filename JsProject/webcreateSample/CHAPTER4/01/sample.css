@@ -1,0 +1,159 @@
+@charset "utf-8";
+
+/*パソコンチェック用*/
+
+html {
+background:
+#EEE;
+}
+body {
+margin: 0 auto;
+width:320px;
+}
+
+body {
+/*margin: 0;
+padding: 0;*/
+background:#FFF;
+color: #333;
+font-size: 14px;
+line-height: 1.2;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+ul, li, dl, dt, dd {
+margin: 0;
+padding: 0;
+}
+
+li {
+list-style-type: none;
+}
+
+
+/* サイト名-------------------- */
+body > header {
+margin: 0 15px 0 15px;
+border-radius: 0 0 10px 10px;
+display: block;
+background: #333;
+height: 105px;
+position: relative;
+}
+
+
+body > header > h1 {
+width: 175px;
+height: 105px;
+padding-top: 70px;
+margin-left: 50%;
+-webkit-border-radius: 88px;
+border-radius: 88px;
+text-align:center;
+color: #F90;
+display: block;
+background: #E1E1E1;
+position: absolute;
+top: -50px;
+left: -90px;
+font-family: 'Dosis', sans-serif;
+font-weight: 700;
+font-size: 48px;
+}
+body > header > h1 span {
+font-weight: 500;
+font-size: 20px;
+margin-bottom: -.3em;
+display: block;
+}
+
+/* ページレイアウト
+------------------------------------ */
+article, section, aside {
+display: block;
+}
+article {
+margin: 70px 15px 0 15px;
+line-height: 1.4;
+}
+article div.photo {
+background: url(img/alpha.png);
+border: 1px solid #CCC;
+position: relative;
+text-align: center;
+}
+article div.photo canvas,
+article div.photo img {
+width: 154px;
+height: 149px;
+padding: 10px;
+margin: 0 auto;
+}
+article div.photo strong {
+display: block;
+background-repeat: no-repeat;
+width: 53px;
+height: 53px;
+text-indent: -9999em;
+overflow: hidden;
+position: absolute;
+top: 7px;
+left: 6px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1),(min-device-pixel-ratio: 1) {
+article div.photo strong {
+background-image: url(img/new.png);
+}
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2),(-webkit-min-device-pixel-ratio: 1.5),(min-device-pixel-ratio: 2),(min-device-pixel-ratio: 1.5) {
+article div.photo strong {
+background-image: url(img@2/new.png);
+background-size: contain;
+}
+}
+
+article h1 {
+font-size: 25px;
+font-weight: normal;
+}
+
+article p:last-child {
+font-size: 25px;
+}
+
+
+/* ページレイアウト:フッタ
+------------------------------------ */
+footer {
+margin: 15px 15px 0 15px;
+padding: 20px;
+border-radius: 10px 10px 0 0;
+text-align:center;
+color: #FFF;
+display: block;
+background: #333;
+}
+
+footer small {
+color: #F90;
+display: block;
+font-size: 12px;
+font-family: 'Dosis', sans-serif;
+}
+
+/* ページ下部ナビ
+------------------------------------ */
+nav ul {
+margin: 0 0 1em 0;
+text-align: center;
+}
+nav ul li {
+display: inline;
+color: #F00;
+font-size: 13px;
+margin: 0 .5em;
+}
+nav ul li a {
+color: #CCC;
+}
+

@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+/**
+@prefix : <http://purl.org/net/ns/doas#> .
+</styles/ie6_7_8_9.css> a :CSSstylesheet;
+ :shortdesc "ie6_7_8_9.css";
+ :dependencies "none" .
+*/
+
+/*----------------------------------------------------
+    IE6_7_8_9 hack
+----------------------------------------------------*/
+#demoArea ul#nav01 li a {
+	background: #fff5e5;
+}
+#demoArea ul#nav02 > li:first-child a {
+	background: #ffeaef;
+}
+#demoArea ul#nav02 li a {
+	background: #e5f5fa;
+}
+#demoArea ul#nav02 ul li a {
+	background: #e5f5ef;
+}
+#demoArea ul#nav02 ul ul li a {
+	background: #efefef;
+}
+#demoArea ul#nav02 ul ul ul li a {
+	background: #f5f5f5;
+}

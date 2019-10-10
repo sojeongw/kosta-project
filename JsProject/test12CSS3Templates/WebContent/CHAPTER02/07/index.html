@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>スマートフォンサイトでよく使う便利なUIフォーム</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+
+<link rel="index" href="/">
+
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, maximum-scale=1"/>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/form.css">
+<script src="js/jquery.js?ver=1.7.1"></script>
+
+<script type="text/javascript">
+$(function(){
+	$('.inputTextCL').bind('click',function(){
+		$(this).prev().val('');
+		return false;
+	}); 
+});
+</script>
+</head>
+
+<body>
+<header>
+<h1 class="globalHeaderLogo"><img src="images/no1_logo.png" alt="Studio Panda Space"></h1>
+</header>
+
+<article class="mainArticle">
+
+<section class="mainHead">
+<h1>■申し込みフォーム</h1>
+<p>申し込みはこちらからおねがいします。</p>
+</section>
+
+<section class="mainSec">
+<form action="#">
+
+<h2 class="checkTitle">お名前</h2>
+<p class="formText"><input class="name" type="text" placeholder="例）日本太郎" value=""><a class="inputTextCL" href="#">×</a></p>
+
+<h2 class="checkTitle">フリガナ</h2>
+<p class="formText"><label><input class="furi" type="text" placeholder="例）ニホンタロウ" value=""><a class="inputTextCL" href="#">×</a></label></p>
+
+<h2 class="checkTitle">メールアドレス</h2>
+<p class="formText"><label><input class="address" type="email" placeholder="例）taro@panda-space.com" value=""><a class="inputTextCL" href="#">×</a></label></p>
+
+<ul class="mailMagSet">
+<li>
+<h2 class="checkTitle">メールマガジンの購読</h2>
+<p class="formCheck"><label><input type="checkbox" name="mailMag" value=""></label></p>
+</li>
+<li>
+<h2 class="checkTitle">メールマガジンの形式</h2>
+<ul class="radioSet">
+ <li><input type="radio" name="mailType" id="no1" value="テキスト"><label for="no1">テキスト</label></li>
+ <li><input type="radio" name="mailType" id="no2" value="HTML"><label for="no2">HTML</label></li>
+ <li><input type="radio" name="mailType" id="no3" value="携帯"><label for="no3">携帯</label></li>
+</ul>
+</li>
+</ul>
+
+<input type="submit" value="送信">
+</form>
+
+<!-- / .mainSec --></section>
+<!-- / .mainArticle --></article>
+
+<footer class="globalFooter">
+<p class="copyringht">Studio Panda Space</p>
+<!-- / .globalFooter --></footer>
+</body>
+</html>

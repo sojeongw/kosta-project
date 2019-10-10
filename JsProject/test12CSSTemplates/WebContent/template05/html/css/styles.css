@@ -1,0 +1,139 @@
+/* CSS Document */
+body{padding:0px; margin:0px; background:#fff url(../images/b_body.gif) 0 0 repeat-x; color:#848484; font:10px/14px Tahoma, sans-serif;}
+div, p, ul, h2, h3, h4, img{padding:0px; margin:0px;}
+ul{list-style-type:none;}
+
+.clear {clear: both; margin: 0px; height:0}
+
+p a{font:10px/14px Tahoma, sans-serif; color:#639ce1; text-decoration:underline;}
+p a:hover{ color:#000; text-decoration:none;}
+
+.headline{font:11px/14px Trebuchet MS, sans-serif; color:#454b55; font-weight:bold}
+
+#container{width:718px; margin:0 auto;}
+
+/* TOP */
+
+#topPan{width:718px; height:95px; position:relative;}
+
+#topPan ul.menu{position:absolute; top:0; left:4px; width:710px}
+#topPan ul.menu li{float:left; width:110px; height:43px; margin-right:10px; background:url(../images/b_btns.jpg) 0 0 no-repeat; padding-top:52px;}
+#topPan ul.menu li a{ width:110px; height:15px; display:block; text-indent:-20000px;}
+#topPan ul.menu li a:hover{ width:110px; height:15px;}
+
+#topPan ul.menu li.home a{background:url(../images/btn_1.jpg) 19px 0 no-repeat; }
+#topPan ul.menu li.home a:hover{background:url(../images/btn_1_over.jpg) 19px 0 no-repeat;}
+
+#topPan ul.menu li.about a{background:url(../images/btn_2.jpg) 23px 0 no-repeat; }
+#topPan ul.menu li.about a:hover{background:url(../images/btn_2_over.jpg) 23px 0 no-repeat;}
+
+#topPan ul.menu li.hosting a{background:url(../images/btn_3.jpg) 27px 0 no-repeat; }
+#topPan ul.menu li.hosting a:hover{background:url(../images/btn_3_over.jpg) 27px 0 no-repeat;}
+
+#topPan ul.menu li.solutions a{background:url(../images/btn_4.jpg) 20px 0 no-repeat; }
+#topPan ul.menu li.solutions a:hover{background:url(../images/btn_4_over.jpg) 20px 0 no-repeat;}
+
+#topPan ul.menu li.support a{background:url(../images/btn_5.jpg) 26px 0 no-repeat; }
+#topPan ul.menu li.support a:hover{background:url(../images/btn_5_over.jpg) 26px 0 no-repeat;}
+
+#topPan ul.menu li.contacts {margin-right:0}
+#topPan ul.menu li.contacts a{background:url(../images/btn_6.jpg) 16px 0 no-repeat; }
+#topPan ul.menu li.contacts a:hover{background:url(../images/btn_6_over.jpg) 16px 0 no-repeat;}
+
+/* HEADER */
+
+#header{width:718px; height:211px; position:relative; background:url(../images/b_header.jpg) 0 0 no-repeat}
+#logo{position:absolute; top:1px; left:523px}
+
+.plan#plan01{position:absolute; top:1px; left:1px; width:261px; height:209px;  background:url(../images/b_p1.jpg) 0 0 no-repeat}
+.plan#plan02{position:absolute; top:1px; left:262px; width:261px; height:209px;  background:url(../images/b_p2.jpg) 0 0 no-repeat}
+
+.plan#plan01 h2{position: absolute; top:9px; left:127px; width:134px; height:53px; background:url(../images/h_p1.gif) 0 0 no-repeat;}
+.plan#plan02 h2{position: absolute; top:9px; left:127px; width:134px; height:53px; background:url(../images/h_p2.gif) 0 0 no-repeat;}
+
+.plan#plan01 img#img_p1{position: absolute; top:9px; left:0; }
+.plan#plan02 img#img_p2{position: absolute; top:9px; left:0; }
+
+.plan#plan01 img#price_p1{position: absolute; top:162px; left:21px; }
+.plan#plan02 img#price_p2{position: absolute; top:162px; left:21px; }
+
+.plan ul.d01{position:absolute; top:70px; left:127px; width:80px}
+.plan ul.d01 li{font:10px/14px Tahoma, sans-serif; padding-left:3px; height:14px; text-transform:uppercase; color:#fff}
+.plan ul.d01 li.back{background:#849a28}
+
+.plan ul.d02{position:absolute; top:70px; left:207px; width:34px}
+.plan ul.d02 li{font:10px/14px Tahoma, sans-serif; padding-right:4px; height:14px; text-transform:uppercase; color:#fff; text-align:right}
+.plan ul.d02 li.back{background:#849a28}
+
+ul.btns{width:72px; position:absolute; top:148px; left:156px}
+ul.btns li{width:72px; height:18px; text-align:center; padding-top:4px}
+ul.btns li a{font:10px/14px Tahoma, sans-serif; color:#0c292b; text-decoration:none}
+ul.btns li a:hover{ text-decoration:underline}
+ul.btns li.details{background:url(../images/b_btn_details.gif) 0 0 no-repeat; margin-bottom:2px}
+ul.btns li.order{background:url(../images/b_btn_order.gif) 0 0 no-repeat}
+
+
+/* CONTENT */
+
+#content{width:716px;position:relative;}
+
+#leftPan{width:523px; margin:0 20px 0 0; float:left;}
+#rightPan{width:165px;float:left;}
+
+#dedicated{width:523px; height:209px; margin-bottom:20px; background: url(../images/b_dedicated.jpg) 0 0 no-repeat; position:relative}
+#dedicated h2{height:59px; position:relative; background:url(../images/h_dedicated.gif) 0 0 no-repeat; margin:17px 0 0 250px}
+#dedicated img#price_dedicated{position:absolute; top:82px; left:237px}
+#dedicated img#btn_dedicated{position:absolute; top:158px; left:256px}
+#dedicated ul{width:105px; position:absolute; top:90px; left:405px}
+#dedicated ul li{height:18px; background: url(../images/arrow1.gif) 0 6px no-repeat; padding-left:10px; font:10px/14px Tahoma, Geneva, sans-serif; color:#848484}
+#dedicated ul li a{ color:#848484; text-decoration:underline}
+#dedicated ul li a:hover{ color:#000; text-decoration:none}
+
+p.subtitle{font:10px/12px Arial, Helvetica, sans-serif; color:#b2b2b2; padding:5px 1px; border-bottom:#444f51 1px dotted; border-top:#444f51 1px dotted; text-transform:uppercase;}
+
+ul.bullets li{height:20px; background: url(../images/arrow1.gif) 0 6px no-repeat; padding-left:10px; font:10px/14px Tahoma, Geneva, sans-serif; color:#8eb61c}
+ul.bullets li a{ color:#8eb61c; text-decoration:underline}
+ul.bullets li a:hover{ color:#000; text-decoration:none}
+
+#services{width:224px; float:left; margin:0 34px 0 16px;}
+#services h2{height:34px; position:relative; background:url(../images/h_services.gif) 0 0 no-repeat; margin-bottom:6px}
+#services img{margin-bottom:12px}
+#services p {margin-bottom:15px}
+#services p span.headline{display:block; margin-bottom:8px}
+#services ul.bullets{margin-left:10px}
+#services p.subtitle{margin-bottom:10px}
+
+
+#solutions{width:224px; float:left;}
+#solutions h2{height:34px; position:relative; background:url(../images/h_solutions.gif) 0 0 no-repeat; margin-bottom:6px}
+#solutions img{margin-right:10px; float:left; margin-bottom:12px}
+#solutions p {margin-bottom:15px;}
+
+#solutions p.headline{float:left; width:111px; margin-bottom:12px}
+#solutions ul.bullets{margin-left:10px}
+#solutions p.subtitle{margin-bottom:10px}
+#included{margin-top:26px; margin-bottom:20px}
+#included h2{height:22px; position:relative; background:url(../images/h_included.gif) 0 0 no-repeat; margin-bottom:5px}
+#included ul li{height:21px; background: url(../images/check.gif) 1px 7px no-repeat; padding-left:24px; font:11px/14px Tahoma, Geneva, sans-serif; color:#444f51; border-bottom: #444f51 1px dotted; padding-top:5px}
+#included ul li a{ color:#444f51; text-decoration:none}
+#included ul li a:hover{ color:#444f51; text-decoration:underline}
+
+#why h2{height:22px; position:relative; background:url(../images/h_why.gif) 0 0 no-repeat; margin-bottom:20px}
+.whyTopic{margin-bottom:20px;}
+.whyTopic img{float:left; margin-right:12px}
+.whyTopic p{padding-left:5px}
+.whyTopic p.link{padding-left:0; width:115px; float:left}
+.whyTopic .clear{height:6px}
+
+/* FOOTER */
+
+#footer{height:70px; clear:both; margin:10px auto 0 auto; background:url(../images/b_footer.gif) 0 0 repeat-x}
+#footer p{padding: 16px 0 0 0; font:11px/16px Trebuchet MS, sans-serif; font-weight:normal; text-align:center; color:#ffffff;}
+#footer p a{font:11px/16px Trebuchet MS, sans-serif; font-weight:normal; color:#ffffff; text-decoration:none; padding: 0 3px }
+#footer p a:hover{text-decoration:none; background:#ffffff; color:#000}
+#sponsor{
+	width:756px;
+	margin:0 auto;
+	text-align: center;
+	padding: 10px 0px 15px 0px;
+}

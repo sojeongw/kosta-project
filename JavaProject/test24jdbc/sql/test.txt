@@ -1,0 +1,40 @@
+create user test identified by hi123456;
+grant connect, resource to test;
+만들 수 있는 권한이 system에게만 있기 때문에 test는 다른 사용자를 생성할 수 없다.
+
+drop user test;
+--------------------------------------------
+create table test (
+  num number, name varchar2(20) 
+);
+
+drop table test;
+--------------------------------------------
+pk 생성을 위한 시퀀스 생성
+insert into test(num, name) values(seq_test.nextval, 'choi');
+1, 2, 3...순서로 choi가 자동으로 들어가게 함 = auto increment
+시퀀스 사용할 때는 깨끗이 비운 상태에서 해야 충돌나지 않는다.
+시퀀스 만들 때는 해당 숫자 건들지 말것
+--------------------------------------------
+입력
+insert into test(num, name) values('1', 'kim');
+insert into test(num, name) values('2', 'han');
+insert into test(num, name) values('3', 'choi');
+--------------------------------------------
+수정
+update test set num=3, name='yang'; = 모든 값을 다 이걸로 바꾸겠다
+조건에 의한 수정
+update test set num=3, name='yang' where num=2;
+update test set name='yang' where num=1;
+
+drop table test;
+--------------------------------------------
+create sequence seq_test; 값을 계속 증가시켜준다
+drop sequence seq_test;
+--------------------------------------------
+삭제 : 조건만 있으면 지울 수 있다
+delete from test where num=2;
+전체 지우기
+delete from test;
+자바에서 코딩으로 입력하면 auto commit이기 때문에 자동으로 다 해버린다.
+그래서 실수가 있으면 다 망하는 것.

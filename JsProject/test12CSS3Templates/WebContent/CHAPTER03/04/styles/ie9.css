@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+/**
+@prefix : <http://purl.org/net/ns/doas#> .
+</styles/ie9.css> a :CSSstylesheet;
+ :shortdesc "ie9.css";
+ :dependencies "none" .
+*/
+
+/*----------------------------------------------------
+    IE9 hack
+----------------------------------------------------*/
+#demoArea {
+	width: 560px;
+}
+p#zone02,
+p#zone03,
+p#zone04 {
+	display: none;
+}
+div.columns01 h2 {
+	font-size: 90px;
+}

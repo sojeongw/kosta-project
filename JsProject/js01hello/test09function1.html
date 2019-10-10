@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset=utf-8>
+  <title> java script </title>
+
+  <script type="text/javascript">
+  console.log("function");
+
+  // 함수를 담은 변수 >> 함수 변수 = 함수명
+  // 배열을 넣으면 배열 변수 = 배열명
+  // 오브젝트 변수 = 오브젝트명
+  var fn = function(){
+    console.log("fn()...");
+    return "kim";
+  };    // 할당 연산자가 있으니 세미콜론으로 마무리
+
+  fn();
+  console.log(fn);  // 함수 자체가 나온다. 콜 한게 아니니까. 함수도 하나의 데이터다.
+  console.log(fn());  // 콜한 '결과'를 출력한다.
+
+  // 함수를 인자로 받는 함수
+  function test(fn){
+    console.log(fn);
+  }
+
+  test();
+  // fn은 선언만 되어져있기 때문에 함수에서 undefined를 출력한다.
+  // test(1) 이라고 하면 1이 나오고 test("kim") 하면 kim이 나온다.
+  // 배열과 오브젝트를 줘도 똑같다.
+
+  // function 함수명 () >> 함수명을 안 쓰면 익명 함수
+  // var fn = function() 하면 var 다음에 이름을 지정해주니까 익명으로 해도 되지만
+  // 그냥 function 부터 시작하면 이름이 있어야 콜을 할 수 있으니 이름이 필요하다.
+  test(function(){});
+  // 이거는 그냥 function 데이터만 보내는 거라 이름이 의미가 없어서 익명 함수임.
+
+  // 함수니까 안에 코딩도 가능
+  test(function(){
+    return 10+20;
+  });
+  // 함수 자체만 출력
+
+  // 함수의 결과를 출력하고 싶다면
+  /* function test(fn){
+    console.log(fn());
+  } */
+  // 이렇게 괄호를 써서 콜 해줘야 한다.
+
+  // 인자를 준다면 콜한 쪽, 그러니까 24번 줄에서 주면 된다.
+  test(function(x, y){
+    return 10+20;
+  });
+  /*
+  function test(fn){
+    console.log(fn(11,22));
+  }
+  */
+
+  /////////////////////////////////
+
+  /*
+  function grade(fn){
+    console.log(fn);
+    console.log(fn());
+  }
+  */
+
+  // grade();
+  // undefined 출력. fn은 선언만 되어있고 값을 넘겨준 게 없기 때문.
+  // 즉, grade 함수를 call 하는데 fn 함수가 아직 선언만 되어있는 상태라 그렇다.
+  // grade(11);
+  // grade({arr:["test",3.14]});
+
+  // 이제서야 함수 출력
+  /*
+  grade(function(){
+    return [10,20];
+  });
+  */
+
+  ////////////////////////////
+
+  function grade(fn){
+    console.log(fn);
+    console.log(fn(100,200));   // grade(function())이 인자를 받게 되니까
+  }
+
+  grade(function(x,y){    // 여기에서 x,y 선언
+    return [x*10,y*20];
+  });
+
+  </script>
+</head>
+
+<body>
+  <h1>function</h1>
+
+</body>
+  </html>

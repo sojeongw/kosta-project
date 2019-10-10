@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+/**
+@prefix : <http://purl.org/net/ns/doas#> .
+</styles/ie8.css> a :CSSstylesheet;
+ :shortdesc "content.css";
+ :dependencies "none" .
+*/
+
+/*----------------------------------------------------
+    IE8 hack
+----------------------------------------------------*/
+ul#menu {
+    border-bottom: 1px solid #d2d2d2;
+}
+ul#menu li a {
+    background: #dcdcdc url(../images/common/nav_icon_01.gif) no-repeat 10px center;
+}
+ul#menu ul {
+    padding-left: 0;
+    border-bottom: 1px solid #d2d2d2;
+}

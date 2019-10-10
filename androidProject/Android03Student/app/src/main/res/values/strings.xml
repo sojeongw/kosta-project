@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Android03Student</string>
+    <string name="btn_insert">insert</string>
+    <string name="btn_insertOK">insertOK</string>
+    <string name="btn_select">select</string>
+    <string name="btn_deleteOK">deleteOK</string>
+
+    <string name="txt_num">num</string>
+    <string name="txt_1">1</string>
+    <string name="txt_name">name</string>
+    <string name="txt_kim">kim</string>
+    <string name="txt_kor">kor</string>
+    <string name="txt_100">100</string>
+    <string name="txt_eng">eng</string>
+    <string name="txt_80" >80</string>
+    <string name="txt_math">math</string>
+    <string name="txt_50">50</string>
+    <string name="btn_updateOK">updateOK</string>
+</resources>

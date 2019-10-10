@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="test.semi.diet">
+
+	<insert id="insertMember" parameterType="test.semi.diet.model.UserVO">
+		insert
+		into login(id,pw)
+		values(#{id},#{pw})
+	</insert>
+
+	<insert id="insertMember2" parameterType="test.semi.diet.model.UserVO">
+		insert
+		into
+		member_info(id,name,age,gender,tel,profile_pic)
+		values(#{id},#{name},#{age},#{gender},#{tel},#{profile_pic})
+	</insert>
+
+	<insert id="insertMember3" parameterType="test.semi.diet.model.UserVO">
+		insert
+		into
+		member_goal(id,height,weight,goal)
+		values(#{id},#{height},#{weight},#{goal})
+	</insert>
+
+
+
+	<select id="selectAll" resultType="test.semi.diet.model.UserVO">
+		select log.id, log.pw,
+		mi.name, mi.age, mi.gender, mi.tel, mi.profile_pic, mg.height,
+		mg.weight, mg.goal
+		from login log, member_goal mg, member_info mi
+		where
+		log.id=mg.id and log.id=mi.id
+
+	</select>
+
+	<update id="up_goal" parameterType="test.semi.diet.model.UserVO">
+		update member_goal set
+		goal
+		=#{goal}
+		where id=#{id}
+	</update>
+
+	<update id="up_info" parameterType="test.semi.diet.model.UserVO">
+		update login set
+		pw=#{pw}
+		where id=#{id}
+	</update>
+
+	<update id="up_info2" parameterType="test.semi.diet.model.UserVO">
+		update member_goal set
+		height=#{height}, weight=#{weight}, goal=#{goal}
+		where id=#{id}
+	</update>
+
+	<update id="up_info3" parameterType="test.semi.diet.model.UserVO">
+		update member_info set
+		name=#{name},age=#{age}, gender=#{gender}, tel=#{tel},
+		profile_pic=#{profile_pic}
+		where id=#{id}
+	</update>
+
+
+
+	<insert id="insertBoard_member" parameterType="test.semi.diet.model.UserVO">
+		insert into
+		diet_board(board_num,id,content,board_date)
+		values(seq_board.nextval,
+		#{id}, #{content},sysdate)
+	</insert>
+
+	<update id="updateBoard_member" parameterType="test.semi.diet.model.UserVO">
+		update diet_board
+		set
+		content=#{content} where board_num=#{board_num}
+	</update>
+
+	<select id="selectOneBoard_member" resultType="test.semi.diet.model.UserVO">
+		select * from
+		diet_board where
+		board_num=#{board_num}
+	</select>
+
+	<delete id="deleteBoard_member" parameterType="int">
+		delete from
+		diet_board
+		where board_num=#{board_num}
+	</delete>
+
+
+	<insert id="insertUserkcal" parameterType="test.semi.diet.model.UserVO">
+		insert
+		into
+		diet_sports(id,sports_date,running,bicycle,rope,totalkcal)
+		values(#{id},sysdate,#{running},#{bicycle},#{rope},#{totalkcal})
+	</insert>
+	<update id="updateUserkcal" parameterType="test.semi.diet.model.KcalVO">
+		update diet_sports set
+		sports_date=sysdate,running=#{running},bicycle=#{bicycle},rope=#{rope},totalkcal=#{totalkcal}
+		where id=#{id}
+	</update>
+
+
+
+	<select id="selectAllUserkcal" resultType="test.semi.diet.model.KcalVO">
+		select * from
+		diet_sports
+		where id=#{id}
+	</select>
+
+	<select id="selectAllBoard_member" resultType="test.semi.diet.model.UserVO"
+		parameterType="hashmap">
+		select a.id,a.board_num,a.content,a.board_date, a.reply
+		from (select
+		rownum rnum,id, board_num,content,board_date,reply from
+		diet_board order by rnum
+		asc) a
+		where rnum between #{snum} and #{enum} order by board_num desc
+	</select>
+
+	<select id="selectPage" resultType="int">
+		select count(*) as cnt from
+		diet_board
+	</select>
+
+	<select id="selectId" resultType="test.semi.diet.model.UserVO">
+		select * from login
+	</select>
+
+
+</mapper>

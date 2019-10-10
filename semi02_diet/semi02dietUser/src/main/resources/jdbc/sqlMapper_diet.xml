@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="test.semi.diet">
+	<insert id = "insertMember" parameterType="test.semi.diet.model.UserVO">
+		insert into
+		dietmember(id,pw,name,age,gender,tel,height,weight,goal,grade)
+		values(#{id},#{pw},#{name},#{age},#{gender},#{tel},#{height},#{weight},#{goal},'newbie')
+	
+	</insert>
+	
+	<insert id="insertUserkcal" parameterType="test.semi.diet.model.KcalVO">
+		insert into
+		userkcal(id,day,totalkcal)
+		values(#{id},sysdate,#{totalkcal})
+	</insert>
+	
+	<insert id="insert" parameterType="test.semi.diet.model.UserVO">
+		insert into board(num, writer, content, reg_date)
+		values(seq_board.nextval, #{id}, #{content}, sysdate)
+	</insert>
+
+	<update id="up_goal" parameterType="test.semi.diet.model.UserVO">
+		update dietmember set
+		goal =#{goal}
+		where id=#{id}
+	</update> 
+	
+	<update id="up_info" parameterType="test.semi.diet.model.UserVO">
+		update dietmember set 
+		pw=#{pw}, name=#{name}, age=#{age}, gender=#{gender}, tel=#{tel}, 
+		height=#{height}, weight=#{weight}
+		where id=#{id}
+	</update>
+	
+<!-- 	<delete id="delete" parameterType="int"> -->
+<!-- 				delete from dietmember where -->
+<!-- 		num=#{num} -->
+<!-- 	</delete> -->
+
+	<select id="selectAll" resultType="test.semi.diet.model.UserVO">
+			select * from dietmember
+	</select>
+
+	<select id="selectUserkcal" resultType="test.semi.diet.model.KcalVO">
+			select * from userkcal where id=#{id}
+	</select>
+
+
+	<select id="selectBoardAll" resultType="test.semi.diet.model.UserVO">
+		select * from board
+	</select>
+
+
+
+
+
+
+<!-- 	<select id="selectOne" resultType="test.semi.diet.model.UserVO"> -->
+<!-- 		select * from dietmember where -->
+<!-- 		num=#{num} -->
+<!-- 	</select> -->
+	
+	
+	
+	
+	
+	
+	<!-- #{menu},#{price} -->
+<!-- 	<insert id="insertKcal" parameterType="semi.diet.model.UserVO"> -->
+<!-- 		insert into -->
+<!-- 		member(kcal) -->
+<!-- 		values(#{kcal}) -->
+<!-- 	</insert> -->
+
+
+<!-- 	<update id="update" parameterType="semi.diet.model.UserVO"> -->
+<!-- 		update semimember set -->
+<!-- 		id=#{id},pw=#{pw},name=#{name},tel=#{tel} -->
+<!-- 		where -->
+<!-- 		num=#{num} -->
+<!-- 	</update> -->
+
+<!-- 	<delete id="delete" parameterType="int"> -->
+<!-- 				delete from semimember where -->
+<!-- 		num=#{num} -->
+<!-- 	</delete> -->
+
+<!-- 	<select id="selectAll" resultType="test.semi.diet.model.UserVO"> -->
+<!-- 			select * from semimember  -->
+<!-- 	</select> -->
+
+<!-- 	<select id="selectOne" resultType="semi.diet.model.UserVO"> -->
+<!-- 		select * from semimember where -->
+<!-- 		num=#{num} -->
+<!-- 	</select> -->
+
+</mapper>

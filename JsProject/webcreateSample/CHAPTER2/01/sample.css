@@ -1,0 +1,249 @@
+@charset "UTF-8";
+
+* {
+margin: 0;
+padding: 0;
+}
+li {
+list-style: none;
+}
+a img {
+border: none;
+}
+body {
+padding: 5px;
+font-size: 14px;
+color: #000;
+line-height: 1.2;
+background: url(img/back.png) #333 top repeat-x;
+}
+a {
+text-decoration: none;
+}
+
+/*縁
+-----------------------------------------*/
+body > .wrapper {
+width: 970px;
+margin: 35px auto 160px;
+background: url(img/back22.png) repeat-y;
+position: relative;
+}
+body > .wrapper:before {
+content: "";
+display: block;
+width: 100%;
+height: 35px;
+background: url(img/back21.png) no-repeat center top;
+position: absolute;
+top: -35px;
+}
+
+/*ヘッダー
+-----------------------------------------*/
+body > .wrapper header {
+position: relative;
+}
+body > .wrapper header {
+position: relative;
+width: 900px;
+height: 90px;
+margin: 0 auto;
+}
+
+/*ヘッダー:メニュー
+-----------------------------------------*/
+nav > ul {
+position: absolute;
+right: 0;
+top: 0;
+}
+nav > ul > li {
+float: left;
+width: 105px;
+}
+nav > ul > li > a {
+display: block;
+height: 40px;
+line-height: 65px;
+text-align: center;
+opacity: .7;
+}
+nav > ul > li:hover > a {
+opacity: 1;
+}
+
+/*ヘッダー:パンくず
+-----------------------------------------*/
+#breadcrumbs {
+background: #333;
+border-radius: 5px;
+overflow: hidden;
+width: 900px;
+margin: 10px 0 0;
+}
+ 
+#breadcrumbs li {
+float: left;
+line-height: 1;
+}
+#breadcrumbs a {
+padding: .7em 1em .7em 3em;
+float: left;
+text-decoration: none;
+color: #000;
+position: relative;
+background-color: #AAAFB5;
+}
+#breadcrumbs li:first-child a {
+padding-left: 1.5em;
+border-radius: 5px 0 0 5px;
+}
+#breadcrumbs a:hover {
+color: #F00;
+background-color: #C7CBCD;
+background-image: -webkit-linear-gradient(left, #FFF, #C7CBCD);
+background-image: -moz-linear-gradient(left, #FFF, #C7CBCD);
+background-image: -ms-linear-gradient(left, #FFF, #C7CBCD);
+background-image: linear-gradient(left, #FFF, #C7CBCD);
+}
+#breadcrumbs a:after,
+#breadcrumbs a:before {
+content: "";
+position: absolute;
+top: 50%;
+margin-top: -1.5em;
+border-top: 1.5em solid transparent;
+border-bottom: 1.5em solid transparent;
+border-left: 1.5em solid;
+right: -1.5em;
+}
+#breadcrumbs a:after {
+border-left-color: #AAAFB5;
+z-index: 3;
+}
+#breadcrumbs a:before {
+border-left-color: #333;
+right: -1.6em;
+z-index: 2;
+}
+#breadcrumbs a:hover:after {
+border-left-color: #C7CBCD;
+}
+#breadcrumbs strong {
+padding: .7em 1em .7em 2.5em;
+color: #FFF;
+display: block;
+}
+
+/*内容
+-----------------------------------------*/
+div#contents {
+width: 890px;
+margin: 20px auto;
+background: url(img/here-ufo.jpg) no-repeat right 130px;
+position: relative;
+overflow: auto;
+}
+article {
+color: #FFF;
+}
+
+article h1 {
+color: #F00;
+font-size: 35px;
+margin-bottom: .5em;
+}
+article h1 small {
+color: #999;
+font-size: 14px;
+font-weight: normal;
+margin-left: 1em;
+}
+article h2 {
+color: #F00;
+font-size: 20px;
+border-top: 1px solid #F00;
+border-bottom: 5px double #F00;
+padding: 5px 0;
+float: right;
+width: 370px;
+margin-bottom: 1em;
+}
+article p {
+line-height: 1.6;
+margin-bottom: 1em;
+}
+article p small {
+font-size: 10px;
+}
+article > img {
+	float: left;
+	margin: 0 20px 10px 0;
+}
+.others {
+clear: both;
+padding: 50px 0 0;
+overflow: hidden;
+}
+.others:after {
+content: "";
+display: block;
+clear: both;
+}
+.others li a {
+display: block;
+width: 134px;
+height: 134px;
+text-align: center;
+margin-left: 52px;
+float: left;
+background: url(img/other.jpg);
+opacity: .8;
+}
+.others li:first-child a {
+margin-left: 0;
+}
+.others li a:hover {
+opacity: 1;
+}
+.others li a img {
+margin-top: 45px;
+}
+/*フッター
+-----------------------------------------*/
+footer {
+content: "";
+display: block;
+width: 100%;
+height: 160px;
+background: url(img/back23.png) no-repeat center bottom;
+position: absolute;
+bottom: -160px;
+}
+footer ul {
+padding-top: 75px;
+margin: 0 auto;
+text-align: right;
+width: 900px;
+}
+footer ul li {
+display:inline;
+margin: 0 0 0 1em;
+}
+footer ul li a {
+font-size: 12px;
+color: #999;
+}
+footer ul li a:hover {
+text-decoration: underline;
+}
+footer small {
+display: block;
+color: #999;
+font-size: 10px;
+margin: 10px auto;
+width: 900px;
+text-align: right
+}
+

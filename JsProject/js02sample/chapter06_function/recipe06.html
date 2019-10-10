@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	window.onload = function() {
+		var reverseArray = function(x, indx, str) {
+			return indx == 0 ? str :
+				reverseArray(x, --indx, (str += " "+ x[indx]));
+		};
+
+// 		var reverseArray = function(x, indx, str) {
+// 			return indx == 0 ?
+// 				str : arguments.callee(x, --indx, (str += " "+ x[indx]));
+							// 재귀호출 함수. 같은 결과를 낸다.
+// 		};
+
+	// 역순으로 뽑고 싶어서 쓴 것
+		var arr = new Array('apple', 'orange', 'peach', 'lime');
+		var str = reverseArray(arr, arr.length, "");
+		console.log(str);
+
+		var arr2 = [ 'car', 'boat', 'sun', 'computer' ];
+		str = reverseArray(arr2, arr2.length, "");	// 재귀호출
+		console.log(str);
+	}
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

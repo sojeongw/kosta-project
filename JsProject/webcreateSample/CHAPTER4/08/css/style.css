@@ -1,0 +1,69 @@
+body {
+	background-color: #F8F8F8;
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+div#loginform {
+	margin: 20px;
+	width: 500px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	background-color: #FFF;
+	-webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+h2 {
+	margin: 0;
+	padding: 10px 10px;
+	-webkit-border-radius: 10px 10px 0 0;
+	-moz-border-radius: 10px 10px 0 0;
+	border-radius: 10px 10px 0 0;
+	background-color: #AF478C;
+	color: #FFF;
+	font-size: 116%;
+}
+dl {
+	padding: 10px 25px;	
+}
+dl dt {
+	float: left;
+}
+dl dt, dl dd {
+	padding: 10px 1em 10px 0;
+}
+dl dd input {
+	padding: 3px;
+	width: 320px;
+	border: 1px solid #CCC;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+}
+div#submit {
+	padding: 0 25px 25px;
+	text-align: center;
+}
+a.button {
+	/*ボタンの基本スタイル*/
+	display: inline-block;
+	margin: 0;
+	padding: 10px 50px;
+	border: 1px solid #881B77;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	-webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+	-moz-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+	color: #FFF;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 108%;
+	/*背景グラデーション*/
+	background: -webkit-gradient(linear, left top, left bottom, from(#D898CA), color-stop(0.49, #BB659E), color-stop(0.5, #AF478C), to(#881B77));
+	background: -webkit-linear-gradient(top, #D898CA, #BB659E 49%, #AF478C 50%, #881B77);
+	background: -moz-linear-gradient(top, #D898CA, #BB659E 49%, #AF478C 50%, #881B77);
+	background: linear-gradient(top, #D898CA, #BB659E 49%, #AF478C 50%, #881B77);
+	filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr=#D898CA, endColorstr=#881B77, GradientType=0);
+}

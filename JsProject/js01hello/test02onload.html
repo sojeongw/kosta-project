@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset=utf-8>
+  <title> java script </title>
+  <script type="text/javascript">
+  // body 안에도 넣을 수 있고 type부터는 생략해서 script만 써도 된다.
+    console.log("test1");  // sysout이라고 생각하면 된다
+    window.onload = function(){ // body를 다 읽고 난 다음에 실행하겠다. body의 내용을 참조하고 있을 때 유용하다.
+      console.log("test3"); // 참조하고 싶을 때 이 안에다가 코딩하면 된다.
+    }
+    // 즉 실행 순서는 헤드 - 바디 - 이벤트. 만약 이게 없으면 1, 3, 2 순서로 나온다.
+  </script>
+</head>
+<body>
+  <h1>Hello 2</h1>
+    <script type="text/javascript">
+    console.log("test2");
+    </script>
+  </body>
+  </html>

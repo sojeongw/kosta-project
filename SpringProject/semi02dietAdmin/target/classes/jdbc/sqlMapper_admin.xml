@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="test.semi.admin.model">
+
+	<!-- 테스트용 보드 insert -->
+	<insert id="insert" parameterType="test.semi.admin.model.AdminVO">
+		insert into diet_board(
+		board_num, id, content, board_date)
+		values(
+		seq_board.nextval, #{id},
+		#{content}, sysdate)
+	</insert>
+
+	<update id="update" parameterType="test.semi.admin.model.AdminVO">
+		update diet_board set
+		reply =
+		#{reply}, board_date = sysdate
+		where board_num = #{board_num}
+	</update>
+
+	<delete id="delete" parameterType="int">
+		delete from diet_board where
+		board_num = #{board_num}
+	</delete>
+
+
+<!-- 	<select id="selectAll" resultType="test.semi.admin.model.AdminVO"> -->
+<!-- 		select * from diet_board order -->
+<!-- 		by board_num -->
+<!-- 	</select> -->
+
+	<select id="selectAll" resultType="test.semi.admin.model.AdminVO"
+		parameterType="hashmap">
+		select a.id,a.board_num,a.content,a.board_date, a.reply from (select rownum
+		rnum,id, board_num,content,board_date,reply from diet_board order by
+		rnum asc) a where rnum between #{snum} and #{enum}
+	</select>
+
+	<select id="selectOne" resultType="test.semi.admin.model.AdminVO">
+		select * from diet_board
+		where
+		board_num = #{board_num}
+	</select>
+
+
+	<select id="selectAll_login" resultType="test.semi.admin.model.AdminVO">
+		select log.id, log.pw,
+		mi.name, mi.age, mi.gender, mi.tel, mi.profile_pic, mg.height,
+		mg.weight, mg.goal
+		from login log, member_goal mg, member_info mi
+		where
+		log.id=mg.id and log.id=mi.id
+		
+	</select>
+
+	<!-- <select id="selectAllmember" resultType="test.semi.admin.model.AdminVO"> 
+		select * from member_info </select> -->
+	<select id="selectAllgrade" resultType="test.semi.admin.model.AdminVO">
+		select * from member_info
+		where id!='admin' and id!='manager'
+	</select>
+
+	<select id="selectOnemember" resultType="test.semi.admin.model.AdminVO">
+		select* from member_info
+		where id=#{id}
+	</select>
+
+	<update id="updateMember_info" parameterType="test.semi.admin.model.AdminVO">
+		update member_info
+		set
+		name = #{name}, age=#{age}, gender=#{gender}, tel=#{tel}
+		where
+		id=#{id}
+	</update>
+
+	<update id="updateMember_pw" parameterType="test.semi.admin.model.AdminVO">
+		update login set
+		pw =
+		#{pw}
+		where
+		id=#{id}
+	</update>
+
+	<delete id="deleteMember" parameterType="int">
+		delete from login where
+		id=#{id}
+	</delete>
+
+	<update id="updateGrade" parameterType="test.semi.admin.model.AdminVO">
+		update member_info set
+		grade = #{grade} where id=#{id}
+	</update>
+
+	<select id="selectAllmember" resultType="test.semi.admin.model.AdminVO"
+		parameterType="hashmap">
+		select a.id,a.name,a.age,a.gender, a.tel
+		from (select
+		rownum rnum,id, name,age,gender,tel from member_info order by rnum
+		asc) a
+		where rnum between #{snum} and #{enum}
+	</select>
+
+	<select id="selectPage" resultType="int">
+		select count(*) as cnt from
+		member_info
+	</select>
+
+
+	<!-- <select id="selectAllmember" resultType="test.semi.admin.model.AdminVO"> 
+		select * from dietmember </select> <select id="selectAllgrade" resultType="test.semi.admin.model.AdminVO"> 
+		select * from dietmember except (select * from dietmember where id='admin' 
+		and id='manager' ) select * from dietmember where id!='admin' and id!='manager' 
+		</select> <select id="selectOnemember" resultType="test.semi.admin.model.AdminVO"> 
+		select * from dietmember where id=#{id} </select> <update id="updateMember" 
+		parameterType="test.semi.admin.model.AdminVO"> update dietmember set pw = 
+		#{pw}, name = #{name}, age=#{age},gender=#{gender},tel=#{tel} where id=#{id} 
+		</update> <delete id="deleteMember" parameterType="int"> delete from dietmember 
+		where id=#{id} </delete> <update id="updateGrade" parameterType="test.semi.admin.model.AdminVO"> 
+		update dietmember set grade = #{grade} where id=#{id} </update> -->
+
+</mapper>

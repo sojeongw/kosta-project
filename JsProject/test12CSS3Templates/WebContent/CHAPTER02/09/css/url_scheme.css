@@ -1,0 +1,170 @@
+@charset "utf-8";
+
+.mainSec{
+	padding:10px 20px 20px;
+	
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #d9dbe0), color-stop(100%, #95a6bb));
+	background-image: -webkit-linear-gradient(-90deg, #d9dbe0 0%, #95a6bb 100%);
+  background-image: linear-gradient(-90deg, #d9dbe0 0%, #95a6bb 100%);
+}
+
+
+.contact{
+	position:relative;
+	margin:0px 0px 22px;
+	width:100%;
+	
+	-webkit-box-sizing: border-box;
+  box-sizing: border-box; 
+	
+	background-color:#FFF;
+	
+	-webkit-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.6), 0px 1px 1px #e6eaef;
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.6), 0px 1px 1px #e6eaef;
+	
+	-webkit-border-radius: 6px;
+  border-radius: 6px;
+	
+	border:#ababab 2px solid;
+}
+.contact h2{
+	padding:10px;
+	width:100%;
+	
+	color:#fff;
+	text-shadow:0px -1px 1px rgba(0,0,0,.5);
+	
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #b0bccc), color-stop(50%, #889bb3), color-stop(50%, #8094ae), color-stop(100%, #6d84a2));
+	background-image: -webkit-linear-gradient(-90deg, #b0bccc 0%, #889bb3 50%, #8094ae 50%, #6d84a2 100%);
+  background-image: linear-gradient(-90deg, #b0bccc 0%, #889bb3 50%, #8094ae 50%, #6d84a2 100%);
+	
+	border-top:#cdd5df 1px solid;
+	border-bottom:#2d3642 1px solid;
+	
+	-webkit-box-sizing: border-box;
+  box-sizing: border-box; 
+}
+
+.contactList{
+	display:table;
+	table-layout:fixed;
+	
+	width:100%;
+	
+	-webkit-box-sizing: border-box;
+  box-sizing: border-box; 
+}
+
+.contactListInner{
+	display:table-cell;
+}
+.contactListInner:first-child{
+	border-right:1px #666 solid;
+}
+.contactListInner h3{
+	padding:6px;
+	
+	color:#fff;
+	text-shadow:0px -1px 1px rgba(0,0,0,.5);
+	
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #92a0ab), color-stop(100%, #b6bec5));
+	background-image: -webkit-linear-gradient(-90deg, #92a0ab 0%, #b6bec5 100%);
+  background-image: linear-gradient(-90deg, #92a0ab 0%, #b6bec5 100%);
+	
+	border-top:#717d85 1px solid;
+	border-bottom:#989ea4 1px solid;
+}
+
+.contactListInner li{
+	padding:0px 12px;
+	font-size:12px;
+	
+	border-bottom: 1px solid gray;
+	
+	-webkit-box-sizing: border-box;
+  box-sizing: border-box; 
+}
+.contactListInner li:last-child{
+	border-bottom:none;
+}
+
+.contactListInner li>a{
+	display: table-cell;
+	padding: 0px 0px 0px 37px;
+	
+	width:100%;
+	height: 45px;
+	vertical-align: middle;
+	
+	background-position:left center;
+	background-repeat:no-repeat;
+	
+	-webkit-background-size: 30px 31px;
+	background-size: 30px 31px;
+}
+.contactListInner li>a[href^="mailto"]{
+	background-image: url(../images/no2_icon_01.png);
+}
+.contactListInner li>a[href^="tel"]{
+	background-image: url(../images/no2_icon_02.png);
+}
+
+.appleList{
+	position:relative;
+	margin:0px 0px 22px;
+	width:100%;
+	
+	-webkit-box-sizing: border-box;
+  box-sizing: border-box; 
+	
+	background-color:#FFF;
+	
+	-webkit-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.6), 0px 1px 1px #e6eaef;
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.6), 0px 1px 1px #e6eaef;
+	
+	-webkit-border-radius: 10px;
+  border-radius: 10px;
+	
+	border:#ababab 2px solid;
+	
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.appleList>li>a{
+	display:table;
+	padding:13px;
+	width:100%;
+	table-layout:fixed;
+	vertical-align:middle;
+	border-bottom:#ababab 2px solid;
+}
+.appleList>li:last-child>a{
+	border-bottom:none;
+}
+.appleList>li>a>figure{
+	display:table-cell;
+	width:68px;
+}
+.appleList>li>a>h2{
+	display:table-cell;
+	padding:0px 0px 0px 12px;
+	font-size:18px;
+	line-height:1.2em;
+	vertical-align:middle;
+	white-space:normal;
+	word-break:break-all;
+	
+	-webkit-background-clip: padding-box;
+  background-clip: padding-box;
+
+}
+@media screen and (orientation:landscape) {
+	.toggleBR{
+		display:none;
+	}
+}
+@media screen and (orientation:portrait) {
+	.toggleBR{
+		display:inline;
+	}
+}

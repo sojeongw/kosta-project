@@ -1,0 +1,167 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset=utf-8>
+  <title> java script </title>
+
+  <script type="text/javascript">
+  console.log("function");
+
+  var name = "kim";
+  let tel = "010";
+  const email = "aaa@email.com"
+  function test(){
+    console.log("test()...");
+    var age = 33;
+    age2 = 44;
+    // 함수 내부에 있는 변수에 접근하고 싶은데 리턴을 하고 싶지 않으면 var을 빼고 선언해서 접근 가능
+    // var을 빼면 전역변수가 된다. 함수 내부에 있기 때문에 접근 방법이 좀 다르다.
+    console.log(age);
+    console.log(name);
+    console.log(tel);
+    console.log(email);
+
+    return age;
+  }
+
+  test();
+  console.log(age2); // 함수 내부에 있기 때문에 반드시 함수가 콜 되고 난 다음에 접근이 가능하다.
+
+
+  /* function agree(){
+  console.log("agree()...");
+
+  function ment(){
+  console.log("ment()...");
+}
+ment(); // 밖에서는 콜이 안 되기 때문에 안에다가 한다.
+
+}
+
+agree();  // 콜은 선언부 아래가 꼭 아니어도 정상적으로 작동한다.
+*/
+
+
+
+//혹은
+/*
+function agree(){
+console.log("agree()...");
+
+function ment(){
+console.log("ment()...");
+}
+return ment;
+}
+agree()();
+*/
+
+
+/*
+function agree(){
+console.log("agree()...");
+
+function ment(){
+console.log("ment()...");
+}
+function ment2(){
+console.log("ment2()...");
+
+}
+return [ment, ment2];
+}
+agree()[0]();
+agree()[1]();
+*/
+
+// agree 없이 출력하고 싶다면
+/*
+function agree(){
+console.log("agree()...");
+
+function ment(){
+console.log("ment()...");
+}
+function ment2(){
+console.log("ment2()...");
+
+}
+return [ment, ment2];
+}
+var arr = agree();
+arr[0]();
+arr[1]();
+*/
+
+/*
+function agree(){
+console.log("agree()...");
+
+function ment(){
+console.log("ment()...");
+}
+function ment2(){
+console.log("ment2()...");
+
+}
+return [ment, ment2];
+}
+var arr = agree();
+// var fn1 = arr[0];  ment나 fn1이나 같으니까 아래로 변경
+var ment = arr[0];
+// var fn2 = arr[1];
+var ment2 = arr[1];
+// fn1();
+ment();
+// fn2();
+ment2();
+*/
+
+function agree(){
+
+  let count = 0;
+  console.log("agree()..." + count);
+
+  function ment(){
+    ++count;
+    console.log("ment()..." + count);
+  }
+  function ment2(){
+    --count;
+    console.log("ment2()..." + count);
+
+  }
+  return [ment, ment2];
+}
+
+// 클로저 인스턴스 : 이렇게 함수 내부의 변수를 계속 참조할 수 있도록 하는 것
+var arr = agree();
+// var fn1 = arr[0];  ment나 fn1이나 같으니까 아래로 변경
+var ment = arr[0];
+// var fn2 = arr[1];
+var ment2 = arr[1];
+// fn1();
+
+// 얘는 클로저 함수
+ment();
+ment();
+ment();
+// fn2();
+ment2();
+
+/* 주의사항
+var arr = agree();
+var ment = agree()[0];
+var ment2 = agree()[1];
+
+agree()[0](); 이렇게 하면 agree가 계속 call 되니까 안 된다.
+*/
+
+</script>
+</head>
+
+<body>
+  <h1>function</h1>
+
+</body>
+</html>

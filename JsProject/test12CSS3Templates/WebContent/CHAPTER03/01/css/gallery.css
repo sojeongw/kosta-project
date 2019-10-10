@@ -1,0 +1,116 @@
+html,body,h1,div,ul,li,a,img {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+html {
+	width:100%;
+	height:100%;
+}
+body {
+	width:100%;
+	height:100%;
+	background: #3c5e40; /* Old browsers */
+	background: -moz-linear-gradient(top,  #3c5e40 0%, #495437 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#3c5e40), color-stop(100%,#495437)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #3c5e40 0%,#495437 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #3c5e40 0%,#495437 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #3c5e40 0%,#495437 100%); /* IE10+ */
+	background: linear-gradient(top,  #3c5e40 0%,#495437 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3c5e40', endColorstr='#495437',GradientType=0 ); /* IE6-9 */
+	position:relative;
+	font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+h1 {
+	width:100%;
+	margin:100px auto;
+	font-size:48px;
+	color:#FFFFFF;
+	text-shadow:-1px -1px 1px #333333;
+	text-align:center;
+	letter-spacing:5px;
+}
+#Gallery {
+	width:950px;
+	height:240px;
+	margin:0 auto;
+	list-style:none;
+}
+#Gallery li {
+	float:left;
+	width:160px;
+	height:120px;
+	margin:0 20px 20px 0;
+	border:5px solid #ffffff;
+
+	position:relative;
+	z-index:10;
+
+	-moz-box-shadow:5px 5px 5px #000000;
+	-webkit-box-shadow:5px 5px 5px #000000;
+	box-shadow:5px 5px 5px #000000;
+
+	-moz-transition:-moz-transform 0.2s ease-out;
+	-webkit-transition:-webkit-transform 0.2s ease-out;
+	transition:transform 0.2s ease-out;
+}
+#Gallery li:hover {
+	-moz-transform: scale(2.0) rotate(0deg) translate(0,0);
+	-webkit-transform: scale(2.0) rotate(0deg) translate(0,0);
+	transform: scale(2.0) rotate(0deg) translate(0,0);
+	z-index:100;
+}
+#Gallery li a img {
+	width:160px;
+	height:120px;
+}
+#Photo01 {
+	-moz-transform: scale(1.0) rotate(-10deg) translate(-6px,-3px);
+	-webkit-transform: scale(1.0) rotate(-10deg) translate(-6px,-3px);
+	transform: scale(1.0) rotate(-10deg) translate(-6px,-3px);
+}
+#Photo02 {
+	-moz-transform: scale(1.0) rotate(8deg) translate(0,6px);
+	-webkit-transform: scale(1.0) rotate(8deg) translate(0,6px);
+	transform: scale(1.0) rotate(8deg) translate(0,6px);
+}
+#Photo03 {
+	-moz-transform: scale(1.0) rotate(-6deg) translate(0,0);
+	-webkit-transform: scale(1.0) rotate(-6deg) translate(0,0);
+	transform: scale(1.0) rotate(-6deg) translate(0,0);
+}
+#Photo04 {
+	-moz-transform: scale(1.0) rotate(10deg) translate(6px,-1px);
+	-webkit-transform: scale(1.0) rotate(10deg) translate(6px,-1px);
+	transform: scale(1.0) rotate(10deg) translate(6px,-1px);
+}
+#Photo05 {
+	-moz-transform: scale(1.0) rotate(5deg) translate(0,3px);
+	-webkit-transform: scale(1.0) rotate(5deg) translate(0,3px);
+	transform: scale(1.0) rotate(5deg) translate(0,3px);
+}
+#Photo06 {
+	-moz-transform: scale(1.0) rotate(-5deg) translate(-3px,3px);
+	-webkit-transform: scale(1.0) rotate(-5deg) translate(-3px,3px);
+	transform: scale(1.0) rotate(-5deg) translate(-3px,3px);
+}
+#Photo07 {
+	-moz-transform: scale(1.0) rotate(3deg) translate(1px,2px);
+	-webkit-transform: scale(1.0) rotate(3deg) translate(1px,2px);
+	transform: scale(1.0) rotate(3deg) translate(1px,2px);
+}
+#Photo08 {
+	-moz-transform: scale(1.0) rotate(-8deg) translate(0,3px);
+	-webkit-transform: scale(1.0) rotate(-8deg) translate(0,3px);
+	transform: scale(1.0) rotate(-8deg) translate(0,3px);
+}
+#Photo09 {
+	-moz-transform: scale(1.0) rotate(-1deg) translate(-6px,-2px);
+	-webkit-transform: scale(1.0) rotate(-1deg) translate(-6px,-2px);
+	transform: scale(1.0) rotate(-1deg) translate(-6px,-2px);
+}
+#Photo10 {
+	-moz-transform: scale(1.0) rotate(12deg) translate(0,-3px);
+	-webkit-transform: scale(1.0) rotate(12deg) translate(0,-3px);
+	transform: scale(1.0) rotate(12deg) translate(0,-3px);
+}

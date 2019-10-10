@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="semi.com.user">
+	<insert id="insertUser" parameterType="semi.com.user.model.UserInfoVO">
+		insert into
+		user_info(user_id,user_pw,user_name,user_tel,user_email,user_address)
+		values(#{user_id},#{user_pw},#{user_name},#{user_tel},#{user_email},#{user_address})
+	</insert>
+
+	<select id="login" resultType="semi.com.user.model.UserInfoVO">
+		select * from user_info where
+		user_id=#{user_id} and user_pw = #{user_pw}
+	</select>
+
+
+	<select id="user_selectone" resultType="semi.com.user.model.UserInfoVO">
+		select * from user_info
+		where user_id=#{user_id}
+	</select>
+
+	<update id="updateUser" parameterType="semi.com.user.model.UserInfoVO">
+		update user_info set
+		user_pw=#{user_pw}, user_name=#{user_name},
+		user_tel=#{user_tel},user_email=#{user_email},
+		user_address=#{user_address}
+		where user_id=#{user_id}
+	</update>
+
+	<delete id="deleteUser" parameterType="semi.com.user.model.UserInfoVO">
+		delete user_info where
+		user_id=#{user_id}
+	</delete>
+
+	<select id="duplication_check" resultType="semi.com.user.model.UserInfoVO">
+		select * from user_info where user_id=#{user_id}
+	</select>
+
+
+
+	<!-- user가 대출하기 전 보는 책 목록 -->
+	<select id="book_selectall" resultType="semi.com.user.model.BookInfoVO">
+		select * from book_info
+	</select>
+	
+	<!-- user가 대출한 목록 -->
+	<select id="checkoutList" resultType="semi.com.user.model.CheckOutVO">
+	select c.checkout_num, c.book_num, u.USER_ID, b.book_name, b.book_writer, c.checkout_start, c.CHECKOUT_END
+	from book_info b, user_info u, checkout c
+	where u.user_id = c.user_id and b.book_num=c.book_num
+	</select>
+
+	<!-- 대출하기 위해 선택한 책 -->
+	<select id="book_selectone" resultType="semi.com.user.model.BookInfoVO">
+		select * from book_info
+		where book_num=#{book_num}
+	</select>
+
+	<!-- 대출할 책 insert -->
+	<insert id="book_register" parameterType="semi.com.user.model.CheckOutVO">
+		insert into
+		checkout(checkout_num, book_num, user_id, checkout_start,
+		checkout_end)
+		values(seq_checkout_num.nextval,#{book_num},#{user_id},#{checkout_start},#{checkout_end})
+	</insert>
+
+	<!-- 대출한 책 반납 -->
+	<delete id="book_return" parameterType="semi.com.user.model.CheckOutVO">
+		delete from checkout
+		where checkout_num=#{checkout_num}
+	</delete>
+
+
+	<update id="changeTF" parameterType="semi.com.user.model.BookInfoVO">
+		update book_info set
+		book_checkout=#{book_checkout}
+		where book_num=#{book_num}
+	</update>
+
+
+</mapper>

@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title>sample</title>
+
+<link rel="stylesheet" type="text/css" href="css/jquery.jqzoom.css" />
+<link rel="stylesheet" type="text/css" href="base.css" />
+
+<script type="text/javascript" src="jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/jquery.jqzoom-core.js"></script>
+<script type="text/javascript">
+	$(document).ready(function($){
+		$('.jqzoom').jqzoom({
+			zoomWidth: 400,  
+			zoomHeight: 350,
+			xOffset: 10,
+			position: 'left'
+		});
+	});
+</script>
+</head>
+
+<body>
+<div id="wrapper">
+	<div id="header">
+		<div id="logo"><img src="img/logo.png" alt="leaf magazine" width="123" height="15" /></div>
+		<div id="menu">
+			<ul>
+				<li><a href="#">News</a></li>
+				<li><a href="#">Product</a></li>
+				<li><a href="#">Food</a></li>
+				<li><a href="#">Shop List</a></li>
+			</ul>
+		</div>
+	</div>
+	
+	<div id="contents">
+		<div class="spec">
+			<h1>Kitchen</h1>
+			<h2>キッチンボール</h2>
+			<p>使い勝手のよいボールです。すてきなカラーを取り揃えています。<br />
+				シンプルで使い勝手のよいすてきなキッチンボールです。</p>
+			<p>サイズ：W230×D230×H123</p>
+			<div class="price"><span>￥</span>1,800</div>
+			<div class="cart"><a href="#"><img src="img/cart.gif" alt="Add to My Cart" /></a></div>
+			<ul id="thumblist" >
+				<li>
+					<a class="zoomThumbActive" href='javascript:void(0);' rel="{gallery: 'gal1', smallimage: 'img/small1.jpg',largeimage: 'img/big1.jpg'}">
+						<img src='img/thumb1.jpg' />
+					</a>
+				</li>
+				<li>
+					<a href='javascript:void(0);' rel="{gallery: 'gal1', smallimage: 'img/small2.jpg',largeimage: 'img/big2.jpg'}">
+						<img src='img/thumb2.jpg' />
+					</a>
+				</li>
+				<li>
+					<a href='javascript:void(0);' rel="{gallery: 'gal1', smallimage: 'img/small3.jpg',largeimage: 'img/big3.jpg'}">
+						<img src='img/thumb3.jpg' />
+					</a>
+				</li>
+			</ul>
+		</div>
+		
+		<div id="zoom-image">
+			<a href="img/big1.jpg" class="jqzoom" rel="gal1" title="拡大画像">
+				<img src="img/small1.jpg" title="ボール" />
+			</a>
+		</div>
+	</div>
+</div>
+</body>
+</html>

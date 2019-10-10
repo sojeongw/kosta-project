@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="test.com.notification">
+    <uses-permission android:name="android.permission.VIBRATE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--theme을 주지 않으면 activity 화면 위에 떠버린다. 홈 화면에 다이얼로그로 구현하고 싶을 때 사용-->
+        <activity
+            android:name="DialogViewPage"
+            android:excludeFromRecents="true"
+            android:label="message"
+            android:launchMode="singleTop"
+            android:theme="@style/Theme.AppCompat.Dialog">
+        </activity>
+    </application>
+
+</manifest>

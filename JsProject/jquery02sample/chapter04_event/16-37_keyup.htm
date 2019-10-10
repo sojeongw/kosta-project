@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="http://code.jquery.com/jquery-1.6.2.js"></script>
+    <script>
+        $(document).ready(function (event) {
+            $('textarea').keyup(function () {
+              // 키보드 키를 눌렀다 떼면 키업, 누르고 있으면 키다운
+                var inputLength = $(this).val().length;
+                var remain = 150 - inputLength;
+
+                $('h1').html(remain);
+            });
+
+//             $('textarea').keydown(function () {
+//                 var inputLength = $(this).val().length;
+//                 var remain = 150 - inputLength;
+
+//                 $('h1').html(remain);
+//             });
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <p>���� �� ������</p>
+        <h1>150</h1>
+        <textarea cols="70" rows="5"></textarea>
+    </div>
+</body>
+</html>

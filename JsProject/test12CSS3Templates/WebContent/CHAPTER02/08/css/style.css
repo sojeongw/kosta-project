@@ -1,0 +1,225 @@
+@charset "UTF-8";
+/**
+ * リスト型ナビゲーション
+ * スライド遷移
+ */
+/**********************************************************
+ * base
+ */
+body {
+  background: #222222 url(../img/carbon_fibre_big.png);
+  color: #333;
+}
+
+/* ヘッダー */
+header {
+  position: relative;
+  height: 48px;
+  overflow: hidden;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.8);
+  background-image: -moz-linear-gradient(top, #666666, #333333);
+  background-image: -webkit-linear-gradient(top, #666666, #333333);
+}
+header nav {
+  position: absolute;
+  left: 12px;
+  top: 8px;
+  display: inline-block;
+  padding-left: 10px;
+  -webkit-transition-duration: 300ms;
+  -webkit-transition-delay: 300ms;
+  -moz-transition-duration: 300ms;
+  -moz-transition-delay: 300ms;
+}
+header nav:before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  -moz-transform-origin: 0 0;
+  -webkit-transform-origin: 0 0;
+  -moz-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  border-radius: 0 4px;
+  border: 1px inset #000;
+  background-image: -moz-linear-gradient(top left, #666666, #333333);
+  background-image: -webkit-linear-gradient(top left, #666666, #333333);
+}
+header nav a {
+  position: relative;
+  z-index: 1;
+  padding: 0 12px 0 4px;
+  display: inline-block;
+  height: 28px;
+  line-height: 28px;
+  vertical-align: middle;
+  border-radius: 0 8px 8px 0;
+  border: 1px inset #000;
+  border-left: none;
+  background-image: -moz-linear-gradient(top, #666666, #333333);
+  background-image: -webkit-linear-gradient(top, #666666, #333333);
+  font-size: 14px;
+  color: #ccc;
+  text-shadow: 0px -1px 2px #333333;
+}
+header h1 {
+  padding: 0 60px;
+  text-align: center;
+  font-size: 24px;
+  line-height: 48px;
+  vertical-align: middle;
+  font-weight: bold;
+  color: #ccc;
+  text-shadow: 0px -1px 2px #333333;
+}
+
+/* メインビジュアル */
+figure {
+  position: relative;
+  height: 180px;
+  overflow: hidden;
+  box-shadow: 0 2px 3px #000;
+}
+figure img {
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  -webkit-transition-duration: 600ms;
+  -moz-transition-duration: 600ms;
+}
+
+#wrapper {
+  position: relative;
+  height: 1000px;
+  overflow: hidden;
+}
+
+/**********************************************************
+ * ページ
+ */
+section {
+  position: absolute;
+  left: 100%;
+  top: 20px;
+  width: 100%;
+  -webkit-transition-duration: 600ms;
+  -webkit-transition-timing-function: cubic-bezier(0.42, 0, 0.52, 1);
+  -moz-transition-duration: 600ms;
+  -moz-transition-timing-function: cubic-bezier(0.42, 0, 0.52, 1);
+}
+section .content {
+  margin: 0 20px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #ccc;
+  color: #666;
+}
+section .content ~ .content {
+  margin-top: 20px;
+}
+section h2 {
+  margin-top: 1em;
+  padding-bottom: 0.5em;
+  font-weight: bold;
+  font-size: 16px;
+}
+section h2:first-child {
+  margin-top: 0;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+/* リストナビ */
+section nav {
+  margin: 0 20px;
+  border-radius: 10px;
+  background-color: #ccc;
+  color: #666;
+}
+
+nav li {
+  display: block;
+  font-size: 16px;
+}
+nav li + li {
+  border-top: 1px solid #bbb;
+}
+nav li > a {
+  padding: 15px;
+  position: relative;
+  display: block;
+  margin-right: 15px;
+  font-weight: bold;
+  color: #666;
+}
+nav li > a:after {
+  content: ">";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-top: -0.5em;
+}
+nav li > span {
+  display: inline-block;
+  padding: 15px;
+}
+
+/* 各ページ設定 */
+#page-0 {
+  left: -100%;
+}
+
+.page-0 header h1:before {
+  content: attr(title);
+}
+.page-0 header nav {
+  opacity: 0;
+  -webkit-transition-delay: 0s;
+  -moz-transition-delay: 0s;
+}
+.page-0 figure img:nth-child(1) {
+  opacity: 1;
+}
+.page-0 #page-0 {
+  left: 0;
+}
+
+.page-1 header h1:before {
+  content: attr(data-page1-title);
+}
+.page-1 figure img:nth-child(2) {
+  opacity: 1;
+}
+.page-1 #page-1 {
+  left: 0;
+}
+
+.page-2 header h1:before {
+  content: attr(data-page2-title);
+}
+.page-2 figure img:nth-child(3) {
+  opacity: 1;
+}
+.page-2 #page-2 {
+  left: 0;
+}
+
+.page-3 header h1:before {
+  content: attr(data-page3-title);
+}
+.page-3 figure img:nth-child(4) {
+  opacity: 1;
+}
+.page-3 #page-3 {
+  left: 0;
+}
+
+section .note {
+  background-color: rgba(229, 230, 25, 0.8);
+  color: #900;
+}

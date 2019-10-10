@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<title>test</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/jquery-1.8.3.min.js"></script>
+	<script>
+		//グラフをアニメーションさせる関数
+		function graphAnimate(element, maxSize, steps){
+			var intervalID = setInterval(function(){
+				var currentW = parseInt(element.attr('width'));
+				if(currentW < maxSize){
+					//グラフの幅が最大値まで到達していない場合
+					element.attr('width', currentW + steps);
+				} else{
+					//グラフの幅が最大値まで到達した場合
+					clearInterval(intervalID);
+				} 
+			},1);
+		}
+		//アニメーションを開始させる関数
+		function graphStart(){
+			graphAnimate($('#bar1'), 280, 2);
+			graphAnimate($('#bar2'), 210, 2);
+			graphAnimate($('#bar3'), 120, 2);
+		}
+	</script>
+</head>
+<body>
+	<div id="graph">
+		<h1>プロセススピード比較</h1>
+		<p class="start"><a href="javascript:graphStart()">グラフを表示</a></p>
+		<svg width="450" height="175" viewBox="0 0 450 175">
+			<g>
+				<g id="graphBG" stroke="#bcb699" stroke-dasharray="2">
+					<line x1="90" y1="0" x2="90" y2="175" />
+					<line x1="140" y1="0" x2="140" y2="175" />
+					<line x1="190" y1="0" x2="190" y2="175" />
+					<line x1="240" y1="0" x2="240" y2="175" />
+					<line x1="290" y1="0" x2="290" y2="175" />
+					<line x1="340" y1="0" x2="340" y2="175" />
+					<line x1="390" y1="0" x2="390" y2="175" />
+				</g>
+				<g id="graphLabel" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="13px">
+					<text x="80" y="42" fill="#bcb699">version 1.0</text>
+					<text x="80" y="92" fill="#bcb699">version 2.0</text>
+					<text x="80" y="142" font-weight="bold">version 3.0</text>
+				</g>
+				<g id="graphBar" fill="#c9c3a5" stroke="#bcb699">
+					<rect x="90" y="25" width="0" height="25" id="bar1" rx="2" />
+					<rect x="90" y="75" width="0" height="25" id="bar2" rx="2" />
+					<rect x="90" y="125" fill="#7fd443" stroke="#58ba27" width="0" height="25" id="bar3" rx="2" />
+				</g>
+			</g>
+		</svg>
+	</div>
+</body>
+</html>

@@ -1,0 +1,69 @@
+@charset "utf-8";
+
+/*------////////// ログインボタン //////////------*/
+#header dd a {
+filter:
+	progid:DXImageTransform.Microsoft.gradient(startColorstr = #fff08ddc,endColorstr = #ffde369f,GradientType = 0);
+
+-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr = #fff08ddc,endColorstr = #ffde369f,GradientType = 0)";
+
+}
+#header dd a:hover {
+filter:
+	progid:DXImageTransform.Microsoft.gradient(startColorstr = #ffd4c58e,endColorstr = #ffb9a566,GradientType = 0);
+
+-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr = #ffd4c58e,endColorstr = #ffb9a566,GradientType = 0)";
+}
+/*------////////// Item A ～ メニュー  //////////------*/
+#mainContent ul#itemMenu li a {
+filter:
+	progid:DXImageTransform.Microsoft.gradient(startColorstr = #ffffffff,endColorstr = #BBBBBBB,GradientType = 0);
+
+-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr = #ffffffff,endColorstr = #BBBBBBB,GradientType = 0)";
+}
+#mainContent ul#itemMenu li a:hover {
+filter:
+	progid:DXImageTransform.Microsoft.gradient(startColorstr = #ffffffff,endColorstr = #ffc5a1bb,GradientType = 0);
+
+-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr = #ffffffff,endColorstr = #ffc5a1bb,GradientType = 0)";
+}
+#mainContent ul#itemMenu li ul.sub li a {
+filter:
+	progid:DXImageTransform.Microsoft.gradient(startColorstr = #FFFFFF,endColorstr = #FFFFFF,GradientType = 0);
+
+-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr = #FFFFFF,endColorstr = #FFFFFF,GradientType = 0)";
+}
+#mainContent ul#itemMenu li ul.sub li a:hover {
+filter:
+	progid:DXImageTransform.Microsoft.gradient(startColorstr = #EBDEE7,endColorstr = #EBDEE7,GradientType = 0);
+
+-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr = #EBDEE7,endColorstr = #EBDEE7,GradientType = 0)";
+}
+
+/*------////////// カートに入れるボタン  //////////------*/
+#mainContent #goodsSpec dd#goodsCart a {
+filter:
+	progid:DXImageTransform.Microsoft.gradient(startColorstr = #ffb65e98,endColorstr = #ff61224b,GradientType = 0);
+
+-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr = #ffb65e98,endColorstr = #ff61224b,GradientType = 0)";
+}
+#mainContent #goodsSpec dd#goodsCart a:hover {
+filter:
+	progid:DXImageTransform.Microsoft.gradient(startColorstr = #ffc1ab58,endColorstr = #ff6d5e1e,GradientType = 0)
+	progid:DXImageTransform.Microsoft.dropshadow(OffX = 1,OffY = 1,Color = #66000000,Positive = true);
+
+-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr = #ffc1ab58,endColorstr = #ff6d5e1e,GradientType = 0) progid:DXImageTransform.Microsoft.dropshadow(OffX = 1,OffY = 1,Color = #66000000,Positive = true)";
+}
+
+
+/*------////////// マイページ //////////------*/
+
+#menu #myPage dt {
+filter:
+	progid:DXImageTransform.Microsoft.gradient(startColorstr = #ffffffff,endColorstr = #fff5f3e7,GradientType = 0);
+
+-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr = #ffffffff,endColorstr = #fff5f3e7,GradientType = 0)";
+}
+#menu #search button {
+text-indent:-99999em;
+}

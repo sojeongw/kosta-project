@@ -1,0 +1,147 @@
+@charset "utf-8";
+
+body{
+margin:0; padding:0;
+min-width:955px;
+/*background: -webkit-gradient( linear, left top, left bottom, from(#000), color-stop(484px, #000), color-stop(484px, #FFF), to(#FFF)) repeat-x,#FFF;*//*webkit系はpx単位が正しく動作しない*/
+/*background: -moz-linear-gradient(top,#000,#000 484px,#FFF 484px,#FFF) repeat-x,#FFF;*//*mozillaだけならこの記述も有効*/
+color:#2C2727;
+font-family:'Meiryo UI','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif!important;
+}
+body.top{
+/*グラデーション系＋画像サイズも、動作が不安定なので使用注意*/
+/*background-image: linear-gradient(top,#B7AD9A,#F4EAD7 89%,#F9EEDC);*/
+/*background-image: -webkit-gradient( linear, left top, left bottom, from(#B7AD9A), color-stop(89%, #F4EAD7), to(#F9EEDC));*/
+/*background-image: -moz-linear-gradient(top,#B7AD9A,#F4EAD7 89%,#F9EEDC);*/
+/*background-size: 484px;*/
+/*-webkit-background-size: 484px;*/
+/*-moz-background-size: 484px;*/
+background-image:url(../img/bg00.jpg);
+background-color:#fff;
+background-repeat:repeat-x;
+}
+
+body:after{
+content:url(../img/bg01.png);
+position:absolute; top:-171px; left:52px
+}
+body.top:after{
+top:174px;
+}
+
+body h1{
+position:absolute;top:85px; left:698px;
+margin:0; padding:0;
+text-align:right;
+font-size:50px;
+color:#FAFAFA;
+}
+body.top h1{
+top:484px;
+color:#2C2727;
+}
+
+h1::first-letter{
+color:#7D2A17
+}
+
+body ul.gnav{
+position:absolute; top:120px; left:427px;
+margin:0; padding:0;
+list-style:none;
+}
+body.top ul.gnav{
+top:520px;
+}
+
+ul.gnav li{
+float:left;
+margin-right:1.2em;
+font-size:small
+}
+ul.gnav li.active{
+border-bottom:#7D2A17 2px solid;
+}
+
+ul.gnav li a{
+color:#F0F0F0;
+}
+ul.gnav li a:link{
+color:#F0F0F0;
+text-decoration:none;
+}
+ul.gnav li a:visited{
+color:#F0F0F0;
+text-decoration:none;
+}
+ul.gnav li a:hover{
+color:#F0F0F0;
+text-decoration:underline
+}
+ul.gnav li a:active{
+color:#F0F0F0;
+}
+body.top ul.gnav li a{
+color:#2C2727;
+}
+body.top ul.gnav li a:link{
+color:#2C2727;
+}
+body.top ul.gnav li a:visited{
+color:#2C2727;
+}
+body.top ul.gnav li a:hover{
+color:#2C2727;
+}
+body.top ul.gnav li a:active{
+color:#2C2727;
+}
+
+div.thcont{
+position:absolute; top:102px; left:427px;
+width:480px; height:270px;
+background:url(../img/bg03.png) no-repeat bottom right,url(../img/bg02.png) repeat top left;
+border-top:#E6C7AE 5px solid;border-right:#E6C7AE 9px solid;border-bottom:#E6C7AE 5px solid;border-left:#E6C7AE 9px solid;
+outline:#371C09 solid 1px;
+}
+
+div.thcont h2{
+visibility:hidden;
+text-align:right;
+margin:10px 10px 0; padding:0;
+font-size:18px;
+line-height:18px;
+}
+div.thcont h2 span{
+visibility:visible}
+
+div.thcont p{
+margin:0 10px; padding:0;
+font-size:50px;
+}
+
+div.content{
+margin-top:157px;
+padding:0 50px;
+}
+body.top div.content{
+margin-top:580px;
+}
+
+p.topbox{
+height:90px;
+padding:10px;
+background:url(../img/bg04.png) repeat-x top left,url(../img/bg04.png) repeat-y top right,url(../img/bg04.png) repeat-x bottom left,url(../img/bg04.png) repeat-y top left;
+background-origin:border-box;
+border:rgba(255,255,255,0.7) dashed 10px;
+}
+p.topbox strong{
+color:#7D2A17
+}
+
+p.copyright{
+clear:both;
+margin-top:50px;
+text-align:center;
+font-size:small;
+}

@@ -1,0 +1,275 @@
+@charset "utf-8";
+
+/*パソコンチェック用*/
+/*html {
+background:
+#FFF;
+}
+body {
+margin: 0 auto;
+width:320px;
+}*/
+
+
+body {
+margin: 0;
+padding: 0;
+background:#F0F0F0;
+}
+
+/* サイト名-------------------- */
+body > header > h1 {
+margin: 0 0 55px 0;
+padding: 5px;
+/*width: 310px;*/ /*パソコンチェック用*/
+height: 58px;
+position: relative;
+
+/* 背景色 */
+background: url(img/head_back.png) repeat-x top center;
+
+/* 文字 */
+line-height: 50px;
+color:#ffffff;
+text-shadow:1px 1px 0px rgba(33,61,132,0.9);
+text-align:center;
+font-size:40px;
+font-weight: normal;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body > header > h1:before {
+/* ハイライト・動物/＋画像 */
+content: "";
+position: absolute;
+z-index: 10;
+width: 100%;
+height:150px;
+top: 0;
+left: 0;
+background:
+url(img/head_img.png) no-repeat center 59%;
+}
+
+/* ページレイアウト------------------------------------ */
+article {
+margin: 0 10px 20px;
+display: block;
+}
+section {
+margin: 0 0 20px 0;
+display: block;
+}
+/* ページレイアウト:見出し------------------------------------ */
+article h1 {
+margin: 0 0 10px;
+border-bottom: 1px solid #B7BCBE;
+color: #333;
+position: relative;
+font-family:Arial, Helvetica, sans-serif;
+font-size: 18px;
+}
+
+article h1:first-letter {
+text-transform: uppercase;
+font-size: 25px;
+}
+article h1:after {
+content:"";
+background: url(img/midashi_kazari.png);
+position: absolute;
+right: 0;
+bottom: 0;
+width: 82px;
+height: 13px;
+}
+/* ページレイアウト: p ------------------------------------ */
+p {
+margin: 0 10px 10px;
+font-size: 14px;
+color: #333;
+padding: 0;
+}
+p em {
+color: #F00;
+font-style:normal;
+}
+/* ページレイアウト:送信ボタン------------------------------------ */
+.button {
+text-align:center;
+margin-top: 40px;
+}
+
+button {
+margin: 0 1em;
+padding: 0;
+width: 86px;
+height: 86px;
+border: none;
+background: none;
+}
+
+/* ページレイアウト:フッタ------------------------------------ */
+footer {
+margin: 0;
+text-align:center;
+font-size: 12px;
+color: #666;
+font-weight: bold;
+padding: 45px 0 15px 0;
+display: block;
+}
+footer:after, footer:before {
+content: " - ";
+}
+
+
+/* よく見るデザイン3パターン共通------------------------------------ */
+ul {
+margin: 0;
+padding: 0;
+}
+
+li {
+list-style: none;
+margin: 0;
+padding: 0;
+}
+
+
+/* よく見るデザイン 1 ------------------------------------ */
+
+/* 角丸のベース */
+ul#theme1 {
+background-color:#FFF;
+border: 1px solid #B7BCBE;
+border-radius: 10px;
+font-size: 14px;
+line-height: 1.2;
+}
+#theme1 li {
+border-top: 1px solid #E7E7E7;
+border-bottom: 1px solid #B7BCBE;
+margin-bottom: 1px;
+}
+#theme1 li:first-child {
+border-top: none;
+}
+#theme1 li:last-child {
+border-bottom: none;
+}
+#theme1 li a {
+display:block;
+padding: 10px 20px 10px 48px;
+text-decoration: none;
+color: #000;
+position:relative;
+}
+/* 左の青いスクエアアイコン */
+#theme1 li a:before {
+content: "";
+position: absolute;
+top: 50%;
+left: 0;
+margin-top:-16px;
+margin-left: 10px;
+width: 32px;
+height: 32px;
+}
+#theme1 li:nth-child(1) a:before {
+content: url(img/icon_megane.png);
+}
+#theme1 li:nth-child(2) a:before {
+content: url(img/icon_nikuq.png);
+}
+#theme1 li:nth-child(3) a:before {
+content: url(img/icon_x.png);
+}
+#theme1 li:nth-child(4) a:before {
+content: url(img/icon_capsule.png);
+}
+#theme1 li:nth-child(5) a:before {
+content: url(img/icon_heart.png);
+}
+/* 右の矢印アイコン */
+#theme1 li a:after {
+content: url(img/icon_next.png);
+position: absolute;
+top: 50%;
+right: 0;
+margin-top:-6px;
+margin-right: 10px;
+}
+
+
+/* よく見るデザイン 2 と 3 共通 ------------------------------------ */
+#theme2 li, #theme3 li {
+position: relative;
+}
+#theme2 label, #theme3 label {
+display: block;
+}
+#theme2 li input[type="radio"], #theme3 li input[type="radio"] {
+display: none;
+}
+
+/* よく見るデザイン 2 ------------------------------------ */
+ul#theme2 {
+}
+#theme2 li {
+background-color:#ccd9e6;
+margin-bottom: 1px;
+}
+#theme2 li:first-child {
+border-radius: 10px 10px 0 0;
+}
+#theme2 li:last-child {
+border-radius: 0 0 10px 10px;
+}
+#theme2 li label {
+color: #333;
+line-height: 1.2;
+font-size: 14px;
+padding: 10px 10px 10px 35px;
+}
+#theme2 li input[type="radio"]:checked + label {
+background: url(img/icon_check.png) no-repeat 10px center;
+}
+
+
+/* よく見るデザイン 3 ------------------------------------ */
+ul#theme3 {
+margin: 0;
+display: -webkit-box;
+}
+#theme3 li {
+width: 30%;
+margin-left: 1px;
+}
+#theme3 li:last-child {
+width: 40%;
+margin-left: 1px;
+}
+#theme3 li label {
+color: #333;
+font-size: 14px;
+height: 28px;
+line-height: 28px;
+text-align:center;
+background-color:#ccd9e6;
+}
+
+#theme3 li:first-child label {
+border-radius: 20px 0 0 20px;
+}
+#theme3 li:last-child label {
+border-radius: 0 20px 20px 0;
+}
+#theme3 li input[type="radio"]:checked + label {
+background: #1466B5;
+color: #FFF;
+font-weight: bold;
+box-shadow: 5px 5px 3px rgba(0,0,0,0.3) inset;
+}
+
+

@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Font Size Change</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="js/jquery.cookies.2.2.0.min.js"></script>
+	<script type="text/javascript">
+		//フォントサイズのプリセット値
+		var presetSize = {'small':-3, 'normal':0, 'large':3};
+		//ドキュメント読み込み後の処理
+		jQuery(document).ready(function() {
+			//ボタンのclickイベントハンドラを設定
+			$('#sizeSmall a').click(function(){changeFontSize('small')});
+			$('#sizeNormal a').click(function(){changeFontSize('normal')});
+			$('#sizeLarge a').click(function(){changeFontSize('large')});
+			//初期フォントサイズを取得
+			var defaultFontSize = parseInt($('#contents').css('font-size'));
+			//クッキーのチェック
+			if($.cookies.get('fontRatio') != null){
+				changeFontSize($.cookies.get('fontRatio'));
+			} else {
+				changeFontSize('normal');
+			}
+			//フォンサイズを変更する関数
+			function changeFontSize(fontRaito){
+				//フォントサイズを変更
+				$('#contents').css('font-size', defaultFontSize + presetSize[fontRaito] + 'px');
+				//ボタンのクラス名を変更
+				$('#button li a').removeClass('current');
+				switch (fontRaito) {
+					case 'small':
+						$('#sizeSmall a').addClass('current');
+						break;
+					case 'normal':
+						$('#sizeNormal a').addClass('current');
+						break;
+					case 'large':
+						$('#sizeLarge a').addClass('current');
+						break;
+					default:
+						break;
+				}
+				//現在のサイズをCookieにセット
+				$.cookies.set('fontRatio', fontRaito);
+			}
+		});
+	</script>
+</head>
+<body>
+<div id="control">
+	<ul id="button">
+		<li id="sizeSmall"><a href="javascript:void(0)">小</a></li>
+		<li id="sizeNormal"><a href="javascript:void(0)">中</a></li>
+		<li id="sizeLarge"><a href="javascript:void(0)">大</a></li>
+	</ul>
+</div>
+<div id="contents">
+	<h1>Font Size Change</h1>
+	<h2>Suspendisse potenti. Aliquam blandit commodo congue.</h2>
+	<p class="note">Phasellus non dui vitae libero tincidunt pulvinar. Aenean augue ipsum, blandit ac ornare a, ornare non purus. Aliquam feugiat convallis lorem eu luctus. Nam vel velit sapien, facilisis ultrices nisi. In hac habitasse platea dictumst. Donec semper nulla quis orci viverra sed sagittis dui tincidunt. Sed nec lacus vitae elit vestibulum ultrices at nec diam. Nam molestie, felis elementum euismod adipiscing, neque nisl interdum leo, sit amet condimentum elit ipsum non nibh. Donec aliquam condimentum nisi, ac consectetur massa sollicitudin quis.</p>
+	<p class="note">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus blandit metus sit amet diam fringilla quis consequat magna lacinia. Donec dictum augue quis mauris malesuada condimentum. Phasellus egestas enim a est dapibus quis aliquam dui sagittis. Aenean ut erat non metus vehicula porta. Mauris in dolor nec dolor sodales volutpat. Maecenas non tortor non nulla dapibus tempus. Etiam tempor tempor ipsum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque nec nisi metus.</p>
+	<p class="caption">Vivamus blandit metus sit amet diam fringilla quis consequat magna lacinia.</p>
+</div>
+</body>
+</html>

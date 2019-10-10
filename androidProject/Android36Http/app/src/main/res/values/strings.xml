@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Android36Http</string>
+
+    <string name="insertTitle">INSERT PAGE</string>
+    <string name="selectTitle">SELECT PAGE</string>
+    <string name="searchTitle">SEARCH PAGE</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="insert_txt_num">num</string>
+    <string name="insert_txt_menu">menu</string>
+    <string name="insert_txt_store">store</string>
+    <string name="insert_txt_price">price</string>
+    <string name="insert_txt_kcal">kcal</string>
+
+
+
+</resources>

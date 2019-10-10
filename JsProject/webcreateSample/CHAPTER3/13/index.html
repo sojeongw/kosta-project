@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link href="base.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="jquery-1.8.3.min.js"></script>
+  <script type="text/javascript" src="jquery.ah-placeholder.js"></script>
+  <script type="text/javascript">
+  $(function()
+  {
+      $('.jq-placeholder').ahPlaceholder({
+          placeholderColor : '#f673ab',
+          placeholderAttr  : 'placeholder',
+          likeApple        : true
+      });
+  });
+  </script>
+  <title>mangareborn</title>
+</head>
+<body>
+  <div class="header_all_wrap" id="page_top">
+    <div class="header_wrap">
+      <div id="header_float_box" class="login_box_wrapper">
+        <div>
+         <table class="search_box">
+          <tr>
+            <td>
+              <span>Language</span>
+            </td>
+            <td class="select_lan">
+              <select>
+                <option selected="selected" value="http://ja.mangareborn.jp/">日本語</option>
+                <option value="http://en.mangareborn.jp/">English</option>
+              </select>
+            </td>
+            <td>
+              <span class="icon_lang">language</span>
+            </td>
+          </tr>
+        </table>
+        <table class="search_box_bottom">
+          <tr>
+            <td>
+              <input type="text" name="your name" placeholder="キーワードを入力してください" class="jq-placeholder" >
+            </td>
+            <td>
+              <a href="#" class="btn_radius">Search</a>
+            </td>
+          </tr>
+        </table>
+      </div>
+        <div class="clear"></div>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+
+</body>
+</html>

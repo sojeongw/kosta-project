@@ -1,0 +1,148 @@
+@charset "UTF-8";
+
+/**
+@prefix : <http://purl.org/net/ns/doas#> .
+</styles/default.css> a :CSSstylesheet;
+ :shortdesc "default.css";
+ :dependencies [
+ :name "Yahoo";
+	:title "YUI Fonts CSS";
+	:description "ブラウザ間のフォントサイズを揃えるライブラリ";
+	:revisiton "3.1.1";
+	:homepage <http://developer.yahoo.com/yui/3/stylesheet/>;
+	:license <http://developer.yahoo.com/yui/3/license.html>;
+	:note "
+		Font-size Adjustment.
+			77% = 10px	|	123.1% = 16px	|	167% = 22px
+			85% = 11px	|	131% =  17px	|	174% = 23px 
+			93% = 12px	|	138.5% = 18px	|	182% = 24px 
+			100% = 13px	|	146.5% = 19px	|	189% = 25px 
+			108% = 14px	|	153.9% = 20px	|	197% = 26px 
+			116% = 15px	|	161.6% = 21px	|
+			"
+	] .
+*/
+
+/**
+ * Percents could work for IE, but for backCompat purposes, we are using keywords.
+ * x-small is for IE6/7 quirks mode.
+ */
+body { font:13px/1.231 'メイリオ','Meiryo','ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','MS Pゴシック',arial,helvetica,clean,sans-serif; *font-size:small; /* for IE */ *font:x-small; /* for IE in quirks mode */ }
+
+/**
+ * Nudge down to get to 13px equivalent for these form elements
+ */ 
+select, input, button, textarea { font:99% arial,helvetica,clean,sans-serif; }
+
+/**
+ * To help tables remember to inherit
+ */
+table { font-size:inherit; font:100%; }
+
+/**
+ * Bump up IE to get to 13px equivalent for these fixed-width elements
+ */
+pre, code, kbd, samp, tt { font-family:monospace; *font-size:108%; line-height:100%; }
+
+/*----------------------------------------------------
+	content
+----------------------------------------------------*/
+html {
+	overflow-y: scroll;
+}
+body {
+	text-align: center;
+	background: #dcdcdc;
+}
+#wrapper {
+	padding-bottom: 30px;
+	background: #fff;
+}
+#readArea {
+	background: #000 url(../images/common/wrapper_line_01.gif) repeat-x left bottom;
+}
+#readArea p {
+	width: 600px;
+	margin: 0 auto;
+	padding: 10px 0;
+	font-size: 93%;
+	text-align: left;
+	color: #fff;
+}
+#readArea p a {
+	color: #fff;
+}
+#header {
+	text-align: left;
+	background: url(../images/common/wrapper_line_01.gif) repeat-x left bottom;
+}
+#header div {
+	position: relative;
+	width: 960px;
+	margin: 0 auto;
+	padding: 10px 0;
+}
+#header h1 {
+	position: absolute;
+	top: 10px;
+	left: 0;
+}
+#header nav {
+	height: 102px;
+	background: url(../images/common/header_back_01.gif) no-repeat right 11px;
+}
+#header nav ul {
+	position: absolute;
+	background: #000;
+	top: 21px;
+	left: 102px;
+}
+#header nav ul li {
+	float: left;
+	font-size: 138.5%;
+	font-weight: bold;
+}
+#header nav ul li a {
+	display: block;
+	width: 209px;
+	height: 50px;
+	padding-top: 30px;
+	text-align: center;
+	color: #fff;
+	border-right: 1px solid #1e1e1e;
+}
+#header nav ul li:last-child a {
+	border-right: none;
+}
+#header nav ul li a:link,
+#header nav ul li a:visited {
+	text-decoration: none;
+}
+#header nav ul li a:hover,
+#header nav ul li a:active {
+	text-decoration: underline;
+}
+#content {
+	width: 600px;
+	margin: 0 auto;
+	text-align: left;
+}
+#footer {
+	padding: 30px;
+	background: url(../images/common/wrapper_line_01.gif) repeat-x left top;
+}
+
+/*----------------------------------------------------
+	clearfix
+----------------------------------------------------*/
+.clearfix:before, .clearfix:afterr {
+	content: "";
+	display: block;
+	overflow: hidden;
+}
+.clearfix:after {
+	clear: both;
+}
+.clearfix {
+	zoom: 1;
+}

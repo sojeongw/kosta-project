@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script src="http://code.jquery.com/jquery-1.7.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('h1').each(function () {
+                // .select라는 클래스가 있다면
+                if ($(this).is('.select')) {
+                  // 얘를 줘
+                    $(this).css('background', 'Orange');
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1 class="select">Header-0</h1>
+    <h1>Header-1</h1>
+    <h1 class="select">Header-2</h1>
+</body>
+</html>

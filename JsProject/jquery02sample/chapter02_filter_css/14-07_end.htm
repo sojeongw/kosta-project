@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="http://code.jquery.com/jquery-1.7.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $('h1').css('background', 'Orange').filter(':even').css('color', 'White')
+            // 필터링 한 것중에 odd >> end()는 원래로 돌아가서 그 순서로 적용되도록 해준다.
+            .end().filter(':odd').css('color', 'Red');
+        });
+    </script>
+</head>
+<body>
+    <h1>Header-0</h1>
+    <h1>Header-1</h1>
+    <h1>Header-2</h1>
+</body>
+</html>

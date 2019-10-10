@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset=utf-8>
+  <title> java script </title>
+
+  <script type="text/javascript">
+  console.log("function");
+
+  function test(){
+    return function(){
+      console.log("return fn()...");
+        return 1000;
+      };
+    }    // 함수를 리턴할 수 있다.
+
+  console.log(test());
+  console.log(test()());  // test() 안에 있는 함수를 콜 하는 법
+
+  var fn = test();  // fn에 함수를 집어넣음.
+  /* var fn = test; 하면 함수 자체를 넣은 것이고 위에는 콜한 값을 넣는 것이다. */
+  console.log(fn);
+
+  function start(){
+    return function(arr){
+      return {time:arr[0], meter:arr[1]};
+    };
+  }
+
+  // 출력하는 법
+  /* console.log(start()()["time"]);
+     console.log(start()()["meter"]);
+      for(var i in start()()){
+        console.log(start()()[i]);
+      }
+  */
+  var fn = start();
+  console.log(fn);  // 일단 나오는지 본 다음에
+  var obj = fn([555,666]);
+  console.log(obj);
+  console.log(obj.time);
+  console.log(obj.meter);
+
+
+
+
+
+  </script>
+</head>
+
+<body>
+  <h1>function</h1>
+
+</body>
+  </html>

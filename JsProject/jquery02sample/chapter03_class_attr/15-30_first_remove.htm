@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="http://code.jquery.com/jquery-1.7.js"></script>
+    <script>
+        $(document).ready(function () {
+//             $('h1').first().remove();    // 첫번째 애를 지워라
+            $('h1').eq(1).remove();
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <h1>Header-0</h1>
+        <h1>Header-1</h1>
+        <!-- 얘의 next는 다시 0 -->
+    </div>
+</body>
+</html>

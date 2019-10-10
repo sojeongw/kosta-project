@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="http://code.jquery.com/jquery-1.7.js"></script>
+    <script>
+        $(document).ready(function () {
+            // ������ �����մϴ�.
+            var object = { name: 'RintIanTta' };
+
+            // $.extend() �޼��带 �����մϴ�.
+            $.extend(object, {    // 위에서 선언한 오브젝트에 이 속성을 더해서 주겠다. object.create와 비슷하다.
+                gender: 'Male',
+                part: 'Second Guitar'
+            });
+
+            // �����մϴ�.
+            var output = '';
+            $.each(object, function (key, item) {
+                output += key + ': ' + item + '\n';
+            });
+            alert(output);
+        });
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

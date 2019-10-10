@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>フォームバリデーション</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="js/jquery.validate.js"></script>
+	<script type="text/javascript" src="js/messages_ja.js"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function() {
+			$('#sendform').validate({
+				rules : {
+					usernumber: {
+						minlength: 4,
+						maxlength: 6
+					},
+					detail: {
+						maxlength: 500
+					}
+				}
+			});
+		});
+	</script>
+</head>
+<body>
+	<div id="inquiry">
+		<h2>お問い合わせ</h2>
+		<form action="#" method="post" id="sendform">
+			<p class="note"><span>＊</span>は必須項目です</p>
+			<table>
+				<tr>
+					<th>
+						<p class="req"><label for="userName">お名前</label></p>
+					</th>
+					<td><input type="text" value="" id="userName" name="username" class="required" /></td>
+				</tr>
+				<tr>
+					<th>
+						<p class="req"><label for="usernNmber">お客様ナンバー</label></p>
+						<p class="caption">半角数字4〜6桁</p>
+					</th>
+					<td><input type="text" value="" id="usernNmber" name="usernumber" class="required digits" /></td>
+				</tr>
+				<tr>
+					<th>
+						<p class="req"><label for="eMail">メールアドレス</label></p>
+					</th>
+					<td><input type="text" value="" id="eMail" name="email" class="required email" /></td>
+				</tr>
+				<tr>
+					<th>
+						<p><label for="url">URL</label></p>
+					</th>
+					<td><input type="text" value="" id="url" name="url" class="url" /></td>
+				</tr>
+				<tr>
+					<th>
+						<p class="req"><label for="detail">内容</label></p>
+						<p class="caption">500文字まで</p>
+					</th>
+					<td><textarea id="detail" name="detail" class="required"></textarea></td>
+				</tr>
+			</table>
+			<div id="submit">
+				<button type="submit">送信する</button>
+			</div>
+		</form>
+	</div>
+</body>
+</html>

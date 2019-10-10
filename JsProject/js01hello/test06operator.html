@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset=utf-8>
+  <title> java script </title>
+  <script type="text/javascript">
+    console.log("operator");
+
+    console.log(3*2);
+    console.log(3/2);
+    console.log(3+2);
+    console.log(3-2);
+    console.log(3%2);
+
+    // 비트연산
+    console.log(3&2);   // 0011 & 0010
+    console.log(3|2);
+    console.log(3^2);
+
+    // 논리연산
+    console.log(3&&2);
+    console.log(0||2);
+    // java는 참/거짓값을 계산해주는데 얘는 논리연산인데도 좌항 우항 둘 다 참이 아니면 0이다.
+    console.log(0&&2);
+    console.log(3&&0);
+
+    console.log(0||2);
+    console.log(3||0);
+
+    var test = 0||2;
+    var test = ""||2;
+    var test = false||2;
+    var test = null||2;
+    var test = undefined||2;
+    console.log(test);
+
+    console.log(5==5);
+    console.log(5>=5);
+    console.log(5<=5);
+    console.log(5>5);
+    console.log(5<5);
+    console.log(5!=5);
+
+    console.log("kim"==="kim");
+    // 문자 비교는 ===을 쓴다.
+
+    var result = false ? "yang" : "choi";
+    var result = "aaa" ? "yang" : "choi";
+    // 데이터가 중요한 게 아니라 뭐라도 들어있으면 참이 된다.
+    console.log(result);
+
+    console.log(result2);   // undefined. 이 타이밍에는 아직 할당은 안 되어 있고 var 변수가 선언은 되어있는 효과.
+    // 즉, var result2; console.log(result2);  한 것과 같다.
+    var result2 = "aaa" ? "yang" : "choi";
+
+
+  </script>
+</head>
+
+<body>
+  <h1>variable</h1>
+
+</body>
+  </html>

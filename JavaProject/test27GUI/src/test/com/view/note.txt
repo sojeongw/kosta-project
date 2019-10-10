@@ -1,0 +1,2 @@
+사용자가 입력해서 어떤 값이 올 지 모르는 건 다 변수로 처리한다.
+int result = bDAO.insert(bvo);

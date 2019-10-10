@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+/* ------- Set ------- */
+
+html, body, div, ul, ol, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, p, img {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+/* ------- wrapper ------- */
+
+#wrapper {
+	margin: 0px auto;
+	width: 640px;
+}
+
+/* ------- contents ------- */
+
+#contents {
+	margin-top: 40px;
+}

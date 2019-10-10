@@ -1,0 +1,240 @@
+@charset "UTF-8";
+
+/* //////////////////////////////////////////////////
+[Base] 
+////////////////////////////////////////////////// */
+
+/* for IE7: page zoom bug fix */
+*:first-child+html body,
+*:first-child+html br { letter-spacing: 0; }
+
+/* for IE6-7: hasLayout bug fix */
+h1, h2, h3, h4, h5, h6,
+p, dl, dt, dd, ul, ol, li, table, th, td,
+div, blockquote, pre,
+form, fieldset, legend,
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	*zoom: 1;
+}
+
+/* for IE6-7: line-height bug fix */
+body {
+	*line-height: 1.2;
+	-webkit-text-size-adjust: none;
+}
+
+/* override html5reset.css */
+input, select, button {
+	font-size: 100%;
+}
+li {
+	list-style: none;
+}
+
+/* //////////////////////////////////////////////////
+[Layout] 
+////////////////////////////////////////////////// */
+
+body {
+	background: #d3daea;
+	color: #333;
+	font-family: Arial, Helvetica, sans-serif;
+	font-family: "MS PGothic", Arial, Helvetica, sans-serif\0/;
+}
+a {
+	color: #333;
+}
+
+/* --------------------------------------------------
+	Contents
+-------------------------------------------------- */
+#contents {
+	/* Old */
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-box;
+	display: box;
+	/* New */
+	display: -webkit-flexbox;
+	display: -moz-flexbox;
+	display: -ms-flexbox;
+	display: flexbox;
+	
+	width: 100%;
+}
+#main {
+	/* Old */
+	-webkit-box-ordinal-group: 2;
+	-moz-box-ordinal-group: 2;
+	-ms-box-ordinal-group: 2;
+	box-ordinal-group: 2;
+	/* New */
+	-webkit-flex-order: 2;
+	-moz-flex-order: 2;
+	-ms-flex-order: 2;
+	flex-order: 2;
+	
+	/* Old */
+	-webkit-box-flex: 1;
+	-moz-box-flex: 1;
+	-ms-box-flex: 1;
+	box-flex: 1;
+	/* New */
+	width: -webkit-flex(1);
+	width: -moz-flex(1);
+	width: -ms-flex(1);
+	width: flex(1);
+}
+#main h1 {
+	padding: 10px 0 12px;
+	background: #cdd5df; /* Old browsers */
+	background: -moz-linear-gradient(top,  #cdd5df 0%, #b0bccd 3%, #899bb3 50%, #8195af 51%, #6d84a2 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cdd5df), color-stop(3%,#b0bccd), color-stop(50%,#899bb3), color-stop(51%,#8195af), color-stop(100%,#6d84a2)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #cdd5df 0%,#b0bccd 3%,#899bb3 50%,#8195af 51%,#6d84a2 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #cdd5df 0%,#b0bccd 3%,#899bb3 50%,#8195af 51%,#6d84a2 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #cdd5df 0%,#b0bccd 3%,#899bb3 50%,#8195af 51%,#6d84a2 100%); /* IE10+ */
+	background: linear-gradient(top,  #cdd5df 0%,#b0bccd 3%,#899bb3 50%,#8195af 51%,#6d84a2 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cdd5df', endColorstr='#6d84a2',GradientType=0 ); /* IE6-9 */
+	border-bottom: 1px solid #2d3642;
+	color: #fff;
+	font-size: 18px;
+	font-weight: bold;
+	text-shadow: 0 -1px 0 rgba(0,0,0,.5);
+	text-align: center;
+}
+#sub {
+	/* Old */
+	-webkit-box-ordinal-group: 1;
+	-moz-box-ordinal-group: 1;
+	-ms-box-ordinal-group: 1;
+	box-ordinal-group: 1;
+	/* New */
+	-webkit-flex-order: 1;
+	-moz-flex-order: 1;
+	-ms-flex-order: 1;
+	flex-order: 1;
+	
+	width: 150px;
+	background: #eee;
+	border-right: 1px solid #ccc;
+	text-shadow: 0 1px 0 rgba(255,255,255,.8);
+}
+#sub h1 {
+	padding: 10px;
+	color: #999;
+	font-size: 14px;
+	font-weight: bold;
+}
+@media screen and (max-width: 479px) {
+	#sub {
+		display: none;
+	}
+}
+
+
+/* //////////////////////////////////////////////////
+[Module] 
+////////////////////////////////////////////////// */
+
+/* talkList */
+.talkList {
+	padding: 20px 10px;
+}
+.talkList li {
+	margin-bottom: 10px;
+}
+.talkList .self {
+	text-align: right;
+}
+
+/* history */
+.history {
+	position: fixed;
+}
+
+/* userList */
+.userList {
+	padding: 0 10px;
+}
+.userList li {
+	margin: 0 0 7px;
+}
+.userList a {
+	display: block;
+	position: relative;
+	color: #666;
+	font-size: 14px;
+	text-decoration: none;
+}
+.userList .current a {
+	font-weight: bold;
+	cursor: default;
+	pointer-events: none;
+}
+.userList .current a:after {
+	content: "▶";
+	position: absolute;
+	top: 50%;
+	margin: -.7em 0 0 5px;
+	color: #999;
+	font-size: 10px;
+}
+.userList img {
+	margin: 0 7px 0 0;
+	padding: 1px;
+	border: 1px solid #ccc;
+	vertical-align: middle;
+}
+
+/* --------------------------------------------------
+	以下、サンプルコード
+-------------------------------------------------- */
+
+/* ##### balloon ##### */
+.balloon {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	line-height: 1.3;
+	max-width: 60%;
+	text-align: left;
+}
+.balloon p {
+	_position: relative;
+	_display: inline;
+	_zoom: 1;
+	margin: -5px;
+	font-size: 14px;
+	text-shadow: 0 1px 0 rgba(255,255,255,.5);
+}
+.balloon img {
+	vertical-align: bottom;
+	border-top: 1px solid rgba(0,0,0,.3);
+	border-right: 1px solid rgba(255,255,255,.5);
+	border-bottom: 1px solid rgba(255,255,255,.5);
+	border-left: 1px solid rgba(0,0,0,.3);
+}
+.self .balloon {
+	/* for IE */
+	border: 15px solid #8bd21c;
+	background-color: #8bd21c\9;
+	
+	/* for Modern Browser */
+	-webkit-border-image: url(../img/balloon01.png) 30 44 34 32 / 15px 22px 17px 16px round;
+	-moz-border-image: url(../img/balloon01.png) 30 44 34 32 / 15px 22px 17px 16px round;
+	-moz-border-image-slice: 30 44 34 32 fill;
+	-o-border-image: url(../img/balloon01.png) 30 44 34 32 / 15px 22px 17px 16px round;
+	border-image: url(../img/balloon01.png) 30 44 34 32 fill / 15px 22px 17px 16px round;
+}
+.other .balloon {
+	/* for IE */
+	border: 15px solid #e9eaea;
+	background-color: #e9eaea\9;
+	
+	/* for Modern Browser */
+	-webkit-border-image: url(../img/balloon02.png) 30 32 34 44 / 15px 16px 17px 22px round;
+	-moz-border-image: url(../img/balloon02.png) 30 32 34 44 / 15px 16px 17px 22px round;
+	-o-border-image: url(../img/balloon02.png) 30 32 34 44 / 15px 16px 17px 22px round;
+	border-image: url(../img/balloon02.png) 30 32 34 44 fill / 15px 16px 17px 22px round;
+}

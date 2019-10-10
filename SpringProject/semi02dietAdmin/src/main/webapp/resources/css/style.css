@@ -1,0 +1,278 @@
+@charset "UTF-8";
+
+/* //////////////////////////////////////////////////
+[Base] 
+////////////////////////////////////////////////// */
+
+/* for IE7: page zoom bug fix */
+*:first-child+html body,
+*:first-child+html br { letter-spacing: 0; }
+
+/* for IE6-7: hasLayout bug fix */
+h1, h2, h3, h4, h5, h6,
+p, dl, dt, dd, ul, ol, li, table, th, td,
+div, blockquote, pre,
+form, fieldset, legend,
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	*zoom: 1;
+}
+
+/* for IE6-7: line-height bug fix */
+body {
+	*line-height: 1.2;
+}
+
+/* override html5reset.css */
+input, select, button {
+	font-size: 100%;
+}
+li {
+	list-style: none;
+}
+
+/* //////////////////////////////////////////////////
+[Layout] 
+////////////////////////////////////////////////// */
+
+body {
+	min-width: 600px;
+	color: #515151;
+	font-size: 13px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-family: "MS PGothic", Arial, Helvetica, sans-serif\0/;
+}
+a {
+	color: #0371A8;
+}
+a:link,
+a:visited {
+	text-decoration: none;
+}
+a:focus,
+a:hover,
+a:active {
+	text-decoration: underline;
+}
+
+/* --------------------------------------------------
+	Header
+-------------------------------------------------- */
+
+#header {
+	overflow: hidden;
+	padding: 15px 20px 0;
+}
+
+/* siteID */
+#siteID {
+	float: left;
+	line-height: 1;
+	margin: -5px 20px 0 0;
+	color: #515151;
+	font-size: 36px;
+	font-family: 'Poly', serif;
+}
+#siteID a {
+	color: #515151;
+	text-decoration: none;
+}
+
+/* userInfo */
+#userInfo {
+	float: left;
+	_width: 300px;
+	color: #666;
+	font-size: 11px;
+}
+#userInfo li {
+	margin-bottom: 5px;
+}
+#userInfo b {
+	margin: 0 3px;
+}
+
+/* utilityNav */
+#utilityNav {
+	float: right;
+}
+#utilityNav li {
+	margin: 0 0 0 10px;
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+}
+#utilityNav a {
+	color: #515151;
+	white-space: nowrap;
+}
+
+/* mainNav */
+#mainNav {
+	clear: both;
+	margin: 0 -20px;
+	padding: 10px 0 0;
+	font-size: 12px;
+}
+#mainNav ul {
+	overflow: hidden;
+	background: #319cbd; /* Old browsers */
+	background: -moz-linear-gradient(top,  #319cbd 0%, #0371a8 80%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#319cbd), color-stop(80%,#0371a8)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #319cbd 0%,#0371a8 80%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #319cbd 0%,#0371a8 80%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #319cbd 0%,#0371a8 80%); /* IE10+ */
+	background: linear-gradient(top,  #319cbd 0%,#0371a8 80%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#319cbd', endColorstr='#0371a8',GradientType=0 ); /* IE6-9 */
+}
+#mainNav li {
+	overflow: hidden;
+	float: left;
+	width: 20%;
+	*width: 19.9%;
+}
+#mainNav a {
+	position: relative;
+	display: block;
+	padding: 10px;
+	border-left: 1px solid #10688c; /* for IE6-8 */
+	border-left: 1px solid rgba(0,0,0,.2);
+	-moz-box-shadow: inset 1px 1px 0 rgba(255,255,255,.2);
+	-webkit-box-shadow: inset 1px 1px 0 rgba(255,255,255,.2);
+	box-shadow: inset 1px 1px 0 rgba(255,255,255,.2);
+	color: #fff;
+	text-align: center;
+	text-decoration: none;
+	text-shadow: 0 -1px 0 rgba(0,0,0,.5);
+	*zoom: 1;
+}
+#mainNav li:first-child a {
+	border-left: 0;
+}
+
+/* --------------------------------------------------
+	Contents
+-------------------------------------------------- */
+#contents {
+	padding: 20px;
+}
+
+/* --------------------------------------------------
+	Footer
+-------------------------------------------------- */
+#footer {
+	overflow: hidden;
+	padding: 15px 20px;
+	border-top: 2px solid #0371A8;
+}
+
+/* rulesNav */
+#rulesNav {
+	float: left;
+}
+#rulesNav li {
+	margin: 0 10px 0 0;
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+}
+#rulesNav a {
+	color: #515151;
+}
+
+/* copyright */
+#copyright {
+	float: right;
+}
+
+/* //////////////////////////////////////////////////
+[Module] 
+////////////////////////////////////////////////// */
+
+/* lead */
+.lead {
+	margin-bottom: 20px;
+}
+.lead h1 {
+	margin: 0 0 10px;
+	padding: 0 0 7px 0;
+	border-bottom: 1px solid #eee;
+	font-size: 16px;
+}
+
+/* detailList */
+.detailList {
+	padding: 15px 20px 20px;
+	background: #E7ECF0;
+	border-radius: 5px;
+}
+.detailList h2 {
+	margin-bottom: 10px;
+	color: #666;
+}
+.detailList table {
+	width: 100%;
+	line-height: 1.2;
+	background: #fff;
+}
+.detailList th,
+.detailList td {
+	padding: 5px 10px;
+	border: 1px solid #ccc;
+}
+.detailList thead th { /* IEでセルのborderが消えるのでfilterは指定しない */
+	padding: 10px;
+	background: #f6f6f6; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ffffff 0%, #f1f1f1 50%, #e1e1e1 51%, #f6f6f6 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(50%,#f1f1f1), color-stop(51%,#e1e1e1), color-stop(100%,#f6f6f6)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%); /* IE10+ */
+	background: linear-gradient(top,  #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%); /* W3C */
+	color: #666;
+	white-space: nowrap;
+}
+.detailList tfoot td {
+	border-top: 3px double #ccc;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: right;
+}
+
+/* --------------------------------------------------
+	以下、サンプルコード
+-------------------------------------------------- */
+
+/* ##### :nth-child(odd / even) ##### */
+.detailList tbody tr:nth-child(odd) td {
+	background: #fff;
+}
+.detailList tbody tr:nth-child(even) td {
+	background: #f3f3f3;
+}
+
+/* ##### :nth-child(An+B) ##### */
+.detailList tbody tr:nth-child(10n+10) td {
+	border-bottom: 3px solid #ccc;
+}
+
+/* ##### :nth-child(N) ##### */
+.detailList tbody td:nth-child(1) { text-align: center; }
+.detailList tbody td:nth-child(2) { text-align: left; }
+.detailList tbody td:nth-child(3) { text-align: right; }
+.detailList tbody td:nth-child(4) { text-align: center; }
+.detailList tbody td:nth-child(5) { text-align: right; }
+.detailList tbody td:nth-child(6) { text-align: left; }
+
+/* ##### :hover ##### */
+.detailList tbody tr:hover td { /* 最後に書く */
+	background: #fdfbe0;
+}
+
+/* ##### :empty ##### */
+.detailList td:empty {
+	text-align: center !important;
+}
+.detailList td:empty:before {
+	content: "-";
+}

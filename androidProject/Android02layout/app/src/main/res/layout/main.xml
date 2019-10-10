@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.test.android02layout.MainActivity">
+
+
+    <Button
+        android:id="@+id/btn_student_insert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="@string/btn_student_insert" />
+
+    <Button
+        android:id="@+id/btn_member_insert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btn_student_insert"
+        android:layout_alignStart="@+id/btn_student_insert"
+        android:layout_below="@+id/btn_student_insert"
+        android:layout_marginTop="8dp"
+        android:text="@string/btn_member_insert" />
+</RelativeLayout>

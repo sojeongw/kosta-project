@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="test.com.spring04Member.model">
+	<!-- #{menu},#{price} -->
+	<insert id="insert" parameterType="test.com.spring04Member.model.MemberVO">
+		insert into member(num, id,
+		pw, name, tel) values(seq_member_num.nextval, #{id}, #{pw}, #{name}, #{tel})
+	</insert>
+
+	<update id="update" parameterType="test.com.spring04Member.model.MemberVO">
+		update member set id = #{id}, pw = #{pw}, name = #{name}, tel = #{tel} where num = #{num}
+	</update>
+
+	<delete id="delete" parameterType="int">
+		delete from member where num =#{num}
+	</delete>
+
+	<select id="selectAll" resultType="test.com.spring04Member.model.MemberVO">
+		select * from member order by num
+	</select>
+
+
+	<!-- select * from member where id=? -->
+	<select id="selectOne" resultType="test.com.spring04Member.model.MemberVO">
+		select * from member where num=#{num}
+	</select>
+
+</mapper>

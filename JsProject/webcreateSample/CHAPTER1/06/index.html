@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>サンプル</title>
+
+<link rel="stylesheet" href="css/bgstretcher.css" type="text/css">
+<link rel="stylesheet" href="css/sample.css" type="text/css">
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bgstretcher.js"></script>
+
+<!--[if lt IE 9]>
+<script src="js/html5shiv.js"></script>
+<![endif]-->
+
+<script>
+
+jQuery(function(){
+
+$('body').bgStretcher({
+images: ['img/photo1.jpg', 'img/photo2.jpg', 'img/photo3.jpg'],
+imageWidth: 1000, 
+imageHeight: 1000,
+anchoringImg: 'center'
+});
+
+});
+
+</script>
+
+</head>
+
+<body>
+
+<h1><img src="img/logo.png" alt="食べ歩き王国" width="539" height="190"></h1>
+<nav>
+<h2><img src="img/blog.png" alt="食べ歩きブログ" width="92" height="15"></h2>
+<ul>
+<li><a href="#">
+<img src="img/blog1.png" alt="スイーツ萌え萌え" width="98" height="15">
+<img src="img/blog1_edit.png" alt="blog1_edit" width="49" height="11">
+</a></li>
+<li><a href="#">
+<img src="img/blog2.png" alt="コーヒー飲み歩き" width="103" height="15">
+<img src="img/blog2_edit.png" alt="blog2_edit" width="58" height="12">
+</a></li>
+<li><a href="#">
+<img src="img/blog3.png" alt="居酒屋道場破り" width="98" height="15">
+<img src="img/blog3_edit.png" alt="blog3_edit" width="93" height="13">
+</a></li>
+</ul>
+
+<h2><img src="img/map.png" alt="食べ歩きMAP" width="92" height="15"></h2>
+<ul>
+<li><a href="#">
+<img src="img/map1.png" alt="京都" width="30" height="15"><strong>12</strong>
+</a></li>
+<li><a href="#">
+<img src="img/map2.png" alt="神戸" width="30" height="15">
+<strong>36</strong>
+</a></li>
+<li><a href="#">
+<img src="img/map3.png" alt="大阪" width="30" height="15">
+<strong>50</strong>
+</a></li>
+</ul>
+
+</nav>
+
+<footer>
+<ul>
+<li><a href="#">個人情報保護方針</a></li>
+<li><a href="#">食べ歩き王国 運営団体</a></li>
+<li><a href="#">お問い合わせ</a></li>
+<li><a href="#">サイトマップ</a></li>
+</ul>
+<small>Copyright © 2013 食べ歩き王国 All rights reserved.</small>
+</footer>
+</body>
+</html>

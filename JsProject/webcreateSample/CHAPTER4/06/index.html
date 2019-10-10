@@ -1,0 +1,195 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>ボーダーと背景のサンプル</title>
+<style>
+.sample01 {
+  width: 300px;
+  height: 120px;
+  border: solid 10px #6666ff; /* ここで枠線を指定 */
+}
+.sample02 {
+  width: 300px;
+  height: 120px;
+  border: dotted 10px #6666ff; /* ここで枠線を指定 */
+}
+.sample03 {
+  width: 300px;
+  height: 120px;
+  border: dashed 10px #6666ff; /* ここで枠線を指定 */
+}
+.sample04 {
+  width: 300px;
+  height: 120px;
+  border: double 10px #6666ff; /* ここで枠線を指定 */
+}
+.sample05 {
+  width: 300px;
+  height: 120px;
+  border: groove 10px #6666ff; /* ここで枠線を指定 */
+}
+.sample06 {
+  width: 300px;
+  height: 120px;
+  border: ridge 10px #6666ff; /* ここで枠線を指定 */
+}
+.sample07 {
+  width: 300px;
+  height: 120px;
+  border: inset 10px #6666ff; /* ここで枠線を指定 */
+}
+.sample08 {
+  width: 300px;
+  height: 120px;
+  border: outset 10px #6666ff; /* ここで枠線を指定 */
+}
+.round_corner {
+  width: 300px;
+  height: 120px;
+  border: solid 10px #ffae66;
+  -webkit-border-radius: 15px; /* Safari, Chrome */
+  -moz-border-radius: 15px; /* Firefox */
+  border-radius: 30px; /* W3C */
+}
+.round_corner2 {
+  width: 600px;
+  height: 240px;
+  border: 10px solid #ffae66;
+  padding: 20px;
+  -webkit-border-radius: 100px 20px 50px 10px; /* Safari, Chrome */
+  -moz-border-radius: 100px 20px 50px 10px; /* Firefox */
+  border-radius:100px 20px 50px 10px; /* W3C */
+}
+.image_border01 {
+  width: 310px;
+  height: 110px;
+  -webkit-border-image: url(img/bg.png) 20 20 20 20 / 20px repeat; /* Safari, Chrome */
+  -moz-border-image: url(img/bg.png) 20 20 20 2 / 20px0 repeat; /* Firefox */
+  -o-border-image: url(img/bg.png) 20 20 20 20 / 20px repeat; /* Opera */
+  border-image: url(img/bg.png) 20 20 20 20 / 20px repeat; /* W3C */
+}
+.image_border02 {
+  width: 310px;
+  height: 110px;
+  -webkit-border-image: url(img/bg.png) 20 20 20 20 / 20px stretch; /* Safari, Chrome */
+  -moz-border-image: url(img/bg.png) 20 20 20 2 / 20px0 stretch; /* Firefox */
+  -o-border-image: url(img/bg.png) 20 20 20 20 / 20px stretch; /* Opera */
+  border-image: url(img/bg.png) 20 20 20 20 / 20px stretch; /* W3C */
+}
+.image_border03 {
+  width: 310px;
+  height: 110px;
+  -webkit-border-image: url(img/bg.png) 20 20 20 20 / 20px round; /* Safari, Chrome */
+  -moz-border-image: url(img/bg.png) 20 20 20 2 / 20px0 round; /* Firefox */
+  -o-border-image: url(img/bg.png) 20 20 20 20 / 20px round; /* Opera */
+  border-image: url(img/bg.png) 20 20 20 20 / 20px round; /* W3C */
+}
+.image_border04 {
+  width: 310px;
+  height: 110px;
+  -webkit-border-image: url(img/bg.png) 20 20 20 20 / 20px space; /* Safari, Chrome */
+  -moz-border-image: url(img/bg.png) 20 20 20 2 / 20px0 space; /* Firefox */
+  -o-border-image: url(img/bg.png) 20 20 20 20 / 20px space; /* Opera */
+  border-image: url(img/bg.png) 20 20 20 20 / 20px space; /* W3C */
+}
+.bg_sample01 {
+  width: 300px;
+  height: 120px;
+  background-color: #c9ffa8; /* 背景色を指定 */
+  background-image: url(img/bg2.png); /* 背景画像を指定 */
+}
+
+.bg_sample02 {
+  width: 300px;
+  height: 200px;
+  background-image: url(img/texture.png), url(img/pic.jpg);/* 複数の背景画像を指定 */
+  background-repeat: no-repeat, auto;
+}
+
+.linear_gradation {
+  width:300px;
+  height:120px;
+  background: -moz-linear-gradient(top, #f1f3ff, #5676ff); /* Firefox */
+  background: -webkit-gradient(linear,left bottom,left top,color-stop(0, #5676ff),color-stop(1, #f1f3ff)); /* Chrome */
+  filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#f1f3ff', endColorstr='#5676ff'); /* IE6-7 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#f1f3ff', endColorstr='#5676ff')"; /* IE8+ */
+}
+.radial_gradation {
+  width:300px;
+  height:120px;
+  background: -moz-radial-gradient(circle closest-side, #e6fff0 0, #00c54f 100px);
+  background: -webkit-gradient(radial, center center, 0, center center, 100, from(#e6fff0), to(#00c54f));
+}
+p {
+ padding: 5px;
+}
+div {
+  margin: 10px;
+  float: left;
+}
+.clear {
+  clear: both;
+}
+</style>
+</head>
+<body>
+  <div class="sample01">
+    <p>solid（実線）</p>
+  </div>
+  <div class="sample02">
+    <p>dotted（点線）</p>
+  </div>
+  <div class="sample03">
+    <p>dashed（破線）</p>
+  </div>
+  <div class="sample04">
+    <p>double（二重線）</p>
+  </div>
+  <div class="sample05">
+    <p>groove（窪んだ線）</p>
+  </div>
+  <div class="sample06">
+    <p>ridge（隆起した線）</p>
+  </div>
+  <div class="sample07">
+    <p>inset（窪み）</p>
+  </div>
+  <div class="sample08">
+    <p>outset（隆起）</p>
+  </div>
+  <div class="sample01 clear">
+    <p>枠線サンプル01</p>
+    <p>サンプルです！</p>
+  </div>
+  <div class="round_corner">
+    <p>角丸です</p>
+  </div>
+  <div class="round_corner2">
+    <p>角丸（4つの角を別々に指定）</p>
+  </div>
+  <div class="image_border01">
+    <p>画像を用いた枠線（repeat）</p>
+  </div>
+  <div class="image_border02">
+    <p>画像を用いた枠線（stretch）</p>
+  </div>
+  <div class="image_border03">
+    <p>画像を用いた枠線（round）</p>
+  </div>
+  <div class="image_border04">
+    <p>画像を用いた枠線（space）</p>
+  </div>
+  <div class="bg_sample01">
+    <p>背景色と背景画像を指定</p>
+  </div>
+  <div class="bg_sample02">
+    <p>複数の背景画像を指定</p>
+  </div>
+  <div class="linear_gradation">
+    <p>線形グラデーション</p>
+  </div>
+  <div class="radial_gradation">
+    <p>円形グラデーション</p>
+  </div>
+</body>
+</html>

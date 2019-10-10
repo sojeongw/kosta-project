@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>Button sample</title>
+<style>
+	.button {
+		display: inline-block;
+		width: 500px;
+		height: 250px;
+		line-height: 250px;
+		text-align: center;
+		text-decoration: none;
+		background-color: #1063C5;
+		color: white;
+		border: 1px solid black;
+		font-size: 5em;
+	}
+
+	.button_true_circle {
+		width: 250px;
+		height: 250px;
+	}
+
+	.radius {
+		-webkit-border-radius: 30px; /* Safari, Chrome */
+		-moz-border-radius: 30px; /* Firefox */
+		-o-border-radius: 30px; /* Opera */
+		border-radius: 30px; /* W3C */
+	}
+
+	.radius_oval {
+		-webkit-border-radius: 50%; /* Safari, Chrome */
+		-moz-border-radius: 50%; /* Firefox */
+		-o-border-radius: 50%; /* Opera */
+		border-radius: 50%; /* W3C */
+	}
+
+	.box_shadow {
+		-webkit-box-shadow: 3px 3px 5px 0 black;/* Safari, Chrome */
+		-moz-box-shadow: 3px 3px 5px 0 black; /* Firefox */
+		-o-box-shadow: 3px 3px 5px 0 black; /* Opera */
+		box-shadow: 3px 3px 5px 0 black; /* W3C */
+	}
+
+	.box_shadow_pushed {
+		-webkit-box-shadow: 3px 3px 5px 0 black inset;/* Safari, Chrome */
+		-moz-box-shadow: 3px 3px 5px 0 black inset; /* Firefox */
+		-o-box-shadow: 3px 3px 5px 0 black inset; /* Opera */
+		box-shadow: 3px 3px 5px 0 black inset; /* W3C */
+	}
+
+	.box_shadow_both {
+		-webkit-box-shadow: 3px 0 1px 0 black, 5px 0 3px 0 black inset;/* Safari, Chrome */
+		-moz-box-shadow: 3px 0 1px 0 black, 5px 0 3px 0 black inset; /* Firefox */
+		-o-box-shadow: 3px 0 1px 0 black, 5px 0 3px 0 black inset; /* Opera */
+		box-shadow: 3px 0 1px 0 black, 5px 0 3px 0 black inset; /* W3C */
+	}
+
+	.box_shadow_wide {
+		-webkit-box-shadow: 0 0 3px 3px black;/* Safari, Chrome */
+		-moz-box-shadow:  0 0 3px 3px black; /* Firefox */
+		-o-box-shadow:  0 0 3px 3px black; /* Opera */
+		box-shadow:  0 0 3px 3px black; /* W3C, IE*/
+	}
+
+	.gradient_top_to_bottom {
+		background: -webkit-gradient(linear, left top, left bottom, from(#1063C5), to(white)); /* Safari, Chrome */
+		background: -moz-linear-gradient(top, #1063C5, white); /* Firefox */
+		background: -o-linear-gradient(top, #1063C5, white); /* Opera */
+	}
+
+	.gradient_left_to_right {
+		background: -webkit-gradient(linear, left top, right top, from(#1063C5), to(white)); /* Safari, Chrome */
+		background: -moz-linear-gradient(left, #1063C5, white); /* Firefox */
+		background: -o-linear-gradient(left, #1063C5, white); /* Opera */
+	}
+
+	.gradient_left_top_to_right_bottom {
+		background: -webkit-gradient(linear, left top, right bottom, from(#1063C5), to(white)); /* Safari, Chrome */
+		background: -moz-linear-gradient(left top, #1063C5, white); /* Firefox */
+		background: -o-linear-gradient(left top, #1063C5, white); /* Opera */
+	}
+
+	.gradient_top_to_bottom_multi_color {
+		background: -webkit-gradient(linear, left top, left bottom, from(#1063C5), color-stop(0.5, black), to(white)); /* Safari, Chrome */
+		background: -moz-linear-gradient(top, #1063C5, black 50%, white); /* Firefox */
+		background: -o-linear-gradient(top, #1063C5, black 50%, white); /* Opera */
+	}
+
+	.gradient_top_to_bottom_ie {
+		-ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, StartColorstr='#1063C5', EndColorstr='white')"; /* IE8+ */
+		filter:  progid:DXImageTransform.Microsoft.gradient(GradientType=0, StartColorstr='#1063C5', EndColorstr='white'); /* IE6-7 */
+	}
+
+	.gradient_left_to_right_ie {
+		-ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=1, StartColorstr='#1063C5', EndColorstr='white')"; /* IE8+ */
+		filter:  progid:DXImageTransform.Microsoft.gradient(GradientType=1, StartColorstr='#1063C5', EndColorstr='white'); /* IE6-7 */
+	}
+
+</style>
+</head>
+<body>
+	<a class="button" href="#">Button</a>
+	<br>
+	<br>
+	<a class="button radius" href="#">Button</a>
+	<br>
+	<br>
+	<a class="button radius_oval" href="#">Button</a>
+	<br>
+	<br>
+	<a class="button button_true_circle radius_oval" href="#">Button</a>
+	<br>
+	<br>
+	<a class="button radius box_shadow" href="#">Button</a>
+	<br>
+	<br>
+	<a class="button radius box_shadow_pushed" href="#">Button</a>
+	<br>
+	<br>
+	<a class="button radius box_shadow_wide" href="#">Button</a>
+	<br>
+	<br>
+	<a class="button radius box_shadow_both" href="#">Button</a>
+	<br>
+	<br>
+	<a class="button radius box_shadow gradient_top_to_bottom" href="#">Button</a>
+	<br>
+	<br>
+	<a class="button radius box_shadow gradient_left_to_right" href="#">Button</a>
+	<br>
+	<br>
+	<a class="button radius box_shadow gradient_left_top_to_right_bottom" href="#">Button</a>
+	<br>
+	<br>
+	<a class="button radius box_shadow gradient_top_to_bottom_multi_color" href="#">Button</a>
+	<br>
+	<br>
+	<a class="button box_shadow gradient_top_to_bottom_ie" href="#">Button</a>
+	<br>
+	<br>
+	<a class="button box_shadow gradient_left_to_right_ie" href="#">Button</a>
+	<br>
+	<br>
+	<a class="button radius box_shadow gradient_top_to_bottom_ie" href="#">Button</a>
+	<br>
+	<br>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Android06events</string>
+    <string name="a_1">park_bogeom</string>
+    <string name="a_2">seo_kangjun</string>
+    <string name="a_3">you_seungho</string>
+    <string name="txt_msg">check</string>
+
+    <string name="r_1">radio1</string>
+    <string name="r_2">radio2</string>
+    <string name="r_3">radio3</string>
+
+
+</resources>

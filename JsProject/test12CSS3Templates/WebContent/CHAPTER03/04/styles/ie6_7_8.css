@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+/**
+@prefix : <http://purl.org/net/ns/doas#> .
+</styles/ie6_7_8.css> a :CSSstylesheet;
+ :shortdesc "ie6_7_8.css";
+ :dependencies "none" .
+*/
+
+/*----------------------------------------------------
+    IE6_7_8 hack
+----------------------------------------------------*/
+#demoArea {
+	width: 560px;
+}
+p#zone01,
+p#zone02,
+p#zone03,
+p#zone04 {
+	display: none;
+}

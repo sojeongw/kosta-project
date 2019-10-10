@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">BookUser</string>
+    <string name="ve_logout">Logout</string>
+    <string name="ve_account">Account</string>
+
+
+    <string name="menu_user_checkout_record">Record</string>
+    <string name="menu_user_checkout">Checkout</string>
+    <string name="menu_book_list">Book List</string>
+    <string name="action_logout">logout</string>
+
+    <string name="txt_book_num">book number</string>
+    <string name="txt_book_num_1">19900418</string>
+    <string name="txt_book_name">BAD FEMINIST</string>
+    <string name="txt_book_writer">Gay, Roxane</string>
+    <string name="txt_book_company">kosta books</string>
+    <string name="txt_book_content">content</string>
+    <string name="btn_checkout">check out</string>
+</resources>

@@ -1,0 +1,58 @@
+body{
+	background:#fff;
+	font-family: 'ÉqÉâÉMÉmäpÉS Pro W3', 'Hiragino Kaku Gothic Pro', 'ÉÅÉCÉäÉI', Meiryo, 'ÇlÇr ÇoÉSÉVÉbÉN', sans-serif;
+	font-size:14px;
+	color: #555;
+}
+
+ul.menu {
+	width:200px;
+}
+
+ul.menu, ul.item {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+li div.category {
+	height: 46px;
+	line-height: 46px;
+	text-indent:20px;
+	background:url("img/category_off.gif");
+	font-weight:bold;
+	cursor:pointer;
+}
+
+li div.category a {
+	display:block;
+}
+
+li div.open {
+	background:url("img/category_on.gif");
+}
+
+li div.rollover {
+	background:url("img/category_on.gif");
+	font-weight: bold;
+	color: #419900;
+}
+
+ul.item li a {
+	display:block;
+	height: 33px;
+	line-height: 33px;
+	font-size: 12px;
+	text-indent:20px;
+	background:url("img/item_off.gif");
+	color: #333;
+}
+
+ul.item li a:hover {
+	background:url("img/item_on.gif");
+	color: #F34B37;
+}
+
+a {
+	text-decoration:none;
+}

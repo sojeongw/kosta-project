@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="Content-Style-Type" content="text/css" />
+		<meta http-equiv="Content-Script-Type" content="text/javascript" />
+		<title>sample</title>
+		<link rel="stylesheet" type="text/css" href="base.css" />
+		<script type="text/javascript" src="jquery-1.8.3.min.js"></script>
+		<script type="text/javascript" src="jquery.zoomooz.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$(".box").click(function(evt) {
+					evt.stopPropagation();
+					$(this).zoomTo({
+						targetsize:0.65,
+						duration:1000
+					});
+				});
+				$("body").click(function(evt) {
+					evt.stopPropagation();
+					$(this).zoomTo();
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div id="wrapper">
+			<div id="header">
+				<img src="img/logo.gif" alt="logo" />
+				<ul id="menu">
+					<li><a href="#">News</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Photograph</a></li>
+				</ul>
+			</div>
+			
+			<div id="contents">
+				<div class="box" id="news">
+					<a href="#">News</a>
+				</div>
+				<div class="box" id="boxrotation">
+					<img src="img/image1.jpg" alt="image" width="220" height="220" />
+				</div>
+				<div class="box">
+					<img src="img/image2.jpg" alt="image" width="460" height="220" />
+				</div>
+				<div class="box">
+					<img src="img/image3.jpg" alt="image" width="460" height="220" />
+				</div>
+				<div class="box" id="about">
+					<a href="#">About</a>
+				</div>
+				<div class="box">
+					<img src="img/image4.jpg" alt="image" width="220" height="220" />
+				</div>
+			</div>
+			
+			<div id="footer">
+				<address>
+					Copyright &copy; 2013 MdN Photo Gallary All Rights Reserved.
+				</address>
+			</div>
+		</div>
+	</body>
+</html>

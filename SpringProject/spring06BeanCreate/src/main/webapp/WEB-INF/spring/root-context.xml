@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- Root Context: defines shared resources visible to all other web components -->
+	<bean id="tb01" class="test.com.spring06.TestBean">
+	
+		<!-- 생성자에 보내는 값 -->
+		<constructor-arg>
+			<value>lee</value>
+		</constructor-arg>
+		<constructor-arg>
+			<value>yang</value>
+		</constructor-arg>
+	</bean>
+	
+	<bean id="tb02" class="test.com.spring06.TestBean2">
+		<!-- property는 그 클래스 안의 getter setter에 있던 전역변수를 의미 -->
+		<!-- value는 그것의 값 -->
+		<property name="name" value="admin"></property>
+	</bean>
+	
+	<bean id="tb03" class="test.com.spring06.TestBean3">
+		<!-- property는 그 클래스 안의 getter setter에 있던 전역변수를 의미 -->
+		<!-- value는 그것의 값 -->
+		<!-- tb의 밸류는 맨 첫번째 bean에서 생성된 tb01이다. 그냥 tb01이라고 쓰면 텍스트로 들어가니까 ref로 설정 -->
+		<property name="tb" ref="tb01"></property>
+	</bean>
+	
+	<bean id="tb04" class="test.com.spring06.TestBean4">
+		<constructor-arg>
+			<ref bean="tb01"/>
+		</constructor-arg>
+	</bean>
+	
+<!-- 	<bean id="tb05" class="test.com.spring06.TestBean5">
+		<constructor-arg>
+			<ref bean="tb01"/>
+		</constructor-arg>
+	</bean> -->
+	
+</beans>

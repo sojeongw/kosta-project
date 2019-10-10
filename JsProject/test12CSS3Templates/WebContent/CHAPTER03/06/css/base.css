@@ -1,0 +1,265 @@
+@charset "utf-8";
+
+body{
+margin:0; padding:0;
+background:url(../img/bg2.jpg) no-repeat left top,url(../img/bg1re.jpg) repeat-y 70px top,#FFF;
+color:#2C2727;
+font-family:'Meiryo UI','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif!important;
+}
+body.code{
+background:url(../img/bg1re.jpg) repeat-y 70px top,#FFF;
+}
+
+body h1{
+position:absolute; top:22px; left:22px;
+margin:0; padding:0;
+width:254px; height:63px;
+color:rgba(0,0,0,0);
+background:url(../img/logo.png) no-repeat left top;
+}
+
+body.code h1{
+left:138px;
+}
+
+div#container{
+margin:0; padding:0;
+display:-moz-box;
+display:-webkit-box;
+display:box;
+-moz-box-direction:reverse;
+-webkit-box-direction:reverse;
+box-direction:reverse;
+}
+
+body ul.gnav{
+width:190px;
+margin:40px 0 0; padding:0 20px 0 0;
+list-style:none;
+-moz-box-flex:0.0;
+-webkit-box-flex:0.0;
+box-flex:0.0;
+line-height:2em;
+font-weight:bold
+}
+
+ul.gnav li a:link{
+color:#A7A7A7;
+text-decoration:none;
+}
+ul.gnav li a:visited{
+color:#A7A7A7;
+text-decoration:none;
+}
+ul.gnav li a:hover{
+color:#A7A7A7;
+text-decoration:underline
+}
+ul.gnav li a:active{
+color:#A7A7A7;
+}
+ul.gnav li.active a{
+color:#FF7F00
+}
+
+
+div.content{
+-moz-box-flex:1.0;
+-webkit-box-flex:1.0;
+box-flex:1.0;
+margin:116px 0 0; padding:1.5em 50px 0.5em;
+}
+
+
+div.content h2{
+margin:0 0 0.5em;
+text-shadow:#022A6F 1px 1px 0,#022A6F 1px -1px 0,#022A6F -1px 1px 0,#022A6F -1px -1px 0;
+color:#FF7700;
+font-size:3em;}
+div.content h3{
+font-size:1.3em;
+}
+h3.shadow01{
+margin-bottom:2em;
+text-shadow:#2C2727 10px 20px 5px;
+}
+h3.shadow02{
+margin-bottom:2em;
+text-shadow:#7D2A17 0 0 20px;
+}
+h3 span{
+font-weight:normal;
+font-size:small;
+}
+h3.shadow03{
+color:#DDD;
+text-shadow:#f33 1px 1px 0,#f33 1px -1px 0,#f33 -1px 1px 0,#f33 -1px -1px 0;}
+h3.shadow03l{
+color:#DDD;
+text-shadow:#f33 1px 0 0,#f33 0 1px 0,#f33 -1px 0 0,#f33 0 -1px 0;}
+h3.shadow03 span,
+h3.shadow03l span{
+color:#2C2727;
+text-shadow:none
+}
+p.shadow04{
+position:relative}
+p.shadow04 img{
+display:inline-block;
+-moz-box-shadow:rgba(44,39,39,0.3) 3px 3px 7px 7px;
+-webkit-box-shadow:rgba(44,39,39,0.3) 3px 3px 7px 7px;
+box-shadow:rgba(44,39,39,0.3) 3px 3px 7px 7px;
+-ms-transform:rotate(-3deg);
+-moz-transform:rotate(-3deg);
+-webkit-transform:rotate(-3deg);
+-o-transform:rotate(-3deg);
+transform:rotate(-3deg);
+border:#FFF 7px solid;
+
+}
+p.shadow04 span{
+display:inline-block;
+padding:10px;
+position:absolute; top:20px; left:10px;
+font-weight:bold;
+background-color:rgba(255,255,255,0.5);
+text-shadow:rgba(255,255,255,0.5) 2px 0 0,rgba(255,255,255,0.5) 0 2px 0,rgba(255,255,255,0.5) -2px 0 0,rgba(255,255,255,0.5) 0 -2px 0,rgba(255,255,255,0.5) 2px 2px 0,rgba(255,255,255,0.5) 2px -2px 0,rgba(255,255,255,0.5) -2px 2px 0,rgba(255,255,255,0.5) -2px -2px 0,rgba(255,255,255,0.75) 0 0 7px;
+}
+p.shadow04 span.demo1{
+left:420px;
+}
+p.shadow04 span.demo2{
+top:100px;
+text-shadow:none
+}
+
+div.content h3.shadow05{
+margin-top:80px;
+}
+div.content h3.shadow05,
+div.content h3.shadow06{
+padding-left:20px;
+background-color:#DDD;
+border-left:#333 10px solid
+}
+div.content h3.shadow05 strong,
+div.content h3.shadow06 strong{
+font-size:50px;
+}
+h3.shadow05{
+text-shadow:#FFF -1px -1px 1px,#333 1px 1px 2px;}
+h3.shadow06{
+text-shadow:#333 -1px -1px 1px,#FFF 1px 1px 1px;}
+
+h3.shadow07,
+h3.shadow07b,
+h3.shadow07c,
+h3.shadow07d{
+padding:30px;
+}
+
+h3.shadow07{
+color:#FFF;
+background:#000;
+text-shadow:#F0F0F0 0 0 5px,
+#7DE6FF 0 0 50px,#7DE6FF 0 0 70px,
+#00CCFF 0 0 100px,#00CCFF 0 0 120px;
+}
+
+h3.shadow07b{
+color:#FFF;
+background:#000;
+text-shadow:#F0F0F0 0 0 3px,
+#9DECFF 0 0 30px,#9DECFF 0 0 50px,
+#00CCFF 0 0 100px,#00CCFF 0 0 120px;
+}
+
+h3.shadow07c{
+color:#FFF;
+background:#000;
+text-shadow:#00CCFF 0 0 120px,#00CCFF 0 0 100px,#9DECFF 0 0 50px,#9DECFF 0 0 30px,#F0F0F0 0 0 3px;
+}
+
+h3.shadow07d{
+color:#7DE6FF;
+background:#000;
+text-shadow:#0093B7 1px 1px 1px,#0093B7 1px -1px 1px,#0093B7 -1px 1px 1px,#0093B7 -1px -1px 1px,#F0F0F0 0 0 5px,#7DE6FF 0 0 50px,#7DE6FF 0 0 70px,#00CCFF 0 0 100px,#00CCFF 0 0 120px;
+}
+p.alpha01{
+font-size:50px;
+}
+p.alpha01{
+background:url(../img/bg04.png);
+color:#0040C6;
+text-shadow:rgba(0,0,0,1.0) 40px 0 0,rgba(0,0,0,0.9) 80px 0 0,rgba(0,0,0,0.8) 120px 0 0,rgba(0,0,0,0.7) 160px 0 0,rgba(0,0,0,0.6) 200px 0 0,rgba(0,0,0,0.5) 240px 0 0,rgba(0,0,0,0.4) 280px 0 0,rgba(0,0,0,0.3) 320px 0 0,rgba(0,0,0,0.2) 360px 0 0,rgba(0,0,0,0.1) 400px 0 0;
+}
+p.alpha02{
+margin:18px auto;
+font-size:72px;
+font-weight:bold;
+}
+p.alpha02{
+background:url(../img/bg04.png);
+color:rgba(0,64,198,0.6);
+text-shadow:rgba(0,0,0,0.4) 10px 3px 0;
+}
+
+p.text01{
+margin-bottom:0;
+}
+p.text01b{
+margin-top:20px;
+}
+p.text01,
+p.text01b{
+font:33px bold;
+color:rgba(62,88,95,0.7)
+}
+p.text01::first-letter{
+float:left;
+font-size:72px
+}
+p.text01b::first-letter{
+font-size:72px
+}
+p.text01::first-line,
+p.text01b::first-line{
+background:rgba(255,128,0,0.5);
+}
+
+
+p.text02{
+width:50%;
+position:relative;
+height:80px;
+border:1px solid #ccc;
+background:#EEE
+}
+p.text02::before{
+content:'龍';
+position:absolute; bottom:0; right:5px;
+color:rgba(2,42,111,0.7);
+font-size:70px;
+-moz-transform:rotate(355deg);
+-webkit-transform:rotate(355deg);
+}
+
+
+div.addAction{
+width:50px;
+margin:166px 58px 0 10px; padding:0;
+}
+
+p.copyright{
+margin-top:1em;
+text-align:center;
+font-size:small;
+}
+
+p.effect01::after{
+content:'Profile';
+position:absolute; top:180px; left:30px;
+color:rgba(255,255,255,0.6);
+font-size:46px;
+-moz-transform:rotate(90deg);
+-webkit-transform:rotate(90deg);}

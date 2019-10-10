@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- Root Context: defines shared resources visible to all other web components -->
+		<bean id="propertyPlaceholderConfigurer"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<value>classpath:jdbc/oracle.properties</value>
+		</property>
+	</bean>
+
+	<!-- pom.xml commons-dbcp.jar -->
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close">
+		<!-- name은 절대 바꾸면 안 된다. 객체 자체에서 이 이름을 사용하기 때문 -->
+		<property name="driverClassName" value="${oracle.DRIVER_NAME}" />
+		<property name="url" value="${oracle.URL}" />
+		<property name="username" value="${oracle.USER_ID}" />
+		<property name="password" value="${oracle.USER_PW}" />
+	</bean>
+
+	<!-- mybatis -->
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="mapperLocations">
+			<list>
+				<value>classpath:jdbc/sqlMapper_admin.xml</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg ref="sqlSessionFactory" />
+	</bean>
+		
+</beans>

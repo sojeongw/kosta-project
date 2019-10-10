@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">bluetooth</string>
+
+    <!-- Device  -->
+    <string name="send">Send</string>
+    <string name="not_connected">연결된 장치가 없습니다.</string>
+    <string name="bt_not_enabled_leaving">Bluetooth was not enabled. Leaving Bluetooth Printer.</string>
+    <string name="title_connecting">connecting...</string>
+    <string name="title_connected_to">connected: </string>
+    <string name="title_not_connected">not connected</string>
+
+    <!-- DeviceListActivity -->
+    <string name="scanning">scanning for devices...</string>
+    <string name="select_device">select a device to connect</string>
+    <string name="none_paired">No devices have been paired</string>
+    <string name="none_found">No devices found</string>
+    <string name="title_paired_devices">Paired Devices</string>
+    <string name="title_other_devices">Other Available Devices</string>
+    <string name="button_scan">장치검색</string>
+
+    <!-- Options Menu -->
+    <string name="connect">장치 찾기</string>
+    <string name="discoverable">내 장치</string>
+</resources>

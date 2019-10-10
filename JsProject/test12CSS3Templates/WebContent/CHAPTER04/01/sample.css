@@ -1,0 +1,802 @@
+@charset "utf-8";
+
+/* 共有＆基礎----------------------- */
+/* ---------------------------------------------- */
+body {
+/*グラデーション-------------------------*/
+/* Firefox */
+background-image:
+-moz-linear-gradient(
+rgb(227,227,227),
+rgb(255,255,255) 33px); 
+
+/* WebKit */
+background-image:
+-webkit-linear-gradient(
+rgb(227,227,227),
+rgb(255,255,255) 33px);
+
+background-image:
+linear-gradient(
+rgb(227,227,227),
+rgb(255,255,255) 33px);
+
+background-color: #FFF;
+font-size: 14px;
+color: #333;
+line-height: 140%;
+}
+
+h1, h2 {
+font-family: Tahoma, Geneva, sans-serif;
+font-weight:normal;
+
+/*textの影-------------------------*/
+text-shadow:1px 1px 0px rgba(0,0,0,0.2);
+}
+.wrapper {
+width: 995px;
+margin: 0 auto;
+}
+.wrapper:after {
+content: "";
+display: block;
+clear: both;
+}
+* html .wrapper {
+height: 1px;
+}
+*+html .wrapper {
+min-height: 1px;
+}
+ul, li, dl, dt, dd {
+margin: 0;
+padding: 0;
+}
+li {
+list-style: none;
+}
+/* ヘッダ----------------------- */
+/* ---------------------------------------------- */
+#header {
+position:relative;
+height: 95px;
+}
+#header h1 {
+font-size: 40px;
+position: absolute;
+top: 50%;
+height:40px;
+margin-top: -20px;
+line-height: 1;
+}
+#header p {
+position: absolute;
+top: 50%;
+left: 255px;
+height:14px;
+margin-top: -7px;
+color: #000;
+line-height: 1;
+}
+#header dl {
+position: absolute;
+top: 30%;
+right: 0;
+height:25px;
+margin-top: -12px;
+color: #000;
+}
+#header dt {
+float:left;
+height: 25px;
+line-height: 25px;
+margin-right: 1em;
+}
+#header dd {
+float:left;
+height: 25px;
+}
+/*------////////// ログインボタン //////////------*/
+#header dd a {
+display:block;
+width: 100px;
+text-align:center;
+font-weight:bold;
+color: #FFF;
+font-size: 12px;
+line-height: 25px;
+text-decoration: none;
+border-radius: 13px;
+border: 1px solid #5C6F91;
+/*textの影-------------------------*/
+text-shadow:0px 0px 2px rgba(0,0,0,0.45);
+
+/*グラデーション-------------------------*/
+
+/* Firefox */
+background-image:
+-moz-linear-gradient(
+rgb(162,181,216),
+rgb(113,138,180)); 
+
+/* WebKit */
+background-image:
+-webkit-linear-gradient(
+rgb(162,181,216),
+rgb(113,138,180));
+
+background-image:
+linear-gradient(
+rgb(162,181,216),
+rgb(113,138,180));
+background-color: #8BA1C7;
+/*boxの影-------------------------*/
+
+box-shadow:inset 1px 1px 0px rgba(255,255,255,0.2);
+
+
+}
+#header dd a:hover {
+border-color: #8E8050;
+/* Firefox */
+background-image:
+-moz-linear-gradient(
+rgb(212,197,142),
+rgb(185,165,102));
+
+/* WebKit */
+background-image:
+-webkit-linear-gradient(
+rgb(212,197,142),
+rgb(185,165,102));
+
+background-image:
+linear-gradient(
+rgb(212,197,142),
+rgb(185,165,102));
+
+background-color:#C8B77D;
+
+}
+/*----------------------------------- ここまでログインボタン */
+
+#header ul {
+position: absolute;
+bottom: 5px;
+right: 0;
+height:14px;
+line-height: 1;
+}
+#header ul li {
+float:left;
+border-right: 1px solid #CCC;
+padding: 0 0.8em;
+}
+#header ul li:first-child {
+border-left: 1px solid #CCC;
+}
+#header ul li a:link, #header ul li a:visited {
+color: #666;
+text-decoration: none;
+}
+#header ul li a:hover {
+text-decoration: underline;
+}
+
+
+/* メイン----------------------- */
+/* ---------------------------------------------- */
+
+#mainContent {
+float:right;
+width: 780px;
+margin-bottom: 60px;
+}
+
+/*------////////// Item A ～ メニュー  //////////------*/
+#mainContent ul#itemMenu {
+font-weight:bold;
+line-height: 1;
+float:right;
+font-family: Tahoma, Geneva, sans-serif;
+margin-bottom: 10px;
+border-radius:6px;
+/*textの影-------------------------*/
+text-shadow:0px 0px 2px rgba(0,0,0,0.45);
+
+/*boxの影-------------------------*/
+box-shadow:1px 1px 3px rgba(0,0,0,0.4);
+}
+#mainContent ul#itemMenu li {
+float:left;
+width: 130px;
+}
+#mainContent ul#itemMenu:after {
+content: "";
+display: block;
+clear: both;
+}
+* html #mainContent ul#itemMenu {
+height: 1px;
+}
+*+html #mainContent ul#itemMenu {
+min-height: 1px;
+}
+#mainContent ul#itemMenu li a:link,
+#mainContent ul#itemMenu li a:visited {
+color: #FFF;
+text-decoration: none;
+text-align:center;
+padding: 1em 0;
+display:block;
+
+border-top:1px solid #AD7398;
+border-bottom:1px solid #AD7398;
+
+
+
+/* Firefox */
+background-image:
+-moz-linear-gradient(
+rgb(211,172,187),
+rgb(189,132,168)); 
+
+/* WebKit */
+background-image:
+-webkit-linear-gradient(
+rgb(211,172,187),
+rgb(189,132,168));
+
+
+background-image:
+linear-gradient(
+rgb(211,172,187),
+rgb(189,132,168));
+background-color: #C897B1;
+}
+
+
+#mainContent ul#itemMenu li a:hover {
+/* Firefox */
+background-image:
+-moz-linear-gradient(
+rgb(210,201,172),
+rgb(189,162,134)); 
+
+
+/* WebKit */
+background-image:
+-webkit-linear-gradient(
+rgb(210,201,172),
+rgb(189,162,134));
+
+
+background-image:
+linear-gradient(,
+rgb(210,201,172),
+rgb(189,162,134));
+
+background-color: #C6B296;
+
+border-top:1px solid #AD8F72;
+border-bottom:1px solid #AD8F72;
+}
+
+#mainContent ul#itemMenu li:first-child a {
+border-left:1px solid #AD7398;
+border-radius:6px 0 0 6px;
+}
+#mainContent ul#itemMenu li:last-child a {
+border-right:1px solid #AD7398;
+border-radius: 0 6px 6px 0;
+}
+#mainContent ul#itemMenu li:first-child a:hover {
+border-left:1px solid #AD8F72;
+}
+#mainContent ul#itemMenu li:last-child a:hover {
+border-right:1px solid #AD8F72;
+}
+
+/* 商品写真 */
+#mainContent #goods {
+clear:both;
+position: relative;
+height: 280px;
+}
+#mainContent #goods #goodsRead {
+position:absolute;
+left: 70px;
+bottom: 1em;
+width: 335px;
+}
+#mainContent #goods #goodsRead h2 {
+font-size: 30px;
+margin: 10px 0;
+text-align: center;
+}
+
+#mainContent #goods #goodsMore {
+position:absolute;
+right: 0;
+width: 315px;
+}
+#mainContent #goods #goodsMore a:before {
+content: url(img/icon_plus.png);
+margin-right: 3px;
+vertical-align:-3px;
+}
+#mainContent #goods #goodsMore a {
+font-size: 12px;
+font-weight: bold;
+color: #000;
+text-decoration: none;
+}
+#mainContent #goods #goodsMore a:hover {
+text-decoration: underline;
+}
+
+#mainContent dl#goodsInfo {
+margin-bottom: 30px;
+}
+#mainContent dl#goodsInfo:before {
+content: "";
+height: 1px;
+display:block;
+margin: 15px 0 10px 0;
+overflow:hidden;
+/* Firefox */
+background-image:
+-moz-linear-gradient(0deg,
+rgb(255,255,255) 0%,
+rgb(227,227,227) 50%,
+rgb(255,255,255) 100%); 
+
+
+/* WebKit */
+background-image:
+-webkit-linear-gradient(0deg,
+rgb(255,255,255) 0%,
+rgb(227,227,227) 50%,
+rgb(255,255,255) 100%);
+
+background-image:
+linear-gradient(0deg,
+rgb(255,255,255) 0%,
+rgb(227,227,227) 50%,
+rgb(255,255,255) 100%);
+
+}
+#mainContent #goodsInfo dt,#mainContent #goodsInfo dd {
+width: 710px;
+font-size: 10px;
+line-height: 1.2;
+color: #888;
+margin: 0 auto;
+}
+#mainContent #goodsInfo dt {
+font-weight:bold;
+}
+
+#mainContent .wrapper {
+width: 710px;
+margin: 0 auto;
+}
+/* Review ---------------------*/
+#mainContent #review {
+width: 380px;
+float:left;
+}
+#mainContent #review > dt {
+font-family: Tahoma, Geneva, sans-serif;
+margin-left: 10px;
+}
+#mainContent #review > dd {
+height: 135px;
+padding: 10px 15px 10px 10px;
+overflow: auto;
+border: 1px solid #B0B0B0;
+border-radius: 6px;
+font-size: 12px;
+line-height: 1.2;
+}
+#mainContent #review > dd dt {
+font-weight: bold;
+}
+#mainContent #review > dd dt .hyoukaON {
+font-weight: normal;
+color: #CC9900;
+}
+#mainContent #review > dd dt .hyoukaOFF {
+font-weight: normal;
+color: #999;
+}
+#mainContent #review > dd dt .osusumeNeme {
+font-weight: normal;
+margin: 0 1em;
+}
+#mainContent #review > dd dt .osusumeNeme:before {
+content: "< ";
+}
+#mainContent #review > dd dt .osusumeNeme:after {
+content: " >";
+}
+#mainContent #review > dd dt .osusumeDay {
+font-weight: normal;
+}
+#mainContent #review > dd dd dl {
+border: 1px solid #E3E3E3;
+margin: 5px 0 15px 0;
+padding: 5px;
+font-size: 11px;
+}
+
+/* 商品価格・ボタン ---------------------*/
+#mainContent #goodsSpec {
+width: 300px;
+margin-left: 30px;
+float:left;
+}
+#mainContent #goodsSpec dt {
+font-weight: bold;
+font-family: Tahoma, Geneva, sans-serif;
+color: #900;
+font-size: 16px;
+text-align: center;
+}
+#mainContent #goodsSpec dd#goodsPrice {
+font-size: 10px;
+text-align: center;
+margin: 5px 0;
+}
+#mainContent #goodsSpec dd#goodsPrice strong {
+font-size: 14px;
+font-weight: bold;
+margin-right: 1em;
+}
+#mainContent #goodsSpec dd#goodsQuantity {
+text-align: center;
+background-color:#c0dbf2;
+
+width:150px;
+border-radius:5px;
+margin: 0 auto;
+padding: 3px 0;
+font-size: 12px;
+}
+
+/*------////////// お気に入りボタン  //////////------*/
+#mainContent #goodsSpec dd#goodsFavorite {
+width:150px;
+margin: 5px auto;
+}
+#mainContent #goodsSpec dd#goodsFavorite a {
+display:block;
+background-color:#F0F0F0;
+border: 1px solid #C1C1C1;
+box-shadow:inset 0px 0px 0px 1px rgba(255,255,255,1);
+border-radius:5px;
+padding: 3px 0;
+text-align: center;
+color: #616161;
+text-decoration:none;
+font-weight: bold;
+font-size: 12px;
+}
+#mainContent #goodsSpec dd#goodsFavorite a:hover {
+background-color:#B3A966;
+box-shadow:inset 0px 0px 0px 1px rgba(220,217,193,1);
+color: #FFF;
+}
+
+/*------////////// カートに入れるボタン  //////////------*/
+#mainContent #goodsSpec dd#goodsCart {
+width:200px;
+margin: 5px auto;
+}
+#mainContent #goodsSpec dd#goodsCart a {
+display:block;
+border: 1px solid #712B59;
+border-radius:5px;
+padding: 8px 0;
+text-align: center;
+color: #FFF;
+text-decoration:none;
+font-weight: bold;
+font-size: 16px;
+
+/* Firefox */
+background-image:
+-moz-linear-gradient(
+rgb(182,94,152) 0%,
+rgb(157,83,133) 50%,
+rgb(131,47,101) 50%,
+rgb(97,34,75) 100%);
+
+/* WebKit */
+background-image:
+-webkit-linear-gradient(
+rgb(182,94,152) 0%,
+rgb(157,83,133) 50%,
+rgb(131,47,101) 50%,
+rgb(97,34,75) 100%);
+
+background-image:
+linear-gradient(
+rgb(182,94,152) 0%,
+rgb(157,83,133) 50%,
+rgb(131,47,101) 50%,
+rgb(97,34,75) 100%);
+
+background-color:#9F5385;
+
+/*boxの影-------------------------*/
+/* Firefox v4.0+ , Safari v5.1+ , Chrome v10.0+  and by Opera v10.5+ */
+box-shadow:1px 1px 3px rgba(0,0,0,0.4), inset 0px 0px 0px 1px rgba(255,255,255,0.2);
+
+/*textの影-------------------------*/
+text-shadow:0 0 3px rgb(0,0,0);
+}
+#mainContent #goodsSpec dd#goodsCart a:hover {
+border-color: #7F6C25;
+/* Firefox */
+background-image:
+-moz-linear-gradient(
+rgb(193,171,88) 0%,
+rgb(169,149,76) 50%,
+rgb(145,126,39) 50%,
+rgb(109,94,30) 100%);
+
+/* WebKit */
+background-image:
+-webkit-linear-gradient(
+rgb(193,171,88) 0%,
+rgb(169,149,76) 50%,
+rgb(145,126,39) 50%,
+rgb(109,94,30) 100%);
+
+background-image:
+linear-gradient(
+rgb(193,171,88) 0%,
+rgb(169,149,76) 50%,
+rgb(145,126,39) 50%,
+rgb(109,94,30) 100%);
+
+background-color: #7F6C25;
+}
+/* 左ナビ----------------------- */
+/* ---------------------------------------------- */
+
+#menu {
+float:left;
+width: 200px;
+margin-bottom: 60px;
+}
+#menu #myPage {
+border: 1px solid #D4D4D4;
+border-radius: 0 0 10px 10px;
+}
+#menu #myPage dt {
+border-bottom: 1px solid #D4D4D4;
+/* Firefox */
+background-image:
+-moz-linear-gradient(
+rgb(255,255,255),
+rgb(245,243,231)); 
+
+/* WebKit */
+background-image:
+-webkit-linear-gradient(
+rgb(255,255,255),
+rgb(245,243,231));
+
+background-image:
+linear-gradient(
+rgb(255,255,255),
+rgb(245,243,231));
+padding: 5px;
+
+background-color: #F7F5EC;
+}
+#menu #myPage dd {
+padding: 10px;
+}
+#menu #myPage dd p {
+text-align: center;
+margin: 0 0 5px;
+}
+#menu #myPage dd ul {
+display:inline-block;
+vertical-align:top;
+width: 90px;
+font-size:12px;
+line-height: 1;
+margin-left: 5px;
+}
+#menu #myPage dd ul li {
+background: url(img/icon_arrow1.png) no-repeat left 0.3em;
+padding: 0 0 3px 10px;
+}
+#menu #myPage dd ul li a {
+text-decoration: none;
+color: #666;
+}
+#menu #myPage dd ul li a:hover {
+text-decoration: underline;
+}
+
+#menu #search{
+margin: 10px 0;
+}
+#menu #search:after {
+content: "";
+display: block;
+clear: both;
+}
+* html #menu #search {
+height: 1px;
+}
+*+html #menu #search {
+min-height: 1px;
+}
+#menu #search input {
+border: 1px solid #D4D4D4;
+border-right: none;
+border-radius: 5px 0 0 5px;
+display:block;
+width: 160px;
+height:23px;
+padding: 0 5px;
+margin: 0;
+line-height: 23px;
+float:left;
+}
+#menu #search button {
+border: 1px solid #D4D4D4;
+border-radius: 0 5px 5px 0;
+display:block;
+width: 25px;
+height: 25px;
+color: transparent;
+margin:0;
+float:left;
+background: url(img/icon_search.png) no-repeat center bottom;
+}
+
+#menu #newItem {
+font-family: Tahoma, Geneva, sans-serif;
+
+}
+#menu #newItem dd {
+margin: 10px 0 25px;
+position: relative;
+}
+#menu #newItem img[src="img/icon_arrow2l.png"] {
+position: absolute;
+left: 0;
+top: 50%;
+margin-top: -8px;
+}
+#menu #newItem img[src="img/icon_arrow2r.png"] {
+position: absolute;
+right: 0;
+top: 50%;
+margin-top: -8px;
+}
+#menu #newItem div {
+width: 170px;
+height: 80px;
+margin: 0 auto;
+overflow: visible;
+}
+#menu #newItem div img {
+border: 1px solid #666;
+margin-left: 5px;
+float:left;
+}
+
+#menu #menuLinks {
+border-top: 1px solid #CCC;
+}
+#menu #menuLinks li {
+border-bottom: 1px solid #CCC;
+}
+#menu #menuLinks li a {
+display:block;
+padding: 10px 20px 10px 5px;
+background: url(img/icon_arrow3.png) no-repeat 175px center;
+text-decoration: none;
+color: #666;
+}
+#menu #menuLinks li a:hover {
+display:block;
+padding: 10px 20px 10px 5px;
+background: url(img/icon_arrow3.png) no-repeat 175px center #F4EDDB;
+text-decoration: none;
+color: #666;
+}
+
+
+
+
+
+
+
+/* フッタ----------------------- */
+/* ---------------------------------------------- */
+#footer {
+clear:both;
+border-top: 1px solid #E3E3E3;
+border-bottom: 1px solid #BEBEBE;
+padding: 15px 0;
+margin-bottom: 10px;
+}
+
+#footer ul {
+text-align: center;
+font-size: 12px;
+line-height: 1;
+margin-bottom: 5px;
+}
+#footer ul li {
+display:inline;
+border-right: 1px solid #CCC;
+padding: 0 0.8em;
+}
+#footer ul li:first-child {
+border-left: 1px solid #CCC;
+}
+#footer ul li a:link, #footer ul li a:visited {
+color: #666;
+text-decoration: none;
+}
+#footer ul li a:hover {
+text-decoration: underline;
+}
+
+#footer strong {
+display: block;
+text-align: center;
+font-family: Tahoma, Geneva, sans-serif;
+}
+
+/* スクロール----------------------- */
+/* ---------------------------------------------- */
+
+.scroll::-webkit-scrollbar {
+width: 10px;
+height: 10px;
+}
+.scroll::-webkit-scrollbar-track {
+background: none;
+}
+.scroll::-webkit-scrollbar-track-piece {
+/* border: 1px solid red; */
+}
+.scroll::-webkit-scrollbar-thumb {
+background: #888;
+border-radius: 5px;
+}
+.scroll::-webkit-scrollbar-button,
+.scroll::-webkit-scrollbar-cornerr,
+.scroll::-webkit-scrollbar-button:horizontal:decrement,
+.scroll::-webkit-scrollbar-button:horizontal:increment,
+.scroll::-webkit-scrollbar-button:vertical:decrement,
+.scroll::-webkit-scrollbar-button:vertical:increment,
+.scroll::-webkit-scrollbar-button:vertical:increment {
+display:none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

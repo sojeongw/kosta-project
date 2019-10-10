@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset=utf-8>
+  <title> java script </title>
+
+  <script type="text/javascript">
+  console.log("object");
+
+  // 오브젝트는 클래스로 만들어주려고 만드는 것이기 때문에 첫글자를 대문자로 한다.
+  var obj = new object();   // 오브젝트 생성
+  obj.username = "admin";
+  obj.useremail = "aaa@aaa.com"   // 오브젝트 속성 생성
+  obj.fn = function(){
+    return "say hello";
+  };    // 오브젝트 함수(속성) 생성
+  obj.arr = [];
+  obj.arr2 = new Array(1,2,3,4,5);   // 오브젝트 배열(속성) 생성
+
+  // 첫 글자를 대문자로 하면 오브젝트로 만들려고 한 것
+  function Student(){
+    name = "kim";   // var가 없으니까 전역 변수. 전역 변수 쓰려고 var를 쓴 것 뿐이다. 속성과는 다르다.
+    var username = "lee";   // 변수
+
+    // 속성으로 쓸 것인지 전역 변수로 쓸 것인지를 구분하는 법
+    this.name = "kim";  // 속성
+
+    var fn = function(){  // this.이 안붙었으니까 속성이 아니다.
+      return 100;
+    }
+
+    this.fn = function(){   // 속성 >> new를 할 수 있다.
+      return 100;
+    }
+  }
+
+  var s = new Student();    // 오브젝트로 생성한 것 >> 접근의 문제
+  var s = Student();  // 단순히 함수를 call 한 것 >> return값이 없으니까 undefined가 나온다.
+  console.log(s.username);  // 그냥 var 변수이기 때문에 undefined가 뜬다.
+
+  // 오브젝트는 대문자, 함수는 동사로 쓴다
+
+</script>
+</head>
+
+<body>
+  <h1>object</h1>
+
+</body>
+</html>

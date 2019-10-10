@@ -1,0 +1,200 @@
+@charset "utf-8";
+
+/*パソコンチェック用*/
+/*html {
+background:
+#EEE;
+}
+body {
+margin: 0 auto;
+width:320px;
+}*/
+
+
+body {
+margin: 0;
+padding: 0;
+background:#FFF;
+color: #333;
+font-size: 14px;
+line-height: 1.2;
+}
+
+/* サイト名-------------------- */
+body > header > h1 {
+margin: 0 0 10px;
+padding: 0;
+text-align: center;
+}
+
+/* ページレイアウト------------------------------------ */
+article, section, aside {
+display: block;
+}
+article {
+margin: 0 10px 40px;
+}
+section {
+margin: 0;
+}
+/* E ~ F
+親要素が同じになる兄弟関係の弟に適用されるセレクタ。 */
+section ~ section {
+margin-top: 30px;
+}
+aside {
+margin-top: 10px;
+border: 1px solid #400000;
+padding: 10px;
+background-color: #EFECE7;
+}
+
+/* ページレイアウト:見出し------------------------------------ */
+article h1 {
+margin: 0;
+color: #3F0000;
+font-size: 20px;
+text-align: center;
+font-family:Arial, Helvetica, sans-serif;
+font-weight: normal;
+}
+article h1:before {
+content:url(img/tit_flower_l.png);
+margin-right: 3px;
+vertical-align: -5px;
+}
+article h1:after {
+content:url(img/tit_flower_r.png);
+margin-left: 3px;
+vertical-align: -5px;
+}
+/* ページレイアウト: p ------------------------------------ */
+p {
+margin: 0 0 10px;
+padding: 0;
+}
+/* ページレイアウト:フッタ------------------------------------ */
+footer {
+margin: 0;
+text-align:center;
+font-size: 12px;
+color: #FFF;
+padding: 10px 0 45px 0;
+background: #400000 url(img/footer.png) center 30px no-repeat;
+display: block;
+}
+footer:after, footer:before {
+content: " - ";
+}
+
+
+/* 写真３枚------------------------------------ */
+#photos {
+position: relative;
+background: url(img/photo_back.png) center repeat-x;
+height: 200px;
+margin: -5px -10px 0 -10px;
+}
+/* E[foo^="homu"]※E（半角スペース)[foo^="homu"]とすると効果が出ないので注意。
+homuという値から始まるfoo属性を持つE要素に対してスタイルを適用する属性セレクタ */
+img[src^="img/photo1"] {
+position:absolute;
+top: 15px;
+left: 50%;
+margin-left:-70px;
+z-index: 10;
+}
+img[src^="img/photo2"] {
+-webkit-transform: scale(1.0) rotate(-10deg);
+-webkit-transform-origin: 0% 0%;
+position:absolute;
+top: 55px;
+left: 0;
+z-index: 1;
+}
+img[src^="img/photo3"] {
+-webkit-transform: scale(1.0) rotate(10deg);
+-webkit-transform-origin: 0% 0%;
+position:absolute;
+top: 30px;
+right: 0;
+z-index: 1;
+}
+
+
+/* しましまのリスト ------------------------------------ */
+ul {
+font-size: 14px;
+line-height: 1.2;
+margin: 0 -10px;
+padding: 0;
+}
+li {
+list-style: none;
+margin: 0;
+padding: 10px 15px 10px 33px;
+background-image: url(img/check.png);
+background-position: 10px 10px;
+background-repeat: no-repeat;
+}
+/* E:nth-child(odd)
+親要素の奇数の要素であるE要素にスタイルを適用する擬似クラス */
+li:nth-child(odd) {
+background-color: #EFECE7;
+}
+/* E:first-child と E:last-child
+兄弟関係にある最初と最後の要素にスタイルを適用する擬似クラス */
+li:first-child {
+border-top: 3px #400000 dotted;
+}
+li:last-child {
+border-bottom: 3px #400000 dotted;
+}
+/* しましまのリスト：別サイトに飛ぶマーク付きリンク ------------------------------------ */
+a {
+color: #87152C;
+}
+/*E[foo*="homu"]
+homuという文字列を含むfoo属性を持つE要素に対してスタイルを適用する属性セレクタ
+E:not([homu]) */
+a[href*="http://"]:not([href*="アフィリエイト"]):after {
+content:url(img/window.png);
+margin: 0 3px 0 0;
+}
+
+
+
+/* Xのあるテーブル ------------------------------------ */
+table {
+border: 1px #666 solid;
+border-spacing: 0;
+border-collapse: collapse;
+margin: 0 0 10px;
+}
+
+td, th {
+border: 1px #666 solid;
+padding: 15px;
+text-align: center;
+}
+
+th {
+white-space: nowrap;
+width: 1%;
+background-color: #400000;
+color: #FFF;
+}
+/*E:empty
+子要素を持たないE要素にスタイルを適用する擬似クラス */
+td:empty {
+background: url(img/no_data.png) no-repeat center;
+background-size: 100% 100%;
+}
+table + p {
+font-size:10px;
+}
+
+
+
+
+

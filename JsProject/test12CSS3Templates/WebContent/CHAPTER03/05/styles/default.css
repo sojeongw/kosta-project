@@ -1,0 +1,193 @@
+@charset "UTF-8";
+
+/**
+@prefix : <http://purl.org/net/ns/doas#> .
+</styles/default.css> a :CSSstylesheet;
+ :shortdesc "default.css";
+ :dependencies [
+ :name "Yahoo";
+	:title "YUI Fonts CSS";
+	:description "ブラウザ間のフォントサイズを揃えるライブラリ";
+	:revisiton "3.1.1";
+	:homepage <http://developer.yahoo.com/yui/3/stylesheet/>;
+	:license <http://developer.yahoo.com/yui/3/license.html>;
+	:note "
+		Font-size Adjustment.
+			77% = 10px	|	123.1% = 16px	|	167% = 22px
+			85% = 11px	|	131% =  17px	|	174% = 23px 
+			93% = 12px	|	138.5% = 18px	|	182% = 24px 
+			100% = 13px	|	146.5% = 19px	|	189% = 25px 
+			108% = 14px	|	153.9% = 20px	|	197% = 26px 
+			116% = 15px	|	161.6% = 21px	|
+			"
+	] .
+*/
+
+/**
+ * Percents could work for IE, but for backCompat purposes, we are using keywords.
+ * x-small is for IE6/7 quirks mode.
+ */
+body { font:13px/1.231 'メイリオ','Meiryo','ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','MS Pゴシック',arial,helvetica,clean,sans-serif; *font-size:small; /* for IE */ *font:x-small; /* for IE in quirks mode */ }
+
+/**
+ * Nudge down to get to 13px equivalent for these form elements
+ */ 
+select, input, button, textarea { font:99% arial,helvetica,clean,sans-serif; }
+
+/**
+ * To help tables remember to inherit
+ */
+table { font-size:inherit; font:100%; }
+
+/**
+ * Bump up IE to get to 13px equivalent for these fixed-width elements
+ */
+pre, code, kbd, samp, tt { font-family:monospace; *font-size:108%; line-height:100%; }
+
+/*----------------------------------------------------
+	content
+----------------------------------------------------*/
+html {
+	overflow-y: scroll;
+}
+body {
+	text-align: center;
+	background: #fff;
+}
+#readArea p {
+	width: 960px;
+	margin: 0 auto;
+	padding: 10px 0;
+	font-size: 93%;
+	text-align: left;
+}
+#header {
+	margin-bottom: 10px;
+	text-align: left;
+	background: #0a81cf;
+}
+#header div {
+	position: relative;
+	width: 960px;
+	margin: 0 auto;
+	padding: 10px 0;
+}
+#header h1 {
+	position: absolute;
+	top: 10px;
+	left: 0;
+}
+#header nav {
+	height: 82px;
+}
+#header nav ul {
+	position: absolute;
+	top: 33px;
+	left: 120px;
+}
+#header nav ul li {
+	float: left;
+	margin-right: 10px;
+	font-size: 108%;
+	font-weight: bold;
+	background: #1ea5ff;
+	border: 2px solid #acd8f5;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+#header nav ul li a {
+	display: block;
+	width: 120px;
+	height: 25px;
+	padding-top: 10px;
+	text-align: center;
+	color: #fff;
+}
+#header nav ul li:last-child a {
+	border-right: none;
+}
+#header nav ul li a:link,
+#header nav ul li a:visited {
+	text-decoration: none;
+}
+#header nav ul li a:hover,
+#header nav ul li a:active {
+	text-decoration: underline;
+}
+#content {
+	width: 940px;
+	margin: 0 auto 10px;
+	padding: 10px 10px 65px;
+	text-align: left;
+	background: #f5f5f5 url(../images/common/content_back_01.gif) no-repeat right bottom;
+}
+#mainContent {
+	width: 690px;
+	float: left;
+	padding: 20px;
+	background: #fff;
+}
+#mainContent h1 {
+	font-size: 123.1%;
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #f0f0f0;
+}
+#mainContent h2 {
+	font-size: 108%;
+	margin-bottom: 10px;
+}
+#mainContent p {
+	font-size: 93%;
+	line-height: 1.5;
+	margin-bottom: 10px;
+}
+#subContent {
+	width: 200px;
+	float: right;
+}
+#subContent nav ul li {
+	margin-bottom: 1px;
+	font-size: 93%;
+	background: #fff;
+}
+#subContent nav ul li a {
+	display: block;
+	padding: 15px;
+	color: #000;
+	zoom: 1;
+}
+#subContent nav ul li a:link,
+#subContent nav ul li a:visited {
+	text-decoration: none;
+}
+#subContent nav ul li a:hover,
+#subContent nav ul li a:active {
+	text-decoration: underline;
+}
+#footer {
+	margin-bottom: 10px;
+	font-size: 93%;
+}
+
+/*----------------------------------------------------
+	clearfix
+----------------------------------------------------*/
+.clearfix:before, .clearfix:after,
+#content:before, #content:after,
+#header nav ul:before, #header nav ul:after {
+	content: "";
+	display: block;
+	overflow: hidden;
+}
+.clearfix:after,
+#content:after,
+#header nav ul:after {
+	clear: both;
+}
+.clearfix,
+#content,
+#header nav ul {
+	zoom: 1;
+}

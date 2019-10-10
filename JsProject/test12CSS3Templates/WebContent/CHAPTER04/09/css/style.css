@@ -1,0 +1,99 @@
+@charset "UTF-8";
+/**
+ * マーカー
+ */
+/**********************************************************
+ * base
+ */
+body {
+  background: url(../img/lined_paper.png);
+}
+
+#wrapper {
+  *zoom: 1;
+  width: 876px;
+  margin: 0 auto;
+  padding: 60px 0 0;
+  background: url(../img/bg.png) no-repeat;
+}
+#wrapper:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.panel {
+  float: left;
+  width: 262px;
+  margin: 12px;
+  border: 1px solid #e6e6e6;
+  background: #fff;
+}
+.panel dl {
+  padding: 16px;
+}
+.panel dl dt {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+  color: #f2bf49;
+  border-bottom: 1px solid #e6e6e6;
+}
+.panel dl .content {
+  margin-top: 16px;
+}
+.panel dl .link {
+  margin-top: 24px;
+}
+.panel dl .link a {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 20px;
+  color: #333;
+  text-decoration: none;
+}
+.panel dl .link a img {
+  padding-right: 3px;
+  vertical-align: middle;
+}
+.panel dl p {
+  padding-bottom: 1em;
+}
+
+/**********************************************************
+ * 通常マーカー
+ */
+#panel-1 em {
+  padding: 0 0.25em;
+  background-color: #fadd4b;
+}
+
+/**********************************************************
+ * 通常マーカー（画像使用）
+ */
+#panel-2 strong {
+  padding: 0 0.25em;
+  background: url(../img/marker-bg.png) repeat-x 0 4px;
+}
+
+/**********************************************************
+ * グラデーション
+ */
+#panel-2 em {
+  padding: 0 0.25em;
+  background-color: #fadd4b;
+  background: -moz-linear-gradient(top, white, white 50%, #fadd4b 50%, #fadd4b 75%, white);
+  background: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(0.5, white), color-stop(0.5, #fadd4b), color-stop(0.75, #fadd4b), to(white));
+}
+
+/**********************************************************
+ * テキスト選択
+ */
+#panel-3 ::selection {
+  padding: 0 0.25em;
+  background-color: #fadd4b;
+}
+#panel-3 ::-moz-selection {
+  padding: 0 0.25em;
+  background-color: #fadd4b;
+}

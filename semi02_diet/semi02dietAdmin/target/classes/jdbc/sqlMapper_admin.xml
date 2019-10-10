@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="test.semi.admin.model">
+
+	<!-- 테스트용 보드 insert -->
+	<insert id="insert" parameterType="test.semi.admin.model.AdminVO">
+		insert into board(num, writer,
+		content, reg_date)
+		values(seq_board.nextval, #{writer}, #{content},
+		sysdate)
+	</insert>
+
+	<insert id="insertReply" parameterType="test.semi.admin.model.AdminVO">
+		insert into reply(reply,
+		reg_date)
+		values(#{reply}, sysdate)
+	</insert>
+
+
+	<update id="update" parameterType="test.semi.admin.model.AdminVO">
+		update board set
+		reply =	#{reply}, reg_date = sysdate where num=#{num}
+	</update>
+
+	<delete id="delete" parameterType="int">
+		delete from board where
+		num=#{num}
+	</delete>
+
+
+	<select id="selectAll" resultType="test.semi.admin.model.AdminVO">
+		select * from board
+	</select>
+
+	<select id="selectOne" resultType="test.semi.admin.model.AdminVO">
+		select * from board where
+		num=#{num} order by num desc
+	</select>
+
+	<select id="selectAllmember" resultType="test.semi.admin.model.AdminVO">
+		
+		select * from dietmember
+	</select>
+	
+	<select id="selectAllgrade" resultType="test.semi.admin.model.AdminVO">
+		<!-- select * from dietmember except (select * from dietmember where id='admin' 
+			and id='manager' ) -->
+		select * from dietmember where id!='admin' and id!='manager'
+	</select>
+
+	<select id="selectOnemember" resultType="test.semi.admin.model.AdminVO">
+		select
+		* from dietmember
+		where
+		id=#{id}
+	</select>
+
+	<update id="updateMember" parameterType="test.semi.admin.model.AdminVO">
+		update dietmember set
+		pw
+		= #{pw}, name = #{name},
+		age=#{age},gender=#{gender},tel=#{tel}
+		where
+		id=#{id}
+	</update>
+
+	<delete id="deleteMember" parameterType="int">
+		delete from dietmember where
+		id=#{id}
+	</delete>
+
+	<update id="updateGrade" parameterType="test.semi.admin.model.AdminVO">
+		update dietmember set
+		grade = #{grade}
+		where
+		id=#{id}
+	</update>
+
+
+</mapper>

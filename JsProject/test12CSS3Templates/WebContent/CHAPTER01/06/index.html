@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>CLOUD DRIVE</title>
+<!--[if (gte IE 7)&(lte IE 9)]>
+	<script type="text/javascript" src="js/jquery-1.7.1.js"></script>
+	<script type="text/javascript" src="js/selectivizr.js"></script>
+<![endif]-->
+<!--[if (gte IE 7)&(lte IE 8)]>
+	<script type='text/javascript'>
+		$(document).ready(function() {
+			$('#content')
+				.prepend('<div class="cloudForIE cloud1"></div>')
+				.prepend('<div class="cloudForIE cloud2"></div>');
+			$('#footer').prepend('<div class="borderForIE"></div>');
+ 		});
+	</script>
+<![endif]-->
+<!--[if IE 9]>
+	<script type='text/javascript'>
+		$(document).ready(function() {
+			$('#footer').prepend('<div class="borderForIE"></div>');
+ 		});
+	</script>
+<![endif]-->
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="content">
+	<h1><img src="images/logo.png" width="280" height="67" alt="CLOUD DRIVE" /></h1>
+	<div id="form">
+		<form>
+			<p class="userid"><label for="userid">User ID</label><input name="userid" type="text" /></p>
+			<p class="password"><label for="password">Password</label><input name="password" type="password" id="password" /></p>
+			<p class="login"><input type="image" name="login" id="login" src="images/arrow.png" /></p>
+		</form>
+	</div>
+	<div id="regist"><a href="regist.html"><img src="images/register.png" width="195" height="150" alt="新規利用登録（無料）" /></a></div>
+	<div id="footer">
+		<ul>
+			<li><a href="about.html">CLOUD DRIVEについて</a></li>
+			<li><a href="company.html">運営会社</a></li>
+			<li><a href="privacypolicy.html">プライバシーポリシー</a></li>
+			<li><a href="inquiry.html">お問い合わせ</a></li>
+		</ul>
+		<p class="credit">Copyright (C) CLOUD DRIVE co., Ltd. All Rights Reserved.</p>
+	</div>
+</div>
+</body>
+</html>

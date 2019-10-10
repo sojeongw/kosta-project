@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>background SAMPLE</title>
+<link rel="stylesheet" href="css/base.css" type="text/css" />
+
+</head>
+
+<body>
+<div class="header">
+<h1>1つの画像で実現するヘッダー背景の例</h1>
+<p>1つの画像を重ね合わせることで、背景に変化を持たせることも可能です。画像の作り方により、複数回重ねることも可能でしょう</p>
+</div>
+<div class="contents">
+<p>背景画像を指定するbackgroundプロパティには、回転に関する指定がありません。そのため、通常の写真と同じ要領で配置した画像を回転し、この画像を背景として利用します。<br />
+背景として利用する画像は、あらかじめHTML内に配置しておく方法でも実現できますが、今回はHTML内にデザイン目的だけの要素を配置することを避け、contentプロパティを利用して画像を配置しました。</p>
+<p>画像の回転は、transformプロパティで指定します。現状、ベンダープレフィックスをつけて指定します。<br />
+角度の指定はdeg（度）以外にrad（ラジアン）などで指定することも可能です。また、負の値を指定することもできます。<br />
+transformプロパティでは、回転以外にも拡縮、移動、シアー（傾斜）などの指定を行うこともできます。</p>
+</div>
+</body>
+</html>

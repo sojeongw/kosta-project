@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset=utf-8>
+  <title> java script </title>
+
+  <script type="text/javascript">
+  console.log("function");
+
+  // es6 : let, const, argument init, function arguments(..., count=3)
+  function say(fn,count=10){  // >> es6
+    // count = count || 3;  >> es5
+    for(var i=0; i<count; i++){
+      fn();
+    }
+  }
+
+  say(function(){
+    console.log("say()...");
+  });
+
+  ////////////////////////////////////////////
+
+  function sum(){
+    console.log("sum()...");
+    var sum = 0;
+    for(var i=0; i<10; i++){
+      sum+=arguments[i];
+    }
+    console.log(sum);
+  }
+
+  sum(1,2,3,4,5,6,7,8,9,10);
+
+
+  // 다른 방법
+  function sum(...sus){ // ... : 모든 arguments를 담는 배열을 받겠다 >> es6
+    console.log("sum()...");
+    var sum = 0;
+    for(var i=0; i<10; i++){
+      sum+=sus[i];
+    }
+    console.log(sum);
+  }
+
+  sum(1,2,3,4,5,6,7,8,9,10);
+
+  // 다른 방법 2
+  function sum(...sus){ // ... : 모든 arguments를 담는 배열을 받겠다 >> es6
+    console.log("sum()...");
+
+    console.log(sus.reduce(function(){return 9;}));
+    // reduce 안에 있는 함수의 값을 반환해준다.
+
+    console.log(sus.reduce(function(x,y){return x+y;}));
+    // >> 1,2 / 3,4 / 5,6...이런 식으로 계산해준다 >> es5
+
+    console.log(sus.reduce((x,y)=>{return x+y;}));
+    // arrow function >> es6. 콜할 때만 사용한다.
+  }
+
+  sum(1,2,3,4,5,6,7,8,9,10);
+
+</script>
+</head>
+
+<body>
+  <h1>function</h1>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+CREATE USER diet IDENTIFIED BY "hi123456"  ;
+GRANT "CONNECT" TO diet ;
+GRANT "RESOURCE" TO diet ;
+
+=================================================================
+create table diet_sports(
+id varchar2(20), 
+sports_date	date,
+running	NUMBER,
+bycicle NUMBER,
+rope NUMBER,
+totalkcal NUMBER,
+constraint diet_sports_fk foreign key(id)
+references login(id)
+on delete cascade
+);
+=================================================================
+
+create table board(
+num number primary key,
+content varchar2(4000) not null,
+reg_date date default sysdate
+);

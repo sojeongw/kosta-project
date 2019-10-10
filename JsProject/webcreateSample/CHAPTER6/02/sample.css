@@ -1,0 +1,227 @@
+@charset "utf-8";
+
+/*パソコンチェック用*/
+
+html {
+background:
+#EEE;
+}
+body {
+margin: 0 auto;
+width:320px;
+}
+
+body {
+/*margin: 0;
+padding: 0;*/
+background-color: #F69;
+background-position: center top;
+background-repeat: no-repeat;
+background-image: url(img/neko1.png);
+color: #61CFDC;
+font-size: 14px;
+line-height: 1.4;
+font-family:Arial, Helvetica, sans-serif;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1),(min-device-pixel-ratio: 1) {
+body {
+background-image: url(img/neko1.png);
+}
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2),(-webkit-min-device-pixel-ratio: 1.5),(min-device-pixel-ratio: 2),(min-device-pixel-ratio: 1.5) {
+body {
+background-image: url(img@2/neko1.png);
+background-size: 300px 580px;
+}
+}
+ul, li, dl, dt, dd {
+margin: 0;
+padding: 0;
+}
+
+li {
+list-style-type: none;
+}
+
+
+/* サイト名-------------------- */
+body > header {
+display: block;
+height: 200px;
+position: relative;
+overflow: hidden;
+font-family: 'Rammetto One', cursive;
+}
+body > header > h1 {
+margin: 0;
+padding: 0;
+position: absolute;
+top:25px;
+left: 60px;
+color: #F36;
+font-size: 40px;
+line-height: 1;
+text-shadow:0px 2px 1px #333,
+0px 1px 1px #333,
+1px 1px 1px #333,
+1px 0px 1px #333,
+2px 0px 1px #333,
+1px -1px 1px #333,
+1px -2px 1px #333,
+0px -2px 1px #333,
+-1px -2px 1px #333,
+-2px -2px 1px #333,
+-2px -1px 1px #333,
+-2px 0px 1px #333,
+-2px 1px 1px #333,
+-1px 1px 1px #333;
+/*-webkit-text-stroke: 1px #333;
+text-stroke: 1px #333;*/
+}
+body > header p {
+background: #E1E1E1;
+border-radius: 5px;
+padding: 10px;
+font-size: 21px;
+color: #666;
+position: absolute;
+top:20px;
+left: -35px;
+-webkit-transform: rotate(90deg);
+}
+body > header p span {
+color: #F00;
+}
+
+
+/* 画像フリック------------------------------------ */
+
+#flick {
+width: 100%;
+overflow: auto;     /* JavaScript無効時にスクロール表示させたいから */
+}
+
+#flick ul {
+display: block;
+height: 170px;
+width: 300%;
+}
+
+#flick ul li {
+float: left;
+width: 320px;
+text-align: center;
+}
+#flick ul li * {
+vertical-align: bottom;
+}
+#flick small {
+display: block;
+font-size: 12px;
+text-align: center;
+margin: 10px;
+}
+
+
+/* ページレイアウト
+------------------------------------ */
+article, section, aside {
+display: block;
+}
+article {
+margin: 10px 10px 0 10px;
+padding: 15px;
+border: 1px dashed #F69;
+border-left: none;
+border-right: none;
+background: #333;
+}
+article h1 {
+font-size: 16px;
+font-weight: normal;
+margin: 0 0 0 -.5em;
+}
+article p {
+margin: 0 0 1em 0;
+}
+
+
+/* ページレイアウト:フッタ
+------------------------------------ */
+footer {
+margin: 0;
+color: #FFF;
+font-size: 12px;
+display: block;
+height: 220px;
+position: relative;
+background-repeat: no-repeat;
+background-position: top;
+background-image: url(img/neko2.png);
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1),(min-device-pixel-ratio: 1) {
+footer {
+background-image: url(img/neko2.png);
+}
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2),(-webkit-min-device-pixel-ratio: 1.5),(min-device-pixel-ratio: 2),(min-device-pixel-ratio: 1.5) {
+footer {
+background-image: url(img@2/neko2.png);
+background-size: contain;
+}
+}
+footer small {
+position: absolute;
+top:70px;
+width: 100%;
+text-align:center;
+color: #999;
+font-size: 12px;
+}
+/* ページ下部検索窓
+------------------------------------ */
+footer form {
+padding: 0;
+margin: 0;
+}
+footer form input {
+display: block;
+width: 230px;
+height: 23px;
+border-radius: 3px 0 0 3px;
+padding: 0 5px;
+line-height: 23px;
+border: 1px solid #ABABAB;
+font-size: 15px;
+margin: 0;
+position: absolute;
+left: 25px;
+top: 20px;
+}
+footer form button {
+display: block;
+width: 24px;
+height: 25px;
+background-color: #000;
+background-repeat: no-repeat;
+background-position: center;
+border: 1px solid #ABABAB;
+border-left: none;
+border-radius: 0 3px 3px 0;
+text-indent: -999em;
+position: absolute;
+left: 265px;
+top: 20px;
+background-image: url(img/search.png);
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1),(min-device-pixel-ratio: 1) {
+footer form button {
+background-image: url(img/search.png);
+}
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2),(-webkit-min-device-pixel-ratio: 1.5),(min-device-pixel-ratio: 2),(min-device-pixel-ratio: 1.5) {
+footer form button {
+background-image: url(img@2/search.png);
+background-size: contain;
+}
+}

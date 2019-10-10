@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="http://code.jquery.com/jquery-1.7.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('tr:odd').css('background', '#ff0000'); // 홀수행
+            $('tr:even').css('background', '#9F9F9F');  //짝수행
+            $('tr:first').css({color:"red",   // 첫번째행
+            	background:"yellow"});
+        });
+    </script>
+</head>
+<body>
+    <table>
+        <tr><th>�̸�</th><th>������</th><th>����</th></tr>
+        <tr><td>���μ�</td><td>AB��</td><td>����Ư���� ���ı�</td></tr>
+        <tr><td>������</td><td>B��</td><td>�̱� Ķ�����Ͼ�</td></tr>
+        <tr><td>����ȭ</td><td>AB��</td><td>�̱� �޻��߼���</td></tr>
+        <tr><td>�輱ȭ</td><td>O��</td><td>���� ������</td></tr>
+        <tr><td>������</td><td>A��</td><td>���� �뷮����</td></tr>
+        <tr><td>���ϸ�</td><td>B��</td><td>���� ���걸</td></tr>
+    </table>
+</body>
+</html>

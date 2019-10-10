@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>操作している箇所が分かりやすいフォーム</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link rel="stylesheet" type="text/css" media="screen,print" href="css/html5reset-1.6.1.css" />
+<link rel="stylesheet" type="text/css" media="screen,print" href="css/layout.css" />
+<link rel="stylesheet" type="text/css" media="screen,print" href="css/form.css" />
+</head>
+
+<body>
+	<div id="Wrapper">
+		<h1>Online Bookstore</h1>
+		<ul id="Navi">
+			<li id="NaviAbout"><a href="#">About us</a></li>
+			<li id="NaviPhilosophy"><a href="#">Philosophy</a></li>
+			<li id="NaviAccess"><a href="#">Access</a></li>
+			<li id="NaviContact"><a href="#">Contact</a></li>
+		</ul>
+		<div id="Contents">
+			<h2>お問い合わせフォーム</h2>
+			<form>
+				<label for="name">お名前</label>
+				<input type="text" name="name" value="" />
+				<label for="email">E-Mail</label>
+				<input type="email" name="email" value=""  />
+				<label for="tel">電話番号</label> 
+				<input type="tel" name="tel" value=""  />
+				<label for="url">ウェブサイトのURL</label>
+				<input type="url" name="url" value=""  />
+				<label for="message">お問い合わせ内容</label> 
+				<textarea name="message" rows="0" cols="0"></textarea>
+				<input type="submit" value="内容を送信する" name="submit" class="submit" />
+			</form>
+		</div>
+		<p id="Copyright">Copyright &copy; 2012 Arcphilia Inc. All rights reserved.</p>
+	</div>
+</body>
+</html>

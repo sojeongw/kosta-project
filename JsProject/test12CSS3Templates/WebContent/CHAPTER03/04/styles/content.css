@@ -1,0 +1,247 @@
+@charset "UTF-8";
+
+/**
+@prefix : <http://purl.org/net/ns/doas#> .
+</styles/content.css> a :CSSstylesheet;
+ :shortdesc "content.css";
+ :dependencies "none" .
+*/
+
+/*----------------------------------------------------
+    content
+----------------------------------------------------*/
+#demoArea {
+    position: relative;
+    margin-top: 30px;
+    padding: 20px;
+    border: 10px solid #000;
+    background: url(../images/demoarea_back_01.gif) no-repeat center center;
+}
+#demoArea header p {
+    padding-bottom: 10px;
+    text-align: center;
+    font-family: 'Fugaz One', Serif;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 0.8;
+    border-bottom: 1px solid #dcdcdc;
+    zoom: 1;
+}
+#demoArea footer p {
+    padding-top: 10px;
+    text-align: center;
+    font-family: 'Fugaz One', Serif;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 0.8;
+    border-top: 1px solid #dcdcdc;
+    zoom: 1;
+}
+#demoArea header p span.font01,
+#demoArea footer p span.font01 {
+    font-family: 'Frijole', Serif;
+    font-size: 30px;
+}
+#demoArea header p span.font02,
+#demoArea footer p span.font02 {
+    font-family: 'Miltonian', Serif;
+    font-size: 25px;
+}
+#demoArea header p span.font03,
+#demoArea footer p span.font03 {
+    font-family: 'Cabin Sketch', Serif;
+    font-size: 20px;
+}
+#demoArea header p span.font04,
+#demoArea footer p span.font04 {
+    font-family: 'Nosifer', Serif;
+    font-size: 25px;
+}
+#demoArea header h1 {
+    position: relative;
+    height: 165px;
+    line-height: 0.8;
+    background: url(../images/demoarea_back_02.gif) no-repeat 370px 15px;
+}
+#demoArea header h1 span {
+    display: block;
+    position: absolute;
+}
+#demoArea header h1 span.font01 {
+    overflow: hidden;
+    width: 340px;
+    font-family: 'Lobster Two', Serif;
+    font-size: 160px;
+    top: 20px;
+    left: 10px;
+}
+#demoArea header h1 span.font02 {
+    overflow: hidden;
+    width: 190px;
+    font-family: 'Fredericka the Great', Serif;
+    font-size: 90px;
+    top: 25px;
+    left: 350px;
+}
+#demoArea header h1 span.font03 {
+    overflow: hidden;
+    width: 190px;
+    font-family: 'Limelight', Serif;
+    font-size: 60px;
+    top: 100px;
+    left: 350px;
+}
+p#zone01 {
+    position: absolute;
+    top: -35px;
+    left: -35px;
+    width: 100px;
+    height: 59px;
+    padding-top: 41px;
+    font-family: 'Wellfleet', Serif;
+    font-size: 20px;
+    line-height: 0.8;
+    color: #fff;
+    text-align: center;
+    background: #000;
+    -webkit-border-radius: 60px;
+    -moz-border-radius: 60px;
+    border-radius: 60px;
+}
+p#zone02 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    overflow: hidden;
+    width: 75px;
+    height: 75px;
+}
+p#zone02 span {
+    display: block;
+    width: 150px;
+    margin: -10px 0 0 -35px;
+    padding: 30px 20px 8px;
+    font-family: 'Wellfleet', Serif;
+    font-size: 16px;
+    line-height: 0.8;
+    color: #fff;
+    text-align: center;
+    background: #000;
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+p#zone03 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    width: 75px;
+    height: 75px;
+}
+p#zone03 span {
+    display: block;
+    width: 150px;
+    margin: 30px 0 0 -80px;
+    padding: 30px 20px 8px;
+    font-family: 'Wellfleet', Serif;
+    font-size: 16px;
+    line-height: 0.8;
+    color: #fff;
+    text-align: center;
+    background: #000;
+    -moz-transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+}
+p#zone04 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+    width: 75px;
+    height: 75px;
+}
+p#zone04 span {
+    display: block;
+    width: 150px;
+    margin: 30px 0 0 -35px;
+    padding: 30px 20px 8px;
+    font-family: 'Wellfleet', Serif;
+    font-size: 16px;
+    line-height: 0.8;
+    color: #fff;
+    text-align: center;
+    background: #000;
+    -moz-transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
+p.text01 {
+    position: relative;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    font-family: 'Esteban', serif;
+    font-size: 15px;
+    line-height: 1.5;
+    border-bottom: 1px solid #dcdcdc;
+    z-index: 10;
+    zoom: 1;
+}
+p.text01:first-letter {
+    display: block;
+    float: left;
+    margin: 10px 7px 0 0;
+    font-size: 70px;
+    line-height: 0.8;
+}
+div.columns01 {
+    position: relative;
+    width: 100%;
+    -moz-column-count: 3;
+    -webkit-column-count: 3;
+    columns-count: 3;
+    border-bottom: 1px solid #fff;
+}
+div.columns01 h2 {
+    position: absolute;
+    top: -100px;
+    left: 0px;
+    width: 100%;
+    overflow: hidden;
+    font-family: 'Noticia Text', serif;
+    font-size: 95px;
+    font-weight: bold;
+    line-height: 1.5;
+    color: #09c;
+    z-index: 0;
+    zoom: 1;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+    filter: alpha(opacity=20);
+    -moz-opacity:0.2;
+    -khtml-opacity: 0.2;
+    opacity: 0.2;
+}
+div.columns01 p {
+    position: relative;
+    margin-bottom: 10px;
+    font-family: 'Nunito', serif;
+    font-size: 14px;
+    line-height: 1.4;
+    z-index: 10;
+}
+
+/*----------------------------------------------------
+    clearfix
+----------------------------------------------------*/
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: block;
+    overflow: hidden;
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    zoom: 1;
+}

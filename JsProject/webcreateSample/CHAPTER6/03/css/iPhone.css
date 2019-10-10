@@ -1,0 +1,269 @@
+/******************************************************************************/
+/* style.css for iPhone */
+/******************************************************************************/
+html {
+	height:100%;
+	overflow-x : hidden ;
+	overflow-y:auto;
+	-webkit-text-size-adjust: none;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+form {
+  margin: 0;
+}
+
+/* Headline */
+h1,h2,h3,h4,h5,h6 {
+  font-size: 20px;
+}
+
+/* Decoration */
+ul, ol {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+em {
+  font-weight: bold;
+  font-style: normal;
+  color: #FF0000;
+}
+
+p {
+  margin: 10px 0;
+  clear:both;
+}
+
+/* Layout */
+body {
+	font-family: HiraKakuProN-W3,'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック','Helvetica Neue',sans-serif;
+  font-size: 16px;
+	max-width:480px;
+	color: #333;
+  background: #fff;
+	-webkit-text-size-adjust: none;
+}
+#outerwrapper {
+	position:relative;
+	height:auto!important;
+	min-height:100%;
+}
+#Container {
+  margin: 0px;
+  text-align: left;
+}
+
+body>#outerwrapper {
+	height:auto;
+}
+
+
+/* Header */
+#Header {
+  width: 100%;
+	height:42px;
+	background:#708090;
+  background-image: -moz-linear-gradient(top, #888 0%, #777 50%, #666 50%, #777 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #888), color-stop(0.50, #777), color-stop(0.50, #666), color-stop(1, #777));
+  box-shadow: 1px 0px 0px rgba(225,225,225,0.3) inset,
+              0px 1px 1px rgba(0,0,0,0.1) inset,
+              0px -1px 1px rgba(0,0,0,0.3) inset,
+              0px 1px 3px #666;
+}
+#Header div#Logo,#Sitename,#menu_m,#iPhoneMenu {
+	display:none;
+}
+#Header h1 {
+	font-family: 'Droid Serif';
+	text-align:center;
+	font-size:30px;
+	color:#fafafa;
+  text-shadow:0 -1px 0px #333,0 1px 0px #555;
+}
+
+#grid-content div ,
+#grid-content div.large ,
+#Container div {
+	width: 99%;
+	margin: 0 1% 0 0;
+	padding:5px 0;
+	word-break: break-all;
+}
+#grid-content div p,
+#Container div p{
+	margin:5px 15px;
+}
+/* タイトルの設定 */
+#grid-content h2 {
+	width:96%;
+	margin:10px 5px;
+	padding:5px 2%;
+	line-height:1.5;
+	color:#fafafa;
+  box-shadow: 1px 0px 0px rgba(225,225,225,0.3) inset,
+              0px 1px 1px rgba(0,0,0,0.1) inset,
+              0px -1px 1px rgba(0,0,0,0.3) inset,
+              0px 1px 3px #666;
+}
+.BlockTitle_a {
+	background:#ea5532;
+}
+.BlockTitle_b {
+	background:#f39800;
+}
+.BlockTitle_c {
+	background:#2cb4ad;
+}
+.BlockTitle_d {
+	background:#5a4498;
+}
+.BlockTitle_e {
+	background:#0073a8;
+}
+
+
+/* コンテンツ内画像横幅を自動縮小 */
+#grid-content div.imagebox {
+	padding:5px 0;
+	margin:0 0 0 10px;
+}
+.imagebox img {
+	max-width: 100%;
+	height: auto;
+	width: auto\9; /* ie8 */
+	margin:0;
+}
+
+/* Footer */
+#Footer {
+  width: 100%;
+  min-height:120px;
+  height:auto;
+	margin-bottom:20px;
+	clear:both;
+  background: #ccc ;
+}
+
+#Footer p {
+    margin: 0;
+    padding: 0;
+    text-align:center;
+}
+
+/* footer menu */
+#user_menu_block {
+	position:relative;
+	height:auto;
+  margin: 0 auto;
+	text-align:left;
+	padding: 5px;
+}
+#user_menu_block ul li {
+	display:block;
+	width:98%;
+	margin: 0 auto;
+	height:20px;
+	padding: 5px;
+	border-bottom:1px solid #ddd;
+	background:url(../images/chevron_circle.png) no-repeat right center;
+}
+#user_menu_block ul li a {
+	display:block;
+	width:98%;
+	height:20px;
+	line-height:20px;
+}
+
+#menu_button {
+	display:block;
+	position:absolute;
+	top:2px;
+	right:5px;
+	height:36px;
+	width:50px;
+	line-height:36px;
+	border:1px solid #ccc;
+	text-align:center;
+		-webkit-border-radius: 10px; 
+    -webkit-box-shadow: 1px 1px 1px #111;
+    -moz-box-shadow: 1px 1px 1px #111;
+    box-shadow: inset 0 1px 1px #111;
+}
+#menu_button a {
+	display:block;
+	height:36px;
+	width:50px;
+	line-height:36px;
+	color:#fff;
+	font-weight:bold;
+	text-decoration:none;
+	text-shadow: -1px -1px 1px #111;
+}
+#goback {
+	height:36px;
+	width:50px;
+	margin:0 auto;
+	text-align:center;
+	line-height:36px;
+	background:transparent;
+		-webkit-border-radius: 10px; 
+    -webkit-box-shadow: 0 0 5px #888;
+    -moz-box-shadow: 0 0 5px #888;
+    box-shadow: 2px 2px 2px #000;
+}
+
+#goback a {
+	font-size:20px;
+	font-weight:bold;
+  color:#fff;
+	text-decoration:none;
+	text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #;
+}
+
+#iPhoneMenu {
+	position:absolute;
+	top:60px;
+	left:0px;
+	margin-top:1px;
+	width: 100%;
+	height:100%;
+	min-height:800px;
+	background:rgba(0, 0, 0, .6);
+}
+#iPhoneMenu ul {
+	border-top:1px solid #ccc;
+}
+
+#iPhoneMenu ul li {
+	display:block;
+	width:90%;
+	margin:3px auto;
+	height:50px;
+	padding-left:14px;
+	border-bottom:1px solid #ccc;
+	background:#fff;
+		-webkit-border-radius: 10px; 
+    -webkit-box-shadow: 0 0 5px #888;
+    -moz-box-shadow: 0 0 5px #888;
+    box-shadow: 2px 2px 2px #000;
+}
+#iPhoneMenu ul li a {
+	display:block;
+	width:98%;
+	height:50px;
+	line-height:50px;
+	font-size:20px;
+	font-weight:bold;
+	text-decoration:none;
+	background:#fff url(../images/chevron_circle.png) no-repeat right center;
+}
+#iPhoneMenu ul li a:link , #iPhoneMenu ul li a:visited {
+	color:blue;
+}

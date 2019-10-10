@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!--         <script src="http://code.jquery.com/jquery-1.11.0.js"></script> -->
+<script src="../jquery-1.11.0.js"></script>
+<script>
+	$(document).ready(function() {
+		//동일아이디인경우 처음에만 적용됨
+		//따라서 엘리먼트 명을 앞에 명시해주면 확실히 적용됨.
+		 $('ul#list01').css('font-size', '30pt');
+	});
+</script>
+</head>
+<body>
+	<header>
+		<ol id="list01">
+			<li>안녕하세요</li>
+			<li>안녕하세요</li>
+			<li>안녕하세요</li>
+		</ol>
+		<ul id="list01">
+			<li>안녕하세요</li>
+			<li>안녕하세요</li>
+			<li>안녕하세요</li>
+		</ul>
+	</header>
+</body>
+</html>

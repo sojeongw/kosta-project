@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.test.bookuser.MainActivity">
+
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="로그인"
+        android:textSize="24dp"
+        android:id="@+id/textView2" />
+
+    <LinearLayout android:layout_height="wrap_content" android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginStart="12dp"
+        android:paddingTop="30dp"
+        android:id="@+id/linearLayout">
+
+        <TextView android:layout_height="wrap_content" android:layout_width="wrap_content"
+            android:textSize="16dp" android:textColor="#ff222222"
+            android:text="ID : "
+            android:id="@+id/usernameLabel"
+            />
+
+        <EditText
+            android:id="@+id/et_id"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/usernameLabel"
+            android:hint="아이디 입력"
+            android:text="ab"
+            />
+    </LinearLayout>
+
+
+    <LinearLayout android:layout_height="wrap_content" android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginTop="39dp"
+        android:layout_marginStart="12dp"
+        android:layout_below="@+id/linearLayout"
+        android:layout_alignStart="@+id/textView"
+        android:id="@+id/linearLayout2">
+
+        <TextView
+            android:id="@+id/passwordLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="pw : "
+            android:textColor="#ff222222"
+            android:textSize="16dp" />
+
+        <EditText
+            android:id="@+id/et_pw"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:inputType="textPassword"
+            android:hint="비밀번호 입력"
+            android:layout_below="@+id/usernameInput"
+            android:text="1"
+            />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="120dp"
+        android:layout_height="130dp"
+        android:text="로그인"
+        android:layout_alignBottom="@+id/linearLayout2"
+        android:layout_toRightOf="@+id/btn_user_insert"
+        android:layout_toEndOf="@+id/btn_user_insert"
+        android:layout_marginLeft="13dp"
+        android:layout_marginStart="13dp" />
+
+    <Button
+        android:id="@+id/btn_user_insert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="회원가입"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        />
+
+
+
+
+
+
+
+
+
+
+
+
+
+</RelativeLayout>

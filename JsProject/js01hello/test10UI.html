@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset=utf-8>
+  <title> java script </title>
+
+  <script type="text/javascript">
+
+
+  function agree(){
+    let count = 0;
+
+    function plus(){
+      return ++count;
+    }
+    function minus(){
+      return --count;
+    }
+    return {plus:plus, minus:minus};
+  }
+
+
+  // onload 이벤트에 함수 할당
+
+  window.onload = function(){
+    console.log("onload()...");
+
+    let obj = agree();
+
+    var d01 = document.getElementById("d01");
+    console.log(d01);
+    // 아래에 정의된 div id="d01"이 출력된다.
+
+    // 안에 있는 텍스트를 바꾸고 싶으면
+    // d01.innerHTML = "<h1>yangssem</h1>"; // 따옴표 안에 html 코드를 넣을 수 있다.
+    // d01.innerText = "yangssem"; // 텍스트만 변경할 때 사용한다.
+    // d01.innerText = "<h1>yangssem</h1>"; // html 코드가 아니라 텍스트로 나온다
+
+    let count = 0;
+    var plus = document.getElementById("plus");
+    plus.onclick = function(){
+      console.log("plus...");
+      d01.innerHTML = obj.plus();
+    };
+
+    var minus = document.getElementById("minus");
+    minus.onclick = function(){
+      console.log("minus()...");
+      d01.innerHTML = obj.minus();
+    }
+
+  };
+
+
+
+</script>
+</head>
+
+<body>
+  <h1>UI</h1>
+  <!-- 유일하게 주고 싶으면 id, 아니면 class -->
+  <div id="d01">
+    hello
+  </div>
+  <button id="plus">++</button>
+  <button id="minus">--</button>
+
+</body>
+</html>

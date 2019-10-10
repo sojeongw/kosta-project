@@ -1,0 +1,138 @@
+@charset "UTF-8";
+
+/*reset
+------------------------------*/
+body,h1,h2,h3,p,ul,ol,li {
+	margin:0;
+	padding:0;
+}
+ol, ul { list-style:none; }
+img {
+	border: none;
+	vertical-align:bottom
+}
+
+
+/*class
+------------------------------*/
+.clearfix { zoom:1; }
+.clearfix:after { content:"."; display: block; height:0px; clear:both; line-height:0; visibility:hidden; }
+
+
+/*body,Anchor
+------------------------------*/
+body {
+	background: #fff url(img/bg-body.gif) repeat-x 0 0;
+	line-height: 1.6;
+	font-size:14px;
+}
+
+a:link,
+a:visited { color: #5b8af4; text-decoration: none; }
+a:hover { color: #5b8af4; text-decoration: underline; }
+
+
+/*Layout
+------------------------------*/
+#container {
+	width: 800px;
+	margin: 0 auto;
+}
+#header {
+	height: 130px;
+}
+#nav {
+	background: url(img/bg-nav.gif) repeat;
+	height: 80px;
+}
+#content {
+	overflow: hidden;
+	margin: 40px 0;
+}
+#footer {
+	clear: both;
+	background: #5b8af4;
+	padding: 15px 0;
+	text-align: right;
+	color: #fff;
+}
+
+
+/*header
+------------------------------*/
+#header a:link,
+#header a:visited { color: #fff; }
+#header a:hover { background: #4364b1; text-decoration: none; color: #fff; }
+
+#header h1 {
+	float: left;
+}
+#header p {
+	padding: 22px 0 20px;
+	text-align: right;
+	font-size: 12px;
+}
+#header ul {
+	float: right;
+	border-right: 1px solid #adc5fa;
+}
+#header ul li {
+	float: left;
+	border-left: 1px solid #adc5fa;
+	text-align: center;
+}
+#header ul li.current {
+	background: #4364b1;
+}
+#header ul li a {
+	display: block;
+	width: 79px;
+	height: 30px;
+	line-height: 30px;
+	box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.5) inset;
+}
+
+
+/*nav
+------------------------------*/
+#nav h2 { float: left; }
+#nav ul {
+	float: right;
+	padding: 55px 0 0;
+}
+#nav li {
+	float: left;
+	margin: 0 20px 0 0;
+}
+#nav li a {
+	background: url(img/list.gif) no-repeat left center;
+	padding: 0 0 0 20px;
+}
+
+
+/*content
+------------------------------*/
+
+#content ul {
+	width: 800px;
+	margin: 5px 0 0 7px;
+}
+#content ul li {
+	float: left;
+	margin: 0 12px 20px 0;
+}
+
+#content ul li img {
+	background: #fff;
+	border: 1px solid #999;
+	padding: 5px;
+	box-shadow: 2px 2px 5px #666;
+	behavior: url("PIE.htc");	/* CSS3 PIE */
+}
+
+/*footer
+------------------------------*/
+#footer p {
+	width: 800px;
+	margin: 0 auto;
+}

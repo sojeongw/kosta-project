@@ -1,0 +1,56 @@
+<!--
+このサンプルは「https://developers.google.com/webfonts/docs/webfont_loader」にあるコードを修正したものです。
+
+CSSの「.wf-loading」がフォント読み込み中、「.wf-active」がフォント読み込み完了後です（「.wf-inactive」はロード失敗です）。
+本サンプルではp要素、およびh1要素（【07】コードの<target>に当たるもの ）にWebフォントを適用し、h2要素にはWebフォントを指定していません。
+「.wf-loading」を「display:none;」とすると、読み込み中はテキストが非表示となり、その結果としてWebフォントの指定をしていないh2要素のみが表示されます。
+なお、「.wf-loading」に「font-family:serif」と指定すれば、読み込み中はデフォルトフォントで表示させることが可能です。
+-->
+
+
+
+<html>
+  <head>
+    <script type="text/javascript">
+      WebFontConfig = {
+        google: { families: [ 'Tangerine', 'Cantarell' ] }
+      };
+      (function() {
+        var wf = document.createElement('script');
+        wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+            '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+        wf.type = 'text/javascript';
+        wf.async = 'true';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wf, s);
+      })();
+    </script>
+    <style type="text/css">
+      .wf-loading p {
+        display:none;
+      }
+      .wf-inactive p {
+        font-family: serif;
+      }
+      .wf-active p {
+        font-family: 'Tangerine', serif;
+      }
+      .wf-loading h1 {
+        display:none;
+      }
+      .wf-inactive h1 {
+        font-family: serif;
+      }
+      .wf-active h1 {
+        font-family: 'Cantarell', serif;
+        font-weight: 400;
+        font-size: 16px
+      }
+    </style>
+  </head>
+  <body>
+    <h1>This is using Cantarell</h1>
+    <p>This is using Tangerine!</p>
+    <h2>This is not using WebFont!!</h2>
+  </body>
+</html>

@@ -1,0 +1,113 @@
+@charset "UTF-8";
+/* CSS Document */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	font-size: 80%;
+	color: #666666;
+	text-align: center;
+	line-height: 180%;
+	background-color: #EFEDE9;
+}
+#Wrapper {
+	text-align: left;
+	width: 960px;
+	margin: 40px auto;
+}
+h1 {
+	width: 960px;
+	height: 0px;
+	padding-top: 100px;
+	background: url(../images/Header.png) no-repeat;
+	overflow: hidden;
+}
+ul#Navi {
+	list-style-type: none;
+}
+ul#Navi li {
+	float: left;
+}
+ul#Navi li a {
+	display: block;
+	width: 192px;
+	height: 0px;
+	padding-top: 45px;
+	overflow: hidden;
+	background: url(../images/Navi.png) no-repeat;
+}
+ul#Navi li#NaviCategory a {
+	background-position: -192px 0px;
+}
+ul#Navi li#NaviSpecial a {
+	background-position: -384px 0px;
+}
+ul#Navi li#NaviCompany a {
+	background-position: -576px 0px;
+}
+ul#Navi li#NaviCart a {
+	background-position: -768px 0px;
+}
+#Contents {
+	clear: both;
+	background-color: #FFFFFF;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+	-moz-border-radius-bottomright: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	padding: 30px;
+}
+#Contents h2 {
+	border-left:solid 5px #99CCCC;
+	margin-top:30px;
+	padding-left:10px;
+	font-size:16px;
+	font-weight:bold;
+}
+#Contents h3 {
+	font-size:14px;
+	font-weight:bold;
+}
+#Detail {
+	clear:both;
+	margin-bottom:40px;
+	list-style-type:none;
+}
+#Detail li {
+	-webkit-box-shadow: 0 0 5px #CCCCCC;
+	-moz-box-shadow: 0 0 5px #CCCCCC;
+	box-shadow: 0 0 5px #CCCCCC;
+	border:solid 1px #DDDDDD;
+    border-radius: 5px;
+	-moz-border-radius: 5px;
+	margin:15px auto;
+	padding:20px;
+	line-height:1.8em;
+}
+select {
+	margin:25px 15px;
+}
+#BtnNext {
+	float:right;
+}
+#BtnBack {
+	float:left;
+}
+#Copyright {
+	clear:both;
+	padding-top:20px;
+	text-align:center;
+}
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+	}
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */

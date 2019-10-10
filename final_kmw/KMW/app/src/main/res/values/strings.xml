@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">KMW</string>
+    <string name="btn_login">LOGIN</string>
+    <string name="alert_dialog_two_buttons_title">로그인 오류</string>
+    <string name="alert_dialog_cancel">취소</string>
+</resources>

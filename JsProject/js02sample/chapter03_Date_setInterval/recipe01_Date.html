@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+p{
+	background-color: #ff0;
+	width: 200px;
+	text-align: center;
+	padding: 10px;
+	border: 2px inset #f00;
+}
+</style>
+<script type="text/javascript">
+	window.onload = function() {
+		var dtElem = document.getElementById("date");
+		var dt = new Date();
+		dtElem.innerHTML = "<p>" + dt + "</p>";
+		
+		
+		
+	}
+</script>
+</head>
+<body>
+	<div id="date"></div>
+</body>
+</html>

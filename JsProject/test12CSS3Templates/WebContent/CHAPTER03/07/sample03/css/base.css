@@ -1,0 +1,42 @@
+@charset "utf-8";
+
+p{
+margin:0.5em 0; padding:0;
+}
+
+.contents1{
+margin:20px; padding:60px 20px 20px;
+background:url(../img/bg01.png),url(../img/bg02.png);
+}
+
+.contents2{
+margin:20px; padding:40px 20px;
+background:url(../img/bg04.png) no-repeat left top,url(../img/bg03.png) no-repeat left 29px,url(../img/bg03.png) no-repeat right bottom,url(../img/bg04.png) no-repeat right bottom,#fafafa
+}
+
+.contents3{
+min-height:200px;
+margin:20px; padding:20px 20px 20px 240px;
+background:url(../img/base01.png) no-repeat 20px 20px,#fafafa;
+}
+
+.contents4{
+background:url(../img/check.png) no-repeat 35px 5px,url(../img/base01.png) no-repeat 20px 20px;
+background-size:40px auto;
+-moz-background-size:40px auto;
+}
+.contents4{/*サンプルのため2つに分割していますが、本来下記コメントアウトの内容で良い*/
+margin:20px; padding:20px 20px 20px 80px;
+color:#fafafa;
+background-color:#333/*background-colorはbackgroundよりも後に*/
+}
+
+/*
+.contents4{
+margin:20px; padding:20px 20px 20px 80px;
+color:#fafafa;
+background:url(../img/check.png) no-repeat 35px 5px,url(../img/base01.png) no-repeat 20px 20px、#333;
+background-size:40px auto;
+-moz-background-size:40px auto;
+}
+*/

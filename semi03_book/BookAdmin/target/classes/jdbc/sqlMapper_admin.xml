@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="semi.com.admin.model">
+	<!-- #{menu},#{price} -->
+
+	<insert id="book_insert" parameterType="semi.com.admin.model.BookInfoVO">
+		insert into
+		book_info(book_num,book_name,book_writer,book_company,book_content,book_checkout)
+		values(#{book_num}, #{book_name}, #{book_writer},
+		#{book_company},#{book_content},
+		'true')
+	</insert>
+
+	<delete id="book_delete" parameterType="semi.com.admin.model.BookInfoVO">
+		delete from book_info
+		where book_num=#{book_num}
+	</delete>
+
+	<delete id="book_return_delete" parameterType="semi.com.admin.model.CheckOutVO">
+		delete from
+		checkout
+		where book_num=#{book_num}
+	</delete>
+
+	<update id="book_update" parameterType="semi.com.admin.model.BookInfoVO">
+		update book_info set
+		book_name=#{book_name},book_writer=#{book_writer},book_company=#{book_company}
+		where
+		book_num=#{book_num}
+	</update>
+
+	<update id="book_return" parameterType="semi.com.admin.model.BookInfoVO">
+		update book_info set
+		book_checkout=#{book_checkout}
+		where
+		book_num=#{book_num}
+	</update>
+
+	<select id="book_selectAll" resultType="semi.com.admin.model.BookInfoVO">
+		select * from book_info
+		order by book_num desc
+	</select>
+
+	<select id="book_checkout_selectAll" resultType="semi.com.admin.model.CheckOutVO">
+		<!-- select * from book_info where book_checkout='false' order by book_num 
+			desc -->
+			
+			
+		<!-- select b.book_name, b.book_writer, b.book_company,
+		u.USER_ID, u.user_name, u.user_tel,
+		c.checkout_start, c.CHECKOUT_END
+		from book_info b ,user_info u, checkout c
+		where u.user_id = c.user_id and b.book_num=c.book_num and book_checkout='false' -->
+		
+		select book_name, book_writer, book_company,
+		USER_ID, user_name, user_tel,
+		checkout_start, CHECKOUT_END
+		from user_info join checkout
+		using(user_id)
+		join book_info
+		using(book_num)
+		where book_checkout='false'
+	</select>
+
+	<select id="login" resultType="semi.com.admin.model.UserInfoVO">
+		select * from user_info where
+		user_id=#{user_id} and user_pw = #{user_pw}
+	</select>
+
+
+</mapper>

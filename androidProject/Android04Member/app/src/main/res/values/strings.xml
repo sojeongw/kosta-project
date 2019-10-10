@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Android04Member</string>
+    <string name="btn_insert">insert</string>
+    <string name="btn_insertOK">insertOK</string>
+    <string name="btn_select">select</string>
+    <string name="btn_updateOK">update</string>
+
+
+    <string name="title">Android02</string>
+    <string name="txt_num">num</string>
+    <string name="txt_id">ID</string>
+    <string name="txt_pw">PW</string>
+    <string name="txt_name">NAME</string>
+    <string name="txt_tel">TEL</string>
+
+    <string name="alert_dialog_username"></string>
+    <string name="alert_dialog_password"></string>
+
+
+    <string name="txt_1">1</string>
+    <string name="txt_admin">admin</string>
+    <string name="txt_hi123456">hi123456</string>
+    <string name="txt_kim">kim</string>
+    <string name="txt_010">010</string>
+    <string name="btn_deleteOK">delete</string>
+
+
+</resources>

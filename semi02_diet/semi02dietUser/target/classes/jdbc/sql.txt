@@ -1,0 +1,44 @@
+CREATE USER diet IDENTIFIED BY "hi123456"  ;
+GRANT "CONNECT" TO diet ;
+GRANT "RESOURCE" TO diet ;
+
+=================================================================
+create table dietmember(
+id varchar2(20) primary key not null,
+pw varchar2(20) not null,
+name varchar2(20),
+age number,
+gender varchar2(20),
+tel varchar2(20),
+height number,
+weight number,
+goal number,
+grade varchar2(20)
+);
+=================================================================
+
+=================================================================
+create table userkcal(
+id varchar2(20) not null,
+day varchar2(50),
+totalkcal number
+);
+=================================================================
+
+=================================================================
+create table board(
+num number,
+content varchar2(4000),
+reg_date date default sysdate
+);
+=================================================================
+create sequence seq_board;
+
+=================================================================
+create table reply(
+content varchar2(4000),
+reg_date date default sysdate
+);
+=================================================================
+
+=================================================================

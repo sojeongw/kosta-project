@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="Content-Style-Type" content="text/css" />
+		<meta http-equiv="Content-Script-Type" content="text/javascript" />
+		<title>sample</title>
+		<link rel="stylesheet" href="base.css" type="text/css" media="screen" />
+		<script type="text/javascript" src="jquery-1.8.3.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("ul.item").hide();
+				$("li div.category").click(function(){
+					if($("+ul",this).css("display")=="none"){
+						$("+ul",this).slideDown();
+						$(this).addClass("open");
+					}
+					else{
+						$("+ul",this).slideUp();
+						$(this).removeClass("open");
+					}
+				}).mouseover(function(){
+					$(this).addClass("rollover");
+				}).mouseout(function(){
+					$(this).removeClass("rollover");
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div id="container">
+			<ul class="menu"> 
+				<li>
+					<div class="category">和食器</div>
+					<ul class="item"> 
+						<li><a href="11.html">ご飯茶碗</a></li> 
+						<li><a href="12.html">汁椀</a></li> 
+						<li><a href="13.html">お皿・鉢</a></li> 
+						<li><a href="14.html">湯呑み</a></li>
+						<li><a href="15.html">急須</a></li>
+					</ul> 
+				</li> 
+				<li>
+					<div class="category">洋食器</div>
+					<ul class="item"> 
+						<li><a href="21.html">お皿・プレート</a></li> 
+						<li><a href="22.html">カップ＆ソーサー</a></li> 
+						<li><a href="23.html">マグカップ</a></li> 
+						<li><a href="24.html">ティーポット</a></li> 
+					</ul> 
+				</li>
+				<li>
+					<div class="category">ガラス食器</div>
+					<ul class="item"> 
+						<li><a href="31.html">グラス・タンブラー</a></li> 
+						<li><a href="32.html">ワイングラス</a></li> 
+						<li><a href="33.html">日本酒・焼酎グラス</a></li> 
+						<li><a href="34.html">プレート</a></li> 
+					</ul> 
+				</li> 
+				<li>
+					<div class="category">カトラリー</div>
+					<ul class="item"> 
+						<li><a href="41.html">カトラリーセット</a></li> 
+						<li><a href="42.html">ナイフ・フォーク</a></li> 
+						<li><a href="43.html">スプーン</a></li> 
+					</ul> 
+				</li> 
+			</ul>
+		</div>
+	</body>
+</html>

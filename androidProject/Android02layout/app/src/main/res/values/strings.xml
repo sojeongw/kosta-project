@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Android02</string>
+    <string name="title">Android02</string>
+    <string name="txt_id">ID</string>
+    <string name="txt_pw">PW</string>
+    <string name="txt_name">NAME</string>
+    <string name="txt_tel">TEL</string>
+
+
+
+    <string name="txt_admin">admin</string>
+    <string name="txt_hi123456">hi123456</string>
+    <string name="txt_kim">kim</string>
+    <string name="txt_010">010</string>
+
+
+    <string name="btn_insertOK">insertOK</string>
+    <string name="btn_student_insert">student insert</string>
+    <string name="btn_member_insert">member insert</string>
+
+
+    <string name="txt_kor">kor</string>
+    <string name="txt_100">100</string>
+    <string name="txt_eng">eng</string>
+    <string name="txt_80" >80</string>
+    <string name="txt_math">math</string>
+    <string name="txt_50">50</string>
+
+
+    <!--java에서 xml에 접근 : r.string.app_name-->
+    <!--xml이 xml에 접근 : @color/colorAccent-->
+</resources>

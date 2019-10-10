@@ -1,0 +1,53 @@
+body {
+	background: url("../images/bg.jpg") repeat left top;
+}
+div#contents {
+	margin: 100px auto 0;
+	width: 940px;
+}
+h1 {
+	padding-bottom: 15px;
+	color: #e8e8e8;
+	text-shadow: -1px -1px 0 rgba(0,0,0, 1);
+	font-size: 36px;
+	font-family: serif;
+	-webkit-text-shadow: -1px -1px 0 rgba(0,0,0, 1);
+	-moz-text-shadow: -1px -1px 0 rgba(0,0,0, 1);
+}
+#photoGallery {
+	-webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+}
+#photoGallery li {
+	position: relative;
+	width: 740px;
+	height: 450px;
+}
+h3.tab {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+div.photo {
+    position: absolute;
+    top: 0;
+    left: 40px;
+}
+p.caption {
+    position: absolute;
+    bottom: 5px;
+    left: 45px;
+    padding: 10px;
+    width: 670px;
+    background-color: rgba(0,0,0,0.6);
+    color: #fff;
+	/*IE8以前対応*/
+	background-color: #000\9;
+}
+p#footer {
+    padding-top: 15px;
+	color: #999;
+    text-align: right;
+    font-size: 85%;
+}

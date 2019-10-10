@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">BookAdmin</string>
+    <string name="title_book_list">BookList</string>
+    <string name="title_book_insert">BookInsert</string>
+    <string name="title_check">Check</string>
+
+    <!--
+     ==============================
+             book_insertOK
+    ===============================
+    -->
+
+    <string name="et_book_num">2000</string>
+    <string name="et_book_name">book</string>
+    <string name="et_book_writer">sam</string>
+    <string name="et_book_company">skt</string>
+    <string name="et_book_content">content</string>
+
+    <string name="txt_book_num">book_num</string>
+    <string name="txt_book_name">book_name</string>
+    <string name="txt_book_writer">book_writer</string>
+    <string name="txt_book_company">book_company</string>
+    <string name="txt_book_content">book_content</string>
+
+    <string name="btn_book_insertOK">book_insertOK</string>
+
+    <!--
+     ==============================
+          book_update_delete
+    ===============================
+    -->
+    <string name="btn_book_updateOK">updateOK</string>
+    <string name="btn_book_deleteOK">deleteOK</string>
+
+
+
+    <string name="btn_book_return">return</string>
+
+    <!--
+     ==============================
+          book_dialog_delete
+    ===============================
+    -->
+
+    <string name="alert_dialog_delete_title">경고</string>
+    <string name="alert_dialog_deleteOk">삭제</string>
+    <string name="alert_dialog_delete_cancel">취소</string>
+    <string name="aler_dialog_delete_really">정말 삭제하시겠습니까?</string>
+</resources>

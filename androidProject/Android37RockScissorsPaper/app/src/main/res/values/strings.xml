@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Android37RockScissorsPaper</string>
+    <string name="textView2">Rock, Scissors Paper!</string>
+</resources>

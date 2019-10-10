@@ -1,0 +1,11 @@
+public class studentMain{
+	public static void main(String[] args){
+
+	studentDAO dao = new studentDAOimpl();
+
+
+
+
+
+	}	// end of main
+} 	// end of class

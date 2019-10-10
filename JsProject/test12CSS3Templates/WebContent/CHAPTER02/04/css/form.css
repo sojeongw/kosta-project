@@ -1,0 +1,64 @@
+@charset "UTF-8";
+/* CSS Document */
+
+form {
+	width:700px;
+	text-align: center;
+}
+label {
+	width: 150px;
+	margin-top: 15px;
+	float: left;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: left;
+}
+input,
+textarea {
+	width: 450px;
+	border: 1px #DDDDDD solid;
+	margin: 4px 0 20px 0;
+	padding: 10px;
+	background: #FFFFFF;
+	font-size: 14px;
+	color: #666666;
+	/* CSS3 */
+	-webkit-box-shadow: 0 0 6px #CCCCCC;
+	-moz-box-shadow: 0 0 6px #CCCCCC;
+	box-shadow: 0 0 6px #CCCCCC;
+	-webkit-transition: background 1s ease;
+	-moz-transition: background 1s ease;
+	transition: background 1s ease;
+}
+textarea {
+	height: 200px;
+}
+input:hover,
+textarea:hover {
+	background: #EFEDE9;
+}
+input.submit {
+	clear: both;
+	width: 200px;
+	border: none;
+	margin: 10px auto 0 auto;
+	background: #78846C;
+	font-size: 16px;
+	font-weight: bold;
+	color: #FFFFFF;
+	letter-spacing:0.1em;
+	/* CSS3 */
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-transition: background 1s ease, box-shadow 1s ease;
+	-moz-transition: background 1s ease, box-shadow 1s ease;
+	transition: background 1s ease, box-shadow 1s ease;
+}
+input.submit:hover {
+	background: #A5B596;
+	-webkit-box-shadow: 0 0 20px #A5B596;
+	-moz-box-shadow: 0 0 20px #A5B596;
+	box-shadow: 0 0 20px #A5B596;
+	cursor: pointer;
+}

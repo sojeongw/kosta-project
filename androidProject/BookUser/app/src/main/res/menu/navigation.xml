@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+
+    <item
+        android:id="@+id/navigation_checkout_record"
+        android:icon="@drawable/navigation_checkout_record"
+        android:enabled="true"
+        android:state_checked="false"
+        android:title="Checkout Record"/>
+
+    <item
+        android:id="@+id/navigation_list"
+        android:icon="@drawable/navigation_list"
+        android:enabled="true"
+        android:state_checked="true"
+        android:title="@string/menu_book_list" />
+
+    <item
+        android:id="@+id/navigation_checkout"
+        android:icon="@drawable/navigation_checkout"
+        android:enabled="true"
+        android:state_checked="false"
+        android:title="@string/menu_user_checkout" />
+
+
+
+</menu>

@@ -1,0 +1,83 @@
+body {
+	background: #f1f1f1;
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+/* コントローラーのスタイル */
+#control {
+	margin: 30px auto;
+	padding: 15px 20px;
+	width: 610px;
+	background-color: #dcdcdc;
+}
+/*----クリアフィックス----*/
+#control:before,
+#control:after {
+	content:"";
+	display:table;
+}
+#control:after {
+	clear:both;
+}
+#control {
+	zoom:1;
+}
+/*------------------*/
+#button {
+	text-align: right;
+	float:right;
+}
+#button li {
+	display: inline-block;
+	margin: 0 0 0 5px;
+	padding: 0;
+	list-style: none;
+	/display: block;
+	/float: left;
+}
+#button li a {
+	display: block;
+	margin: 0;
+	padding: 10px;
+	border: 2px solid #bbb;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	background-color: #fff;
+	-webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+	color: #999;
+	text-decoration: none;
+	-ms-border-radius: 5px;
+}
+#button li a:hover {
+	border: 2px solid #999;
+	color: #555;
+}
+#button li a.current {
+	border: 2px solid #f5b759;
+	background-color: #fdf5cf;
+	color: #f5b759;
+}
+/* ページ内容 */
+#contents {
+	margin: 0 auto;
+	width: 650px;
+}
+h1 {
+	color: #d4098a;
+	font-size: 2em;
+}
+h2 {
+	font-size: 1.3em;
+}
+p.note {
+	margin-bottom: 1em;
+	color: #555;
+	font-size: 1em;
+	line-height: 1.7em;
+}
+p.caption {
+	color: #999;
+	font-size: 0.7em;
+}

@@ -1,0 +1,123 @@
+body {
+	background: #000;
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+/*ヘッダのスタイル*/
+div#header {
+	position: fixed;
+	top: 0;
+	z-index: 1;
+	width: 100%;
+	background: -webkit-gradient(linear, left top, left bottom, from(#555555), to(#000000));
+	background: -webkit-linear-gradient(top, #555555, #000000);
+	background: -moz-linear-gradient(top, #555555, #000000);
+	background: linear-gradient(top, #555555, #000000);
+	filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr=#555555, endColorstr=#000000, GradientType=0);
+}
+h1 {
+	padding: 10px;
+	color: #fff;
+	font-size: 24px;
+	-webkit-text-shadow: -1px -1px 0 rgba(0,0,0, 1);
+	-moz-text-shadow: -1px -1px 0 rgba(0,0,0, 1);
+	text-shadow: -1px -1px 0 rgba(0,0,0, 1);
+}
+ul#glovalNav {
+    position: absolute;
+    top: 3px;
+    right: 15px;
+	padding: 10px;
+}
+ul#glovalNav li {
+	display: inline;
+}
+ul#glovalNav li a {
+	padding-left: 20px;
+	color: #ccc;
+	text-decoration: none;
+	font-size: 116%;
+}
+ul#glovalNav li a:hover {
+	color: #fff;
+}
+
+/*セクション自体のスタイル*/
+.section {
+	position: relative;
+    height: 1000px;
+	background-size: cover;
+}
+
+/*差し込み背景レイヤーのスタイル*/
+.section .bgLayer {
+	position: absolute;
+	top: 0;
+	left: 0;
+    width: 100%;
+    height: 1000px;
+}
+
+/*セクション内容共通スタイル*/
+.content {
+    width: 500px;
+    position: relative;
+}
+.content h2 {
+	margin-bottom: 1em;
+	font-size: 189%;
+}
+.content h3 {
+	margin-bottom: 1em;
+	font-size: 138.5%;
+}
+.content p {
+    line-height: 1.8;
+}
+
+/*セクション個別スタイル（1）*/
+#c01 {
+	background: url(../images/bg01.jpg) no-repeat fixed;
+	background-size: cover;
+}
+#c01 .bgLayer {
+	background: url(../images/bg01b.png) repeat-y fixed;
+}
+#c01 .content {
+    padding: 240px 0 1em 80px;
+}
+
+/*セクション個別スタイル（2）*/
+#c02 {
+	background: url(../images/bg02.jpg) no-repeat fixed;
+	background-size: cover;
+}
+#c02 .bgLayer {
+	background: url(../images/bg02b.png) no-repeat fixed;
+}
+#c02 .content {
+    padding: 240px 0 1em 700px;
+}
+
+/*セクション個別スタイル（3）*/
+#c03 {
+	background: url(../images/bg03.jpg) no-repeat fixed;
+	background-size: cover;
+}
+#c03 .bgLayer {
+	background: url(../images/bg03b.png) no-repeat fixed;
+}
+#c03 .content {
+    padding: 240px 0 1em 50px;
+}
+
+/*フッタ*/
+div#footer {
+ 	width: 100%;
+	background: #333;
+}
+#credit {
+	padding: 10px;
+	color: #999;
+	font-size: 85%;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>jquery</title>
+  <!-- <script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> : cdn 방식 -->
+  <script	src="./jquery-3.2.1.min.js"></script> <!-- 저장해놓고 쓸 때. 둘 중 하나만 쓰면 된다. -->
+
+  <script type="text/javascript">
+  console.log("jquery");
+
+  function agree(){
+    let count = 0;
+
+    function plus(){
+      return ++count;
+    }
+    function minus(){
+      return --count;
+    }
+    return {plus:plus, minus:minus};
+  }
+
+
+  // jqeury 라이브러리 사용 명령어
+  $(function(){   // window.onload와 같아서 body까지 다 인식하고 난 다음에 이 함수를 인식한다.
+    console.log("ready");
+    // var h001 = document.getElementById("h001");
+    // var h001 = $("#h001");   // 이제 $로 대신한다. 아이디에는 앞에 #을 붙인다.
+    //h001.innerHTML = "yangssem"; 이제 이걸 지우고
+    $("#h001").html("yangssem");  // 한줄로 표현가능해짐
+
+    ///////////////////////////
+
+    let obj = agree();
+    $("#btn01").on("click",function(){  // .on() : 버튼에 세미콜론 주기.
+      // $("#btn01").click(function()와
+      // $("#btn01").bind(function()은 옛날 버전
+      console.log("click...");
+    });
+    $("#btn_minus").on("click", function(){
+      console.log("minus...");
+      $("#h001").html(obj.minus());
+    })
+    $("#btn_plus").on("click", function(){
+      console.log("plus...");
+      $("#h001").html(obj.plus());
+    })
+  });
+
+  </script>
+</head>
+<body>
+  <h1 id="h001">jquery</h1>
+
+  <button id = "btn01">button</button>
+  <button id = "btn_plus">++</button>
+  <button id = "btn_minus">--</button>
+  <script type="text/javascript">
+  console.log("jquery2");
+  </script>
+</body>
+</html>

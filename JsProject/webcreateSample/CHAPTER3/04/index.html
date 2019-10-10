@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="Content-Style-Type" content="text/css" />
+		<meta http-equiv="Content-Script-Type" content="text/javascript" />
+		<title>sample</title>
+		<link rel="stylesheet" type="text/css" href="jquery.powertip.css" />
+		<link rel="stylesheet" type="text/css" href="base.css" />
+		
+		<script type="text/javascript" src="jquery-1.8.3.min.js"></script>
+		<script type="text/javascript" src="jquery.powertip-1.1.0.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$('.tooltip').powerTip({
+					placement: 'n' // north tooltip position
+				});
+				$('.mousefollow').powerTip({
+					followMouse: true
+				});
+			});
+		</script>
+	</head>
+	<body>
+		
+		<div id="container">
+			<div id="p_title"><h1>Product</h1></div>
+			<div id="p_comment"><p>さまざま商品を取り揃えております。お気に入りのひと品をどうぞ探してください。商品をクリックすると詳細ページをご覧いただけます。</p></div>
+			<div class="item">
+				<a href='#'>
+					<img src="img/image1.jpg" alt="image" class="tooltip" title="プロダクト01の詳細を見る" />
+				</a>
+				<h2>プロダクト01</h2>
+				<div class="price">1,500円</div>
+			</div>
+			<div class="item">
+				<a href='#'>
+					<img src="img/image2.jpg" alt="image" class="tooltip" title="プロダクト02の詳細を見る" />
+				</a>
+				<h2>プロダクト02</h2>
+				<div class="price">780円</div>
+			</div>
+			<div class="item item_right">
+				<a href='#'>
+					<img src="img/image3.jpg" alt="image" class="tooltip" title="プロダクト03の詳細を見る" />
+				</a>
+				<h2>プロダクト03</h2>
+				<div class="price">1,980円</div>
+			</div>
+			<div class="item item_bottom">
+				<a href='#'>
+					<img src="img/image4.jpg" alt="image" class="mousefollow" title="プロダクト04の詳細を見る" />
+				</a>
+				<h2>プロダクト04</h2>
+				<div class="price">300円</div>
+			</div>
+			<div class="item item_bottom">
+				<a href='#'>
+					<img src="img/image5.jpg" alt="image" class="mousefollow" title="プロダクト05の詳細を見る" />
+				</a>
+				<h2>プロダクト05</h2>
+				<div class="price">2,980円</div>
+			</div>
+			<div class="item item_bottom item_right">
+				<a href='#'>
+					<img src="img/image6.jpg" alt="image" class="mousefollow" title="プロダクト06の詳細を見る" />
+				</a>
+				<h2>プロダクト06</h2>
+				<div class="price">640円</div>
+			</div>
+		</div>
+	</body>
+</html>

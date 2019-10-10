@@ -1,0 +1,83 @@
+@charset "UTF-8";
+/* CSS Document */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 80%;
+	color: #666666;
+	text-align: center;
+	line-height: 180%;
+	background-color: #EFEDE9;
+}
+#Wrapper {
+	text-align: left;
+	width: 860px;
+	margin: 40px auto;
+}
+h1 {
+	width: 860px;
+	height: 0px;
+	padding-top: 100px;
+	background: url(../images/Header.png) no-repeat;
+	overflow: hidden;
+}
+ul#Navi {
+	list-style-type: none;
+}
+ul#Navi li {
+	float: left;
+}
+ul#Navi li a {
+	display: block;
+	width: 215px;
+	height: 0px;
+	padding-top: 45px;
+	overflow: hidden;
+	background: url(../images/Navi.png) no-repeat;
+}
+ul#Navi li#NaviPhilosophy a {
+	background-position: -215px 0px;
+}
+ul#Navi li#NaviAccess a {
+	background-position: -430px 0px;
+}
+ul#Navi li#NaviContact a {
+	background-position: -645px 0px;
+}
+#Contents {
+	clear: both;
+	background-color: #FFFFFF;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+	-moz-border-radius-bottomright: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	padding: 40px 80px;
+	/* IE8 */
+	padding: 20px 80px 40px 80px\9;
+}
+#Contents h2 {
+	border-bottom:solid 2px #A5B596;
+	margin-bottom:30px;
+	padding-bottom:10px;
+	font-size:18px;
+	font-weight:bold;
+}
+#Copyright {
+	clear:both;
+	padding-top:20px;
+	text-align:center;
+}
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+	}
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */

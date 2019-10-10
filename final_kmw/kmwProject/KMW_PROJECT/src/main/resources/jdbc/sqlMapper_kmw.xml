@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 반드시 !DOCTYPE mapper~를 선언(?)해줘야함 -->
+
+<mapper namespace="kmw.com.admin.model">
+	<!-- #{menu},#{price} -->
+
+	<!-- <insert id="insertCalc" parameterType="kmw.com.admin.model.Calc_VO">
+	
+	</insert>
+
+	<update id="updateCalc" parameterType="kmw.com.admin.model.Calc_VO">
+		
+	</update>
+
+	<select id="selectOneCalc" resultType="kmw.com.admin.model.Calc_VO">
+		
+	</select>
+
+	<select id="selectAllCalc" resultType="kmw.com.admin.model.Calc_VO">
+		
+	</select>
+	
+	<update id="updateMotion" parameterType="kmw.com.admin.model.Ctrl_VO">
+	
+	</update>
+	
+	<update id="updateAngle" parameterType="kmw.com.admin.model.Ctrl_VO">
+	
+	</update>
+		
+	<update id="updateStart_time" parameterType="kmw.com.admin.model.Ctrl_VO">
+		update control set 
+	</update>
+	
+	<update id="updateStart_time" parameterType="kmw.com.admin.model.Ctrl_VO">
+		update control set 
+	</update>
+	
+	<update id="updateElec" parameterType="kmw.com.admin.model.Elec_VO">
+	
+	</update>
+
+	<select id="selectOneElec" resultType="kmw.com.admin.model.Elec_VO">
+		// select * from room
+	</select>
+	
+	<select id="selectAllElec" resultType="kmw.com.admin.model.Elec_VO">
+		// select * from room
+	</select>
+
+	 -->
+
+	<select id="LoginSelectOne" resultType="kmw.com.admin.model.Login_VO">
+		select * from login_info where id=#{id} and pw=#{pw}
+	</select>
+	
+	<select id="AndroidLoginSelectOne" resultType="kmw.com.admin.model.Login_VO">
+		select * from login_info where id=#{id}
+	</select>
+</mapper>

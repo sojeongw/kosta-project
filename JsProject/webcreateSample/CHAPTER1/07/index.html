@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<title>Parallax</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="js/jquery.parallax-1.1.3.js"></script>
+	<script type="text/javascript" src="js/jquery.scrollTo-1.4.3.1-min.js"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function() {
+			//グローバルナビゲーションのリンク設定
+			$('#glovalNav li a').each(function(){
+				$(this).attr('href','javascript:$.scrollTo("' + $(this).attr('href') + '",1000)');
+			});
+			//背景レイヤーとなるdivy要素をセクションに追加	
+			$('.section').prepend('<div class="bgLayer" />');
+			//jQuery-Parallaxを有効にする処理
+			$('#c01').parallax('left', 0.1, false);
+			$('#c01 .bgLayer').parallax('right', 0.3, false);
+			$('#c02').parallax('left', 0.1, false);
+			$('#c02 .bgLayer').parallax('left', 0.3, false);
+			$('#c03').parallax('left', 0.1, false);
+			$('#c03 .bgLayer').parallax('right', 0.3, false);
+			$(window).trigger('scroll');
+		});
+	</script>
+</head>
+
+<body>
+	<div id="header">
+		<h1>My Favorite Fonts</h1>
+		<ul id="glovalNav">
+			<li><a href="#c01">Helvetica</a></li>
+			<li><a href="#c02">Optima</a></li>
+			<li><a href="#c03">Century</a></li>
+		</ul>
+	</div>
+	<div id="contents">
+		<div class="section" id="c01">
+			<div class="content">
+				<h2><img src="images/title01.png" height="43" width="256" alt="Helvetica"></h2>
+				<h3>Lorem ipsum id do officia dolore.</h3>
+				<p>Lorem ipsum elit sit dolor consequat Excepteur in elit quis dolor cillum anim aliquip enim pariatur consequat nostrud qui Excepteur voluptate Excepteur sint aute aute nostrud sunt dolor esse ut dolor laboris esse velit in eiusmod dolor ea aliqua eu id ex sit proident Duis est pariatur ad commodo adipisicing consequat enim minim Duis id consequat anim irure dolor tempor velit et ea do do dolor amet anim anim nostrud ut cupidatat nostrud aliqua elit sed elit dolore minim magna proident tempor irure deserunt Excepteur consectetur quis reprehenderit aliqua esse anim culpa exercitation in dolor et consequat non et deserunt est ea irure irure eiusmod.</p>
+			</div>
+		</div>
+		<div class="section" id="c02">
+			<div class="content">
+				<h2><img src="images/title02.png" height="58" width="200" alt="Optima"></h2>
+				<h3>Lorem ipsum irure ea sint in officia.</h3>
+				<p>Lorem ipsum eiusmod laborum veniam reprehenderit irure proident laborum aliqua Ut enim nostrud eu aliqua anim laborum et irure enim dolore id fugiat Excepteur in Excepteur cillum elit commodo irure ad cillum dolor sit amet dolore occaecat proident elit officia irure.Lorem ipsum ad ea dolore occaecat aliquip mollit fugiat sint laborum cillum sed dolor eiusmod Duis quis deserunt in cupidatat mollit eiusmod magna ea nisi fugiat laborum laborum culpa proident qui sint aute nostrud nulla deserunt labore dolore elit id laboris consequat culpa anim cillum esse consectetur nisi.</p>
+			</div>
+		</div>
+		<div class="section" id="c03">
+			<div class="content">
+				<h2><img src="images/title03.png" height="55" width="234" alt="Century"></h2>
+				<h3>Lorem ipsum ea mollit ea occaecat Ut veniam dolor.</h3>
+				<p>Lorem ipsum do voluptate est consectetur id aute elit mollit in consequat voluptate ut sint laboris ad reprehenderit nulla aute elit quis sint eu dolor minim anim eiusmod occaecat labore adipisicing dolore. Lorem ipsum anim quis aute aliquip eu et in enim consectetur culpa Duis fugiat minim magna id sunt fugiat eu culpa exercitation in incididunt exercitation in ea tempor in id laborum ea et esse Duis cillum aute officia in sint voluptate.</p>
+			</div>
+		</div>
+	</div>
+	<div id="footer">
+		<p id="credit">Copyright © 2013 Graphic Arts Unit All rights reserved.</p>
+	</div>
+</body>
+</html>

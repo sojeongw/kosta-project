@@ -1,0 +1,34 @@
+create user student identified by hi123456;
+grant connect, resource to student;
+
+drop user student;
+--------------------------------------------
+create table student (
+  num number primary key,
+  name varchar2(20) not null,
+  kor number not null,
+  eng number not null,
+  math number not null,
+  total number,
+  avg number,
+  grade varchar2(2)
+);
+/* default sysdate : 시스템 날짜를 넣어줘 */
+
+drop table student;
+--------------------------------------------
+시퀀스
+create sequence seq_student_num; 값을 계속 증가시켜준다
+drop sequence seq_student_num;
+--------------------------------------------
+입력
+insert into student(num, name, kor, eng, math) values(seq_student_num.nextval, 'name', 100, 80, 90);
+--------------------------------------------
+수정
+update student set name = 'update name', kor = 50, eng = 40, math = 20 where num = 2;
+--------------------------------------------
+삭제 : 조건만 있으면 지울 수 있다
+delete from student where num = 3;
+--------------------------------------------
+select * from student;
+select * from student where num = 5;

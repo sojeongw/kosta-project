@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+/**
+@prefix : <http://purl.org/net/ns/doas#> .
+</styles/ie6.css> a :CSSstylesheet;
+ :shortdesc "ie6.css";
+ :dependencies "none" .
+*/
+
+/*----------------------------------------------------
+    IE6 hack
+----------------------------------------------------*/
+#demoArea ul#nav02 li,
+#demoArea ul#nav02 ul li,
+#demoArea ul#nav02 ul ul li,
+#demoArea ul#nav02 ul ul ul li { display: inline; }

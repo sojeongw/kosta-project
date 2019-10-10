@@ -1,0 +1,256 @@
+@charset "UTF-8";
+/**
+ * style
+ */
+/**********************************************************
+ * base
+ */
+#header {
+  padding: 36px 48px;
+}
+
+#container {
+  padding: 96px 48px 0;
+}
+#container p {
+  width: 50%;
+  line-height: 2em;
+  color: #fff;
+  text-shadow: 1px 1px 1px #666;
+}
+
+#area-nav {
+  *zoom: 1;
+  margin-top: 36px;
+  padding: 0 48px;
+}
+#area-nav:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+#area-nav a {
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+}
+#area-nav .nav-global {
+  *zoom: 1;
+  float: left;
+}
+#area-nav .nav-global:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+#area-nav .nav-global li {
+  float: left;
+  padding-right: 1.5em;
+}
+#area-nav .nav-global li .icon {
+  padding-right: 0.5em;
+  font-weight: bold;
+  color: #f07575;
+}
+#area-nav .nav-other {
+  float: left;
+  border-left: 1px solid #f7f5f2;
+  padding-left: 1em;
+}
+#area-nav .nav-other a {
+  margin: 0 0.5em;
+  font-size: 12px;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+#footer {
+  padding: 96px 48px 0;
+  color: #fff;
+}
+
+/**********************************************************
+ * アイコン（矢印）のHSLアニメーション
+ */
+.nav-global .icon {
+  -webkit-animation: color-anime 20s ease 0s infinite alternate;
+  -moz-animation: color-anime 20s ease 0s infinite alternate;
+}
+.nav-global .list-0 .icon {
+  -webkit-animation-delay: 0s;
+  -moz-animation-delay: 0s;
+}
+.nav-global .list-1 .icon {
+  -webkit-animation-delay: 2s;
+  -moz-animation-delay: 2s;
+}
+.nav-global .list-2 .icon {
+  -webkit-animation-delay: 4s;
+  -moz-animation-delay: 4s;
+}
+.nav-global .list-3 .icon {
+  -webkit-animation-delay: 6s;
+  -moz-animation-delay: 6s;
+}
+
+@-webkit-keyframes color-anime {
+  0% {
+    color: #f07575;
+  }
+
+  20% {
+    color: #d7f075;
+  }
+
+  40% {
+    color: #75f0a6;
+  }
+
+  60% {
+    color: #75a6f0;
+  }
+
+  80% {
+    color: #d775f0;
+  }
+
+  100% {
+    color: #f07575;
+  }
+}
+
+@-moz-keyframes color-anime {
+  0% {
+    color: #f07575;
+  }
+
+  20% {
+    color: #d7f075;
+  }
+
+  40% {
+    color: #75f0a6;
+  }
+
+  60% {
+    color: #75a6f0;
+  }
+
+  80% {
+    color: #d775f0;
+  }
+
+  100% {
+    color: #f07575;
+  }
+}
+
+/**********************************************************
+ * マスク処理
+ */
+h1 {
+  height: 300px;
+  overflow: hidden;
+  background: url(../img/mask-type.png) no-repeat;
+  opacity: 0.7;
+  text-indent: -9999px;
+}
+
+/* only webkit */
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  h1 {
+    opacity: 1;
+    background: url(../img/bg-type.jpg) repeat -60px -60px;
+    -webkit-mask: url(../img/mask-type.png) no-repeat 0px 0px;
+    -webkit-animation: mask-anime 4s;
+  }
+}
+
+/* マスクにアニメーションを付ける。 */
+@-webkit-keyframes mask-anime {
+  0% {
+    opacity: 0;
+    background-position: -24px -24px;
+  }
+
+  75% {
+    opacity: 1;
+  }
+
+  100% {
+    background-position: -60px -60px;
+  }
+}
+
+/* テキストへのグラデーション */
+#container p {
+  -webkit-mask-image: -webkit-linear-gradient(top, black, rgba(0, 0, 0, 0.2));
+}
+
+/**********************************************************
+ * ロード時のアニメーション
+ */
+body {
+  -webkit-animation: loaded 800ms;
+  -moz-animation: loaded 800ms;
+  background-color: #fff;
+}
+
+@-webkit-keyframes loaded {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes loaded {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  h1 {
+    -webkit-animation-delay: 800ms;
+    -webkit-animation-fill-mode: backwards;
+  }
+}
+
+/**********************************************************
+ * 背景画像をウィンドウにフィットさせる。
+ */
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+#wrapper {
+  width: 100%;
+  height: 100%;
+  min-width: 980px;
+  min-height: 750px;
+  background: url(../img/bg.jpg) no-repeat center top;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+.unsupported {
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+#wrapper-ie {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}

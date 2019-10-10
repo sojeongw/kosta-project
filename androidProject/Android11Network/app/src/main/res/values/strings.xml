@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Android11Network</string>
+    <string name="listview">listview</string>
+
+
+    <string name="et_num">1</string>
+    <string name="et_title">test_title</string>
+    <string name="et_content">test_content</string>
+    <string name="et_writer">test_writer</string>
+    <string name="et_regDate"></string>
+
+    <string name="txt_num">num</string>
+    <string name="txt_title">title</string>
+    <string name="txt_content">content</string>
+    <string name="txt_writer">writer</string>
+    <string name="txt_regDate">date</string>
+
+
+    <string name="btn_insert">insert</string>
+    <string name="btn_insertOK">insertOK</string>
+    <string name="btn_updateOK">updateOK</string>
+    <string name="btn_deleteOK">deleteOK</string>
+    <string name="btn_select">select</string>
+</resources>

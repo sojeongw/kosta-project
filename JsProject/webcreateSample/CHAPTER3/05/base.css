@@ -1,0 +1,119 @@
+@charset "utf-8";
+
+/* ------- Set ------- */
+
+html, body, div, ul, ol, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, p, img {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+ul, ol {
+	list-style: none;
+}
+
+h1 {
+	font-size: 16px;
+	color: #01B3CD;
+	font-weight:normal;
+}
+
+h2 {
+	font-size: 24px;
+	color: #01B3CD;
+	font-weight:bold;
+}
+
+body {
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	font-size: 13px;
+	color: #000;
+	line-height: 2em;
+}
+
+/* ------- wrapper ------- */
+
+#wrapper {
+	margin: 0px auto;
+	width: 820px;
+}
+
+/* ------- header ------- */
+
+#header {
+	padding-top: 20px;
+	height: 35px;
+}
+
+#header #logo {
+	float: left;
+	padding-top:1px;
+	padding-right:45px;
+}
+
+#menu ul li {
+	float: left;
+	padding-right:30px;
+}
+
+#menu a {
+	font-family: 'Arial', sans-serif;
+	font-size: 15px;
+	color: #000;
+	font-weight:bold;
+	text-decoration: none;
+}
+
+
+/* ------- contents ------- */
+
+#contents {
+	padding:20px 0 0 0;
+}
+
+#zoom-image {
+	padding:0 0px 0 0;
+	float: right;
+	width: 410px;
+}
+
+ul#thumblist{
+	display:block;
+}
+
+ul#thumblist li {
+	float: left;
+	margin:25px 6px 0 0;
+}
+
+ul#thumblist li a {
+	display:block;
+	border: 1px solid #CCC;
+}
+
+ul#thumblist li a.zoomThumbActive {
+    border:1px solid #01B3CD;
+}
+
+.spec {
+	width: 400px;
+	float: left;
+}
+
+.spec p {
+	padding-top: 17px;
+}
+
+.price {
+	padding-top: 5px;
+	font-size:20px;
+}
+
+.price span {
+	font-size:10px;
+}
+
+.cart {
+	padding-top: 12px;
+}
+

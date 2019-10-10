@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.test.android04member.MainActivity">
+
+    <LinearLayout
+        android:layout_width="304dp"
+        android:layout_height="437dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!--내 자식에 대한 정렬은 gravity-->
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/txt_id"
+                android:textAlignment="textStart"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="30sp" />
+
+            <EditText
+                android:id="@+id/et_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="@string/txt_admin" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/txt_pw"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="30sp" />
+
+            <EditText
+                android:id="@+id/et_pw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="@string/txt_hi123456" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.63"
+                android:text="@string/txt_name"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="30sp"
+
+                />
+
+            <EditText
+                android:id="@+id/et_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="@string/txt_kim" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/txt_tel"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="30sp"
+
+                />
+
+            <!--ems : 텍스트를 담을 수 있는 수치, 사이즈-->
+            <!--weight : 공간을 얼마만큼 꽉 차게 쓸 것인가-->
+            <!--붙어있는 애들이 둘다 weight 설정이 있으면 맨 왼쪽을 기준으로
+            적당히 분배된다. 100프로 확실히 되는 건 아니라 조심해야 한다.-->
+            <!--weight를 주지 않은 공간을 빼고는 가득 채우라는 뜻이다.-->
+            <EditText
+                android:id="@+id/et_tel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="@string/txt_010" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_select"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_select" />
+
+            <Button
+                android:id="@+id/btn_insertOK"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="1dp"
+                android:text="@string/btn_insertOK" />
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="376dp">
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                app:srcCompat="@mipmap/ic_launcher" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<title>サンプル</title>
+<meta name="viewport" content="width=device-width">
+<meta name="format-detection" content="telephone=no">
+
+<link href='http://fonts.googleapis.com/css?family=Rammetto+One' rel='stylesheet' type='text/css'>
+
+<link href="sample.css" rel="stylesheet">
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.flicksimple.js"></script>
+
+</head>
+
+<body>
+
+<header><h1>NYANKO <br>MEMO</h1>
+<p>I<span>♥</span> CAT</p></header>
+
+<div id="flick">
+<ul>
+<li><img src="img@2/photo1.jpg" alt="写真：ネコ" width="274" height="170"></li>
+<li><img src="img@2/photo2.jpg" alt="写真：肉球" width="274" height="170"></li>
+<li><img src="img@2/photo3.jpg" alt="写真：爪切りばさみ" width="274" height="170"></li>
+</ul>
+<small>フリックで画像がご覧になれます</small>
+</div>
+
+<script>
+jQuery(function(){
+	$('#flick').flickSimple();
+});
+</script>
+
+<article>
+<h1>【爪切り-つめきり】</h1>
+<p>大きくなってから急に切ろうとしても、なかなか切らせてもらえません。小さなうちから爪を切る習慣をつけましょう。猫の爪には血管が通っているので傷つけないように先端の部分を切りましょう。</p>
+</article>
+
+<footer>
+<form>
+<input type="text"><button>検索</button>
+</form>
+
+<small>© 2013 NYANKO MEMO</small></footer>
+
+</body>
+</html>

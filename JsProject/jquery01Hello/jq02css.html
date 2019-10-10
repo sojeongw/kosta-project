@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>jquery</title>
+  <!-- <script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> : cdn 방식 -->
+  <script	src="./jquery-3.2.1.min.js"></script> <!-- 저장해놓고 쓸 때. 둘 중 하나만 쓰면 된다. -->
+
+  <script type="text/javascript">
+  console.log("jquery");
+
+  $(function(){
+    console.log("ready...");
+    $("#btn01").on("click", function(){
+      console.log("click");
+      $("#h001").css({color:"red"});
+    });
+
+    // 클래스는 .으로 찍어준다.
+    $(".link01").on("click", function(){
+      console.log("link01...");
+      $(".title").css({color:"blue"});
+      return false; // 링크 이동 안 되게 설정
+    });
+
+  });
+
+
+
+  </script>
+</head>
+<body>
+  <h1 id="h001">jquery</h1>
+  <h1 id="top">top</h1>
+  <h1 class="title">title</h1>
+  <button id = "btn01">button</button>
+  <a href="http://yangssem.cafe24.com/golfscore/gscore.html" class="link01">nextpage</a>
+  <!-- top으로 되어있는 곳으로 이동 -->
+  <!-- #으로 어딘가로 이동하는 것이 앵커 포인트 -->
+  <a href="#top">top</a>
+
+</body>
+</html>
